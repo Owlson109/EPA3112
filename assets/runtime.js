@@ -368,6 +368,8 @@
         if (!e.data) return;
         if (e.data.type === 'go' && typeof e.data.idx === 'number') {
           go(e.data.idx, true);
+        } else if (e.data.type === 'evidence-pause' && e.data.idx === idx) {
+          window.dispatchEvent(new CustomEvent('epa:evidence-pause'));
         } else if (e.data.type === 'theme' && e.data.name) {
           /* Sync theme across windows */
           const i = themes.indexOf(e.data.name);
@@ -989,6 +991,11 @@
       case 'Home': go(0); break;
       case 'End':  go(total - 1); break;
       case 'r': case 'R': resetTimer(); break;
+      case 'p': case 'P':
+        if (e.target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) break;
+        e.preventDefault();
+        if (!e.repeat && bc) bc.postMessage({ type: 'evidence-pause', idx: idx });
+        break;
       case 'Escape': window.close(); break;
     }
   });

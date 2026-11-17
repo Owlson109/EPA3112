@@ -21,7 +21,7 @@
 /* One shared timeline: papers depart while a warm light band and the actual
    slide overlap. Prepared content stays in its final layout after the reveal. */
 :root{--evidence-duration:5800ms}
-.evidence-intro[hidden],.evidence-skip[hidden]{display:none!important}
+.evidence-intro[hidden],.evidence-skip[hidden],.evidence-controls[hidden]{display:none!important}
 .epa[data-evidence-intro] .deck>.slide{visibility:hidden!important;pointer-events:none!important}
 .epa[data-evidence-intro] .deck>.slide.is-active{visibility:visible!important;animation:epa-content-bridge var(--evidence-duration) linear both!important;transition:none!important;will-change:opacity,transform,filter}
 .epa[data-evidence-intro] .deck>.slide.evidence-outgoing{visibility:visible!important;z-index:3;animation:epa-outgoing-slide var(--evidence-duration) linear both!important;transition:none!important;will-change:opacity,transform,filter}
@@ -65,9 +65,18 @@
 .epa .evidence-progress{height:3px;flex:1;background:var(--border);overflow:hidden}
 .epa .evidence-progress::after{content:'';display:block;height:100%;background:var(--accent);transform-origin:left;animation:epa-evidence-progress var(--evidence-duration) linear both}
 .epa .evidence-bridge{position:absolute;inset:-10%;pointer-events:none;z-index:4;opacity:0;background:linear-gradient(112deg,transparent 23%,rgb(255 245 191 / .28) 42%,rgb(255 254 245 / .58) 50%,rgb(255 242 171 / .18) 58%,transparent 74%);filter:blur(30px);animation:epa-evidence-light var(--evidence-duration) linear both}
-.evidence-skip{position:fixed;z-index:60;right:18px;bottom:55px;border:1px solid var(--border-strong);border-radius:7px;padding:10px 16px;min-height:44px;background:var(--surface);color:var(--accent);font:14px/1.5 var(--font-sans);cursor:pointer;box-shadow:0 3px 15px rgb(24 47 48 / .08)}
-.evidence-skip kbd{font-size:11px;color:var(--text-3);margin-left:9px}
-@media(max-width:650px){.evidence-skip{bottom:88px}}
+.epa[data-evidence-intro][data-evidence-paused] .deck>.slide.is-active,
+.epa[data-evidence-intro][data-evidence-paused] .deck>.slide.evidence-outgoing,
+.epa[data-evidence-paused] .evidence-intro,
+.epa[data-evidence-paused] .evidence-intro::before,
+.epa[data-evidence-paused] .evidence-intro *,
+.epa[data-evidence-paused] .evidence-intro *::before,
+.epa[data-evidence-paused] .evidence-intro *::after{animation-play-state:paused!important}
+.evidence-controls{position:fixed;z-index:60;right:18px;bottom:55px;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 36px)}
+.evidence-skip,.evidence-pause{border:1px solid var(--border-strong);border-radius:7px;padding:10px 16px;min-height:44px;background:var(--surface);color:var(--accent);font:14px/1.5 var(--font-sans);cursor:pointer;box-shadow:0 3px 15px rgb(24 47 48 / .08)}
+.evidence-skip kbd,.evidence-pause kbd{font-size:11px;color:var(--text-3);margin-left:9px}
+.evidence-pause[aria-pressed="true"]{background:var(--surface-2);border-color:var(--accent)}
+@media(max-width:650px){.evidence-controls{bottom:88px}}
 @keyframes epa-document-flight{
  0%,5%{opacity:0;transform:translate3d(var(--fly-x),var(--fly-y),-220px) rotate(var(--entry-turn)) scale(.82);animation-timing-function:cubic-bezier(.16,.8,.2,1)}
  23%{opacity:1;transform:translate3d(0,0,0) rotate(var(--paper-turn))}
@@ -84,16 +93,16 @@
 @keyframes epa-marker-shine{0%,27%{opacity:0;background-position:-100% 0}28%,43%{opacity:1}47%,100%{opacity:0;background-position:220% 0}}
 @keyframes epa-evidence-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){
- .epa .evidence-intro,.evidence-skip{display:none!important}
+ .epa .evidence-intro,.evidence-controls{display:none!important}
  .epa[data-evidence-intro] .deck>.slide.evidence-outgoing{visibility:hidden!important;animation:none!important}
  .epa[data-evidence-intro] .deck>.slide{visibility:visible!important}
  .epa[data-evidence-intro] .deck>.slide.is-active{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
 }
 @media print{
- .epa .evidence-intro,.evidence-skip{display:none!important}
+ .epa .evidence-intro,.evidence-controls{display:none!important}
  .epa[data-evidence-intro] .deck>.slide.evidence-outgoing{animation:none!important;filter:none!important}
  .epa[data-evidence-intro] .deck>.slide{visibility:visible!important}
  .epa[data-evidence-intro] .deck>.slide.is-active{animation:none!important;opacity:1!important;filter:none!important;transform:none!important}
  .epa .deck>section.slide:last-of-type{break-after:auto;page-break-after:auto}
 }
-body[data-preview] .evidence-intro,body[data-preview] .evidence-skip{display:none!important}
+body[data-preview] .evidence-intro,body[data-preview] .evidence-controls{display:none!important}

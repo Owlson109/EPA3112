@@ -14,18 +14,36 @@
  const overlay=document.createElement('div');overlay.className='evidence-intro';overlay.hidden=true;
  overlay.setAttribute('role','region');overlay.setAttribute('aria-label','本頁文件重點');deck.append(overlay);
  const skip=document.createElement('button');skip.className='evidence-skip';skip.hidden=true;
- skip.innerHTML='略過文件動畫 <kbd>空白鍵 / Esc</kbd>';skip.setAttribute('aria-label','略過文件動畫，顯示本頁');document.body.append(skip);
+ skip.innerHTML='略過文件動畫 <kbd>空白鍵 / Esc</kbd>';skip.setAttribute('aria-label','略過文件動畫，顯示本頁');
+ const controls=document.createElement('div');controls.className='evidence-controls';controls.hidden=true;
+ const pause=document.createElement('button');pause.className='evidence-pause';pause.type='button';pause.setAttribute('aria-keyshortcuts','P');
+ controls.append(pause,skip);document.body.append(controls);
  const toggle=document.querySelector('[data-evidence-toggle]');
- let current=null, outgoing=null, timer=0, active=false, last=-1, focusBefore=null, endHandler=null;
+ let current=null, outgoing=null, timer=0, active=false, paused=false, remaining=0, deadline=0, last=-1, focusBefore=null, endHandler=null;
  const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e;};
  function setToggle(){if(toggle){toggle.textContent='文件動畫：'+(enabled?'開':'關');toggle.setAttribute('aria-pressed',String(enabled));}}
+ function setPauseLabel(){
+  pause.innerHTML=(paused?'已暫停 · 繼續':'暫停文件動畫')+' <kbd>P</kbd>';
+  pause.setAttribute('aria-pressed',String(paused));
+  pause.setAttribute('aria-label',paused?'繼續文件動畫（P）':'暫停文件動畫（P）');
+ }
+ function scheduleFinish(ms){remaining=ms;deadline=performance.now()+ms;timer=setTimeout(finish,ms);}
+ function togglePause(){
+  if(!active)return;
+  paused=!paused;
+  document.body.toggleAttribute('data-evidence-paused',paused);
+  if(paused){remaining=Math.max(0,deadline-performance.now());clearTimeout(timer);timer=0;}
+  else scheduleFinish(remaining);
+  setPauseLabel();
+ }
  function finish(){
   clearTimeout(timer);timer=0;
   if(current&&endHandler)current.removeEventListener('animationend',endHandler);
   endHandler=null;
   outgoing?.classList.remove('evidence-outgoing');outgoing=null;
-  const restore=skip===document.activeElement;
-  active=false;overlay.hidden=true;skip.hidden=true;document.body.removeAttribute('data-evidence-intro');
+  const restore=controls.contains(document.activeElement);
+  active=false;paused=false;remaining=0;deadline=0;overlay.hidden=true;skip.hidden=true;controls.hidden=true;
+  document.body.removeAttribute('data-evidence-intro');document.body.removeAttribute('data-evidence-paused');setPauseLabel();
   if(current){const visible=current.classList.contains('is-active');current.inert=!visible;current.setAttribute('aria-hidden',String(!visible));}
   overlay.replaceChildren();
   if(restore){if(focusBefore?.isConnected&&!focusBefore.closest('.slide:not(.is-active)'))focusBefore.focus();else document.querySelector('[data-action="next"]')?.focus();}
@@ -68,21 +86,27 @@
   }
   active=true;document.body.setAttribute('data-evidence-intro',String(index+1));current.inert=true;current.setAttribute('aria-hidden','true');
   current.classList.add('evidence-prepared');
-  overlay.hidden=false;skip.hidden=false;
+  overlay.hidden=false;skip.hidden=false;controls.hidden=false;
   // The shared timeline overlaps paper departure with the actual slide reveal.
   // Finish on the slide's last frame, so the completed view never flashes.
   endHandler=e=>{if(e.animationName==='epa-content-bridge'&&e.target===current)finish();};
   current.addEventListener('animationend',endHandler);
   const duration=parseFloat(getComputedStyle(overlay).getPropertyValue('--evidence-duration'))||5800;
-  timer=setTimeout(finish,duration+220);
+  scheduleFinish(duration+220);
  }
  skip.addEventListener('click',finish);
+ pause.addEventListener('click',togglePause);
  toggle?.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem(storeKey,enabled?'on':'off');}catch{}setToggle();if(!enabled)finish();});
  setToggle();
  window.addEventListener('epa:slide-change',e=>start(e.detail.index,e.detail.slide,e.detail.previousSlide));
+ window.addEventListener('epa:evidence-pause',togglePause);
  // The first forward key reveals the current page, never accidentally skips it.
  document.addEventListener('keydown',e=>{
   if(!active||e.metaKey||e.ctrlKey||e.altKey||document.querySelector('dialog[open]'))return;
+  if(e.key.toLowerCase()==='p'){
+   if(e.target.isContentEditable||e.target.closest?.('input,textarea,select'))return;
+   e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)togglePause();return;
+  }
   if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){
    if(e.target.closest?.('button,a,input,textarea,select')&&[' ','Enter'].includes(e.key)&&e.target!==skip)return;
    e.preventDefault();e.stopImmediatePropagation();finish();
