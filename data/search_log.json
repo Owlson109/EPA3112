@@ -409,6 +409,19 @@
         "https://zh.wikipedia.org/wiki/%E8%87%AA%E9%A1%98%E5%84%AA%E5%8C%96%E7%8F%AD%E7%B4%9A%E7%B5%90%E6%A7%8B%E8%A8%88%E5%8A%83",
         "https://zh.wikipedia.org/wiki/%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B%E6%AA%94%E6%A1%88"
       ]
+    },
+    {
+      "round": "rubric-followup",
+      "date": "2026-11-17",
+      "queries": [
+        "site:edb.gov.hk 應用學習 48/2025 學校 課程提供機構 中四",
+        "site:edb.gov.hk 學校課程檢討 最後報告 應用學習 時間表 3.7"
+      ],
+      "result_urls": [
+        "https://applications.edb.gov.hk/circular/upload/EDBCM/EDBCM26049C.pdf",
+        "https://applications.edb.gov.hk/circular/upload/EDBCM/EDBCM25048C.pdf"
+      ],
+      "findings": "2026通函§3、7–9補足職專教育定位、持份者協調及撥款機制；2025通函有相應模式二要求。D57線上全文超出抓取大小，改核已保存官方原件PDF34–35頁。"
     }
   ]
 }

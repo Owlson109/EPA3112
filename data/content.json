@@ -24,16 +24,18 @@
     "speaker": "A",
     "seconds": 60,
     "refs": [
-      "D29",
       "D12",
-      "D41"
+      "D41",
+      "D37",
+      "D42"
     ],
-    "body": "<div class=\"identity-grid\"><div class=\"identity\"><span class=\"eyebrow\">應用學習 · 應用科學／運動</span><b>674</b><h3>運動及體適能教練</h3><p>香港專業進修學校 HKCT</p></div><div class=\"research-path\" data-focus=\"course-aims\" data-anim=\"stagger-list\"><div class=\"rule-row\"><span class=\"num\">01</span><div><h3>從實踐理解理論</h3><p>運動科學、體適能與健康、教練法</p></div></div><div class=\"rule-row\"><span class=\"num\">02</span><div><h3>培養職業相關能力</h3><p>基礎技能、思考、人際關係與態度</p></div></div><div class=\"rule-row\"><span class=\"num\">03</span><div><h3>探索升學與就業</h3><p>發展興趣，為後續學習做好準備</p></div></div></div></div><div class=\"evidence-key\"><span class=\"tag\">文件</span>公開目標與制度<span class=\"tag oral\">經驗／轉述</span>親歷與內部說明<span class=\"tag inference\">綜合分析</span>依據資料作出的解讀與推論</div>",
+    "body": "<div class=\"identity-grid\"><div class=\"identity\"><span class=\"eyebrow\">應用學習 · 應用科學／運動</span><b>674</b><h3>運動及體適能教練</h3><p>香港專業進修學校 HKCT</p><p class=\"course-target\">高中選修 · 中四或中五開始</p></div><div class=\"research-path\" data-focus=\"course-aims\" data-anim=\"stagger-list\"><div class=\"rule-row\"><span class=\"num\">01</span><div><h3>從實踐理解理論</h3><p>運動科學、體適能與健康、教練法</p></div></div><div class=\"rule-row\"><span class=\"num\">02</span><div><h3>培養職業相關能力</h3><p>基礎技能、思考、人際關係與態度</p></div></div><div class=\"rule-row\"><span class=\"num\">03</span><div><h3>探索升學與就業</h3><p>發展興趣，為後續學習做好準備</p></div></div></div></div><div class=\"policy-position\"><span class=\"tag\">職專教育定位</span><p>多元高中選擇 → 職業相關學習 → 升學與就業探索</p></div><div class=\"evidence-key\"><span class=\"tag\">文件</span>公開目標與制度<span class=\"tag oral\">經驗／轉述</span>親歷與內部說明<span class=\"tag inference\">綜合分析</span>依據資料作出的解讀與推論</div>",
     "notes": [
-      "研究對象係港專嘅<strong>科目674</strong>。2016至2018課程概覽第68頁，同2016年評審摘要第3頁，已經清楚交代課程目的：透過運動實踐理解理論，培養職業相關能力，再探索升學同就業。呢部分有公開依據，唔需要全部留待訪談。",
-      "不過，<strong>教育目的同2014年院校點樣作出開辦決定</strong>，係不同問題。今次會分開文件、本人經驗、上司經Nelson轉述嘅說明，同標示為「綜合分析」嘅解讀及推論。課程提出嘅目標亦唔等於已證明每位學生都達到同一成效。"
+      "研究對象係港專<strong>科目674</strong>，係高中應用學習選修科，一般可以中四或中五開始。2016至2018概覽同2016評審都寫明三個目的：從運動實踐理解理論、培養職業相關能力，再探索升學同就業。",
+      "放喺<strong>職專教育政策脈絡</strong>，本科提供多元高中選擇，讓學生接觸職業相關學習。2026通函第3段仍強調理論與實踐並重，為升學就業準備；但2019本科評審亦提醒，完成課程唔等於成為合資格教練。",
+      "所以我哋會分開<strong>政策目標、實施紀錄同實際成效</strong>。文件、經驗轉述同綜合分析亦各有標示；教育目的有公開依據，但唔等於已證明每位學生都達成。"
     ],
-    "purpose": "先說明有文獻支持的教育用意，再界定證據層次。",
+    "purpose": "界定課程、對象及教育目的，說明本科如何體現職專教育的多元學習與職業探索方向。",
     "transition": "港專課程出現之前，應用學習制度已逐步建立。"
   },
   {
@@ -203,30 +205,32 @@
   },
   {
     "number": 11,
-    "title": "政策落實：學生可提早開始修讀",
-    "era": "2020/21–2023",
+    "title": "政策落實：修讀彈性如何成為學生的選擇",
+    "era": "2020改革 → 本科選項 → 2026施行條件",
     "speaker": "C",
-    "seconds": 70,
+    "seconds": 90,
     "refs": [
       "D57",
       "D20",
-      "D29"
+      "D29",
+      "D37"
     ],
-    "body": "\n<div class=\"steps\" data-anim=\"stagger-list\"><article class=\"step\"><span class=\"num\">1</span><span class=\"tag\">政策建議</span><h3>2020.09</h3><p>中四提早修讀<br>第四選修科資助</p><small>學校課程檢討 §3.7.1</small></article><span class=\"link-arrow\" aria-label=\"後續制度安排\">→</span>\n<article class=\"step\"><span class=\"num\">2</span><span class=\"tag\">行政安排</span><h3>118/2021 通函</h3><p>中四或中五開課<br>2020/21 起擴展資助</p><small>教育局 · 頁 2，§6–8</small></article><span class=\"link-arrow\" aria-label=\"本科公布的選項\">→</span>\n<article class=\"step\" data-focus=\"course-options\"><span class=\"num\">3</span><span class=\"tag\">本科公布</span><h3>2023–25 概覽</h3><p>中四：2022 年 9 月<br>中五：2023 年 9 月</p><small>港專本科頁 · 印刷頁 100</small></article></div>\n<div class=\"takeaway\">制度安排與本科選項有文件可對照；實際開班數目須另查。</div>\n<p class=\"fine\">通函註 2：中四模式二試點自 2013/14 已存在；2020/21 是較一般安排的落實。</p>",
+    "body": "\n<div class=\"steps implementation-steps\" data-anim=\"stagger-list\"><article class=\"step\"><span class=\"num\">1</span><span class=\"tag\">政策建議</span><h3>2020.09</h3><p>中四提早修讀<br>第四選修科資助</p><small>學校課程檢討 §3.7.1</small></article><span class=\"link-arrow\" aria-label=\"後續制度安排\">→</span>\n<article class=\"step\"><span class=\"num\">2</span><span class=\"tag\">行政安排</span><h3>118/2021 通函</h3><p>中四或中五開課<br>2020/21 起擴展資助</p><small>教育局 · 頁 2，§6–8</small></article><span class=\"link-arrow\" aria-label=\"本科公布的選項\">→</span>\n<article class=\"step\" data-focus=\"course-options\"><span class=\"num\">3</span><span class=\"tag\">本科公布</span><h3>2023–25 概覽</h3><p>中四：2022 年 9 月<br>中五：2023 年 9 月</p><small>港專本科頁 · 印刷頁 100</small></article></div>\n<div class=\"implementation-roles\" data-anim=\"stagger-list\">\n<article><span class=\"tag\">學生 · 政策機會</span><h3>提早完成，調配時間</h3><p>中四開始、中五完成<br>政策期望中六可專注其他科目</p><small>D57 · §3.7.1；屬政策目的</small></article>\n<article><span class=\"tag\">學校＋院校 · 實施條件</span><h3>模式二須共同議定</h3><p>課表、場地及教學設施<br>學校亦須慎重考慮開班數目</p><small>D37 · 49/2026通函 §8</small></article>\n</div><div class=\"takeaway compact-inference\"><span class=\"tag inference\">綜合分析</span>制度提供彈性；學生實際可選的安排，仍取決於學校與院校協調。</div>\n<p class=\"fine\">中四模式二試點自2013/14已存在（D20註2）；公布選項及施行要求，不等於本科實際開班數或成效。</p>",
     "notes": [
-      "呢一頁係政策同課程關係較清楚嘅例子。2020學校課程檢討提出建議後，<strong>118/2021通函</strong>列明，一般可以中四開始、中五完成，或者中五開始、中六完成；亦記錄第四選修科資助由2020/21學年擴展。",
-      "再往本科睇，<strong>2023至2025課程概覽</strong>同時列出港專嘅中四開課時間係2022年9月，中五開課時間係2023年9月。可見一般制度同本科公布嘅選項係對得上嘅。",
-      "不過，通函註腳亦講明，中四模式二試點早喺2013/14已存在。所以唔應講2020先首次有校內授課。概覽係公布可選安排，唔等於已知兩種選項實際各開幾多班。"
+      "呢頁由<strong>改革議程追到實施</strong>。2020學校課程檢討提出提早修讀同放寬第四選修科資助；118/2021通函列明相應安排。港專2023至2025概覽再列出中四2022年9月、中五2023年9月開始嘅選項，形成政策、制度同本科資料嘅對照。",
+      "對<strong>學生</strong>而言，報告期望中四開始、中五完成，令中六可專注其他科目或興趣。呢個係改革想提供嘅機會，唔係已量度到嘅學習成效。",
+      "對<strong>學校同院校</strong>而言，2026通函第8段列明，模式二要先議定課表、場地同設施，學校亦要慎重考慮開班數。所以我哋分析：制度彈性須經校本協調先成為實際選擇。呢啲係文件列明嘅實施條件，唔係聲稱港專曾經協調失敗。",
+      "亦要留意，中四模式二試點早喺2013/14已有；2026通函係現行安排嘅佐證，唔用嚟倒推當年所有做法。個別選項開幾多班、有咩成效，仍須另查。"
     ],
-    "purpose": "建立政策—通函—本科公布的可證實關聯。",
-    "transition": "除了入讀時間，授課地點同學習路徑亦有文件記錄。"
+    "purpose": "以政策—通函—本科選項，解釋學生的修讀機會，以及學校與院校須協調的實施條件。",
+    "transition": "修讀彈性需要具體安排配合；下一頁用場地與升學路徑繼續看本科實施。"
   },
   {
     "number": 12,
     "title": "場地與升學路徑：從修讀走向後續選擇",
     "era": "2014–2026 查核",
     "speaker": "C",
-    "seconds": 60,
+    "seconds": 50,
     "refs": [
       "O01",
       "D12",
@@ -248,7 +252,7 @@
     "title": "瑜伽到伸展：先對齊文件版本與班別",
     "era": "2024–2028 文件版本",
     "speaker": "C",
-    "seconds": 80,
+    "seconds": 70,
     "refs": [
       "D51",
       "D25",
@@ -274,7 +278,7 @@
     "title": "為何改為運動伸展？需要、接受程度與定位",
     "era": "2025調整 · 2026.11.17補充",
     "speaker": "C",
-    "seconds": 90,
+    "seconds": 70,
     "refs": [
       "O09",
       "D25",
@@ -292,25 +296,26 @@
   },
   {
     "number": 15,
-    "title": "從運動興趣出發，在制度與需要之間調整",
+    "title": "政策提供機會，落實仍需協調與證據",
     "era": "綜合理解",
     "speaker": "C",
-    "seconds": 40,
+    "seconds": 60,
     "refs": [
-      "D12",
       "D09",
       "D41",
       "D42",
-      "D100",
-      "D36",
+      "D20",
+      "D29",
+      "D37",
       "O09"
     ],
-    "body": "<div class=\"closing-grid\" data-anim=\"stagger-list\"><article><b class=\"closing-num\">01</b><h3>教育目的</h3><p>實踐基礎知識<br>探索升學與職業</p><small>課程概覽明確列出目標</small></article><article><b class=\"closing-num\">02</b><h3>認可與質素</h3><p>QF認可、評審要求<br>與修讀安排逐步發展</p><small>證書差異可由文件補充解釋</small></article><article><b class=\"closing-num\">03</b><h3>回應需要</h3><p>調整課程內容<br>與運動應用定位</p><small>文件變化＋上司說明（轉述）</small></article></div><div class=\"open-question\" data-focus=\"closing-analysis\"><span class=\"tag inference\">綜合分析</span><p>課程持續協調教育目標、認可要求與學校需要。</p></div><p class=\"closing-link\">仍待補：開辦／承接的直接紀錄、正式修訂及過渡通知、長期成效追蹤。</p>",
+    "body": "<div class=\"closing-grid policy-closing\" data-anim=\"stagger-list\">\n<article><b class=\"closing-num\">01</b><h3>資助與選擇</h3><p>政府提供課程津貼<br>學校向院校支付費用</p><small>支援修讀機會<br>不等於本科收生已增加</small></article>\n<article><b class=\"closing-num\">02</b><h3>認可與質素</h3><p>QF建立進階基礎<br>評審要求檢討內容</p><small>院校須回應質素要求<br>不等於畢業即獲教練資格</small></article>\n<article><b class=\"closing-num\">03</b><h3>彈性與協調</h3><p>中四／中五修讀選項<br>模式二配合校本安排</p><small>學校與院校議定施行細節<br>學生可選安排須看實際開班</small></article>\n</div><div class=\"open-question\" data-focus=\"closing-analysis\"><span class=\"tag inference\">綜合分析</span><p>政策擴闊選擇並設定質素要求；本科落實仍須配合院校安排與學校需要。</p></div>\n<p class=\"closing-link\">證據界限：未證2020改革直接促成伸展調整；開班、接受程度及技能成效仍須另查。</p>",
     "notes": [
-      "我哋可以用三條線理解課程發展。第一係<strong>教育目的</strong>：用運動實踐培養知識、能力同升學職業探索。第二係<strong>認可與質素</strong>：評審、資歷同修讀安排逐步發展，幫我哋理解開場證書嘅差異。第三係<strong>回應需要</strong>：文件見到內容變化，上司經Nelson轉述嘅說明補充咗接受程度同定位考慮。",
-      "綜合理解係課程持續協調呢幾方面。呢個係有依據嘅解讀，唔係成效評估；承接文件、正式修訂通知同長期追蹤仍有待補充。多謝大家。"
+      "回到開場問題，課程發展可以由<strong>三種政策作用</strong>理解：資助支援修讀機會，QF同評審建立認可及質素要求，修讀安排就提供時間同模式嘅彈性。學校、港專同學生各有角色，政策要經具體安排先落實。",
+      "但機會同成效要分開：有資助唔等於本科收生已增加，有認可唔等於取得教練資格，有選項亦唔等於每校都實際開班。",
+      "瑜伽改伸展嘅轉述，補充咗學校需要同接受程度，<strong>未能證明係2020改革直接造成</strong>。我哋嘅結論係：政策擴闊選擇並設定質素要求，本科亦須回應校情；要判斷實際成效，仍需開班、學生接受程度同技能表現嘅追蹤資料。多謝大家。"
     ],
-    "purpose": "回答開場問題，提出有依據且標明性質的整體理解。",
+    "purpose": "綜合資助、認可及修讀彈性如何影響實施，連結持份者角色、機會與證據限制。",
     "transition": "進入答問；按需要開啟附錄及來源。"
   }
 ]
