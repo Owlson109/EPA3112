@@ -58,7 +58,22 @@
    edge. Only the decoration moves; the text and frame geometry stay fixed.
    Colours follow the existing evidence / oral-account palette. */
 @property --epa-focus-angle{syntax:'<angle>';inherits:false;initial-value:0deg}
-@keyframes epa-policy-frame-arrive{from{filter:opacity(0)}to{filter:opacity(1)}}
+@property --epa-focus-reveal{syntax:'<angle>';inherits:false;initial-value:0deg}
+@property --epa-focus-trace{syntax:'<percentage>';inherits:false;initial-value:0%}
+/* Draw the rim first; its bright trace dissolves into the regular orbit as
+   the surface and halo gently resolve underneath. Neither layer moves text. */
+@keyframes epa-policy-frame-arrive{
+ 0%{filter:opacity(0) blur(6px)}
+ 35%{filter:opacity(.16) blur(3px)}
+ 100%{filter:opacity(1) blur(0)}
+}
+@keyframes epa-focus-trace-in{
+ 0%{--epa-focus-reveal:0deg;--epa-focus-trace:85%;filter:opacity(0)}
+ 10%{filter:opacity(1)}
+ 60%{--epa-focus-trace:70%}
+ /* The last four degrees finish the feathered edge of the reveal mask. */
+ 100%{--epa-focus-reveal:364deg;--epa-focus-trace:0%;filter:opacity(1)}
+}
 @keyframes epa-policy-glow{
  0%,100%{opacity:.88;box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--focus-surface,var(--bg)) 85%,transparent),inset 0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 20%,transparent),0 0 14px 1px color-mix(in srgb,var(--focus-color,var(--accent)) 14%,transparent),0 5px 14px -10px color-mix(in srgb,var(--focus-color,var(--accent)) 28%,transparent)}
  45%,55%{opacity:1;box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--focus-surface,var(--bg)) 85%,transparent),inset 0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 30%,transparent),0 0 32px 5px color-mix(in srgb,var(--focus-color,var(--accent)) 28%,transparent),0 7px 22px -9px color-mix(in srgb,var(--focus-color,var(--accent)) 34%,transparent)}
@@ -96,9 +111,10 @@
  }
  .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]){
   position:relative;isolation:isolate;overflow:visible;
+  --focus-enter:.18s;--focus-loop:calc(var(--focus-enter) + 1.4s);
  }
  .epa:not([data-preview]) .deck>.slide.is-active .timeline-focus{
-  --focus-inset:-16px -14px;--focus-enter:2.4s;--focus-loop:3.2s;
+  --focus-inset:-16px -14px;--focus-enter:2.1s;
  }
  .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]{--focus-inset:2px;--focus-radius:8px}
  .epa:not([data-preview]) .deck>.slide.is-active [data-focus="course-aims"]{--focus-inset:-8px -30px}
@@ -119,19 +135,20 @@
  .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::before{
   border:1px solid color-mix(in srgb,var(--focus-color,var(--accent)) 58%,transparent);
   background:linear-gradient(135deg,color-mix(in srgb,var(--focus-color,var(--accent)) 2%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 6%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 2%,var(--focus-surface,var(--bg))));
-  animation:epa-policy-frame-arrive .6s var(--anim-ease) var(--focus-enter,.45s) both,
-   epa-policy-glow 3.8s ease-in-out var(--focus-loop,1.1s) infinite both;
+  animation:epa-policy-frame-arrive 1.2s cubic-bezier(.22,.61,.36,1) calc(var(--focus-enter) + .2s) both,
+   epa-policy-glow 3.8s ease-in-out var(--focus-loop) infinite both;
  }
  .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::after,
  .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::after{
   /* The mask leaves a 5px edge. Light never sweeps across the words. */
   padding:5px;border:0;opacity:.96;
-  background:conic-gradient(from var(--epa-focus-angle),transparent 0deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 32deg,var(--focus-color,var(--accent)) 68deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 81deg,transparent 100deg,transparent 180deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 212deg,var(--focus-color,var(--accent)) 248deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 261deg,transparent 280deg,transparent 360deg);
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;mask-composite:exclude;
-  animation:epa-policy-frame-arrive .6s var(--anim-ease) var(--focus-enter,.45s) both,
-   epa-focus-orbit 5.6s linear var(--focus-loop,1.1s) infinite both;
+  background:conic-gradient(from var(--epa-focus-angle),transparent 0deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 32deg,var(--focus-color,var(--accent)) 68deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 81deg,transparent 100deg,transparent 180deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 212deg,var(--focus-color,var(--accent)) 248deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 261deg,transparent 280deg,transparent 360deg),
+   linear-gradient(color-mix(in srgb,var(--focus-color,var(--accent)) var(--epa-focus-trace),transparent),color-mix(in srgb,var(--focus-color,var(--accent)) var(--epa-focus-trace),transparent));
+  -webkit-mask:conic-gradient(#fff 0deg calc(var(--epa-focus-reveal) - 4deg),transparent var(--epa-focus-reveal) 364deg) border-box,linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0) border-box;
+  mask:conic-gradient(#fff 0deg calc(var(--epa-focus-reveal) - 4deg),transparent var(--epa-focus-reveal) 364deg) border-box,linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0) border-box;
+  -webkit-mask-composite:source-in,xor;mask-composite:intersect,exclude;
+  animation:epa-focus-trace-in 1.4s cubic-bezier(.45,0,.2,1) var(--focus-enter) both,
+   epa-focus-orbit 5.6s linear var(--focus-loop) infinite both;
  }
  .epa[data-motion-paused] .deck>.slide:nth-child(3) .five-events *,
  .epa[data-motion-paused] .deck>.slide:nth-child(3) .takeaway,
