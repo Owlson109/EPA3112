@@ -310,6 +310,12 @@
     /* ===== navigation ===== */
     function go(n, fromRemote){
       n = Math.max(0, Math.min(total-1, n));
+      const navigation = new CustomEvent('epa:before-slide-change', { cancelable:true, detail:{index:n, previousIndex:idx} });
+      if (!window.dispatchEvent(navigation)) {
+        history.replaceState(null,'', '#/'+(idx+1));
+        if (bc) bc.postMessage({ type:'go', idx:idx });
+        return;
+      }
       const slideChanged = !slides[n].classList.contains('is-active');
       const previousSlide = slideChanged ? slides.find(s => s.classList.contains('is-active')) : null;
       slides.forEach((s,i) => {

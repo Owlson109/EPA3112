@@ -8,9 +8,10 @@
  if(!deck||!data)return;
  const rows=new Map(JSON.parse(data.textContent).map(r=>[r.slide,r]));
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'), print=matchMedia('print');
- const storeKey='epa3112-evidence-intros';
- let enabled=true;
+ const storeKey='epa3112-evidence-intros', holdKey='epa3112-evidence-auto-hold';
+ let enabled=true, autoHold=false;
  try{enabled=localStorage.getItem(storeKey)!=='off';}catch{}
+ try{autoHold=localStorage.getItem(holdKey)==='on';}catch{}
  const overlay=document.createElement('div');overlay.className='evidence-intro';overlay.hidden=true;
  overlay.setAttribute('role','region');overlay.setAttribute('aria-label','本頁文件重點');deck.append(overlay);
  const skip=document.createElement('button');skip.className='evidence-skip';skip.hidden=true;
@@ -18,31 +19,68 @@
  const controls=document.createElement('div');controls.className='evidence-controls';controls.hidden=true;
  const pause=document.createElement('button');pause.className='evidence-pause';pause.type='button';pause.setAttribute('aria-keyshortcuts','P');
  controls.append(pause,skip);document.body.append(controls);
+ const holdToggle=document.createElement('button');holdToggle.type='button';holdToggle.dataset.evidenceHoldToggle='';holdToggle.setAttribute('aria-keyshortcuts','P');
+ document.querySelector('.viewer-tools')?.append(holdToggle);
  const toggle=document.querySelector('[data-evidence-toggle]');
- let current=null, outgoing=null, timer=0, active=false, paused=false, remaining=0, deadline=0, last=-1, focusBefore=null, endHandler=null;
+ let current=null, outgoing=null, timer=0, holdFrame=0, active=false, paused=false, holdPassed=false, duration=5800, last=-1, focusBefore=null, endHandler=null;
  const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e;};
  function setToggle(){if(toggle){toggle.textContent='文件動畫：'+(enabled?'開':'關');toggle.setAttribute('aria-pressed',String(enabled));}}
  function setPauseLabel(){
-  pause.innerHTML=(paused?'已暫停 · 繼續':'暫停文件動畫')+' <kbd>P</kbd>';
-  pause.setAttribute('aria-pressed',String(paused));
-  pause.setAttribute('aria-label',paused?'繼續文件動畫（P）':'暫停文件動畫（P）');
+  const label='自動停留：'+(autoHold?'開':'關');
+  pause.innerHTML=label+' <kbd>P</kbd>';holdToggle.textContent=label+' P';
+  for(const button of [pause,holdToggle]){
+   button.setAttribute('aria-pressed',String(autoHold));
+   button.setAttribute('aria-label',label+'；按P切換，開啟後每頁在螢光筆完成時停留');
+  }
+  skip.innerHTML=paused?'標記完成 · 顯示正文 <kbd>→ / 空白鍵</kbd>':'略過文件動畫 <kbd>空白鍵 / Esc</kbd>';
  }
- function scheduleFinish(ms){remaining=ms;deadline=performance.now()+ms;timer=setTimeout(finish,ms);}
- function togglePause(){
-  if(!active)return;
-  paused=!paused;
-  document.body.toggleAttribute('data-evidence-paused',paused);
-  if(paused){remaining=Math.max(0,deadline-performance.now());clearTimeout(timer);timer=0;}
-  else scheduleFinish(remaining);
+ function transitionAnimations(){
+  return document.getAnimations().filter(a=>{const target=a.effect?.target;return target&&(target===current||target===outgoing||overlay.contains(target));});
+ }
+ function elapsed(){return transitionAnimations().find(a=>a.animationName==='epa-content-bridge')?.currentTime||0;}
+ function scheduleFinish(ms){
+  clearTimeout(timer);
+  timer=setTimeout(()=>{if(autoHold&&!holdPassed)holdAtReading();else finish();},Math.max(0,ms));
+ }
+ function holdAtReading(){
+  if(!active||!autoHold||holdPassed)return;
+  clearTimeout(timer);timer=0;cancelAnimationFrame(holdFrame);holdFrame=0;
+  // Marker stroke ends at 42%, its shine at 47%. At 50% all text is
+  // highlighted, papers are settled, and neither papers nor heading departs.
+  paused=true;document.body.setAttribute('data-evidence-paused','');
+  transitionAnimations().forEach(a=>{a.currentTime=duration*.5;});
   setPauseLabel();
  }
+ function watchHold(){
+  cancelAnimationFrame(holdFrame);holdFrame=0;
+  if(!active||!autoHold||holdPassed||paused)return;
+  if(elapsed()>=duration*.5){holdAtReading();return;}
+  holdFrame=requestAnimationFrame(watchHold);
+ }
+ function resumeHold(advance=false){
+  if(!paused)return;
+  // Advance starts the existing departure sequence without another reading
+  // delay. Switching the mode off simply resumes at the held frame.
+  if(advance)transitionAnimations().forEach(a=>{a.currentTime=duration*.62;});
+  const time=elapsed();paused=false;holdPassed=true;
+  document.body.removeAttribute('data-evidence-paused');setPauseLabel();
+  scheduleFinish(duration+220-time);
+ }
+ function togglePause(){
+  autoHold=!autoHold;try{localStorage.setItem(holdKey,autoHold?'on':'off');}catch{}
+  setPauseLabel();
+  if(!autoHold){cancelAnimationFrame(holdFrame);holdFrame=0;resumeHold();}
+  else if(active){holdPassed=false;watchHold();}
+ }
+ function advance(){if(paused)resumeHold(true);else finish();}
  function finish(){
   clearTimeout(timer);timer=0;
+  cancelAnimationFrame(holdFrame);holdFrame=0;
   if(current&&endHandler)current.removeEventListener('animationend',endHandler);
   endHandler=null;
   outgoing?.classList.remove('evidence-outgoing');outgoing=null;
   const restore=controls.contains(document.activeElement);
-  active=false;paused=false;remaining=0;deadline=0;overlay.hidden=true;skip.hidden=true;controls.hidden=true;
+  active=false;paused=false;holdPassed=false;overlay.hidden=true;skip.hidden=true;controls.hidden=true;
   document.body.removeAttribute('data-evidence-intro');document.body.removeAttribute('data-evidence-paused');setPauseLabel();
   if(current){const visible=current.classList.contains('is-active');current.inert=!visible;current.setAttribute('aria-hidden',String(!visible));}
   overlay.replaceChildren();
@@ -91,31 +129,39 @@
   // Finish on the slide's last frame, so the completed view never flashes.
   endHandler=e=>{if(e.animationName==='epa-content-bridge'&&e.target===current)finish();};
   current.addEventListener('animationend',endHandler);
-  const duration=parseFloat(getComputedStyle(overlay).getPropertyValue('--evidence-duration'))||5800;
+  duration=parseFloat(getComputedStyle(overlay).getPropertyValue('--evidence-duration'))||5800;
   scheduleFinish(duration+220);
+  watchHold();
  }
- skip.addEventListener('click',finish);
+ skip.addEventListener('click',advance);
  pause.addEventListener('click',togglePause);
+ holdToggle.addEventListener('click',togglePause);
  toggle?.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem(storeKey,enabled?'on':'off');}catch{}setToggle();if(!enabled)finish();});
- setToggle();
+ setToggle();setPauseLabel();
  window.addEventListener('epa:slide-change',e=>start(e.detail.index,e.detail.slide,e.detail.previousSlide));
  window.addEventListener('epa:evidence-pause',togglePause);
+ // This also covers touch swipes and presenter-window next buttons. Keep
+ // the intended slide selected while its held documents depart.
+ window.addEventListener('epa:before-slide-change',e=>{
+  if(active&&e.detail.index===last+1){e.preventDefault();advance();}
+ });
  // The first forward key reveals the current page, never accidentally skips it.
  document.addEventListener('keydown',e=>{
-  if(!active||e.metaKey||e.ctrlKey||e.altKey||document.querySelector('dialog[open]'))return;
+  if(e.metaKey||e.ctrlKey||e.altKey||document.querySelector('dialog[open]'))return;
   if(e.key.toLowerCase()==='p'){
    if(e.target.isContentEditable||e.target.closest?.('input,textarea,select'))return;
    e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)togglePause();return;
   }
+  if(!active)return;
   if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){
    if(e.target.closest?.('button,a,input,textarea,select')&&[' ','Enter'].includes(e.key)&&e.target!==skip)return;
-   e.preventDefault();e.stopImmediatePropagation();finish();
+   e.preventDefault();e.stopImmediatePropagation();if(e.key==='Escape')finish();else advance();
   }else if(['o','O','n','N'].includes(e.key))finish();
  },true);
  document.addEventListener('click',e=>{
   if(!active)return;
   const control=e.target.closest('[data-action]');
-  if(control?.dataset.action==='next'){e.preventDefault();e.stopImmediatePropagation();finish();}
+  if(control?.dataset.action==='next'){e.preventDefault();e.stopImmediatePropagation();advance();}
   else if(control&&['toc','notes','print'].includes(control.dataset.action))finish();
  },true);
  const changed=()=>{if(reduced.matches||print.matches)finish();};
