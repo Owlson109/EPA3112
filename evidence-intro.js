@@ -136,14 +136,27 @@
  skip.addEventListener('click',advance);
  pause.addEventListener('click',togglePause);
  holdToggle.addEventListener('click',togglePause);
- toggle?.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem(storeKey,enabled?'on':'off');}catch{}setToggle();if(!enabled)finish();});
+ toggle?.addEventListener('click',e=>{
+  enabled=!enabled;try{localStorage.setItem(storeKey,enabled?'on':'off');}catch{}
+  setToggle();if(!enabled)finish();
+  // A mouse/touch click returns keyboard control to the deck. Otherwise the
+  // next Space would activate this still-focused switch instead of advancing.
+  // Keep focus for deliberate keyboard activation (Enter/Space has detail 0).
+  if(e.detail>0)toggle.blur();
+ });
+ // Audience windows share navigation and stored preferences. Without this
+ // listener, another open window can retain a prelude and reject every other
+ // forward request even after the visible window turns document animation off.
+ window.addEventListener('storage',e=>{
+  if(e.key===storeKey){enabled=e.newValue!=='off';setToggle();if(!enabled)finish();}
+ });
  setToggle();setPauseLabel();
  window.addEventListener('epa:slide-change',e=>start(e.detail.index,e.detail.slide,e.detail.previousSlide));
  window.addEventListener('epa:evidence-pause',togglePause);
  // This also covers touch swipes and presenter-window next buttons. Keep
  // the intended slide selected while its held documents depart.
  window.addEventListener('epa:before-slide-change',e=>{
-  if(active&&e.detail.index===last+1){e.preventDefault();advance();}
+  if(enabled&&active&&e.detail.index===last+1){e.preventDefault();advance();}
  });
  // The first forward key reveals the current page, never accidentally skips it.
  document.addEventListener('keydown',e=>{
