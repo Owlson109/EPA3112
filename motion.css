@@ -99,6 +99,7 @@
   --focus-inset:-16px -10px;--focus-enter:2.4s;--focus-loop:3.2s;
  }
  .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]{--focus-inset:2px}
+ .epa:not([data-preview]) .deck>.slide.is-active [data-focus="course-aims"]{--focus-inset:-8px -30px}
  .epa:not([data-preview]) .deck>.slide.is-active [data-focus-tone="oral"]{
   --focus-color:var(--accent-2);--focus-surface:var(--oral-bg);
  }
