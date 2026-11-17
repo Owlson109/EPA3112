@@ -1,0 +1,27 @@
+/* Evidence-led revision: retain the original palette, grid and body type. */
+.epa .tag.inference{color:#31546c;background:#eaf0f5;border-color:#cad8e2}
+.epa .compact-inference{font-size:28px;padding:17px 24px}
+.epa .compact-inference .tag{margin-right:15px}
+.epa .opening-context{grid-template-columns:1fr 1fr;gap:36px}
+.epa .opening-context .track{padding:27px 32px}
+.epa .opening-context .track-title{padding-bottom:21px;gap:20px}
+.epa .opening-context .track-title h3{font-size:34px}
+.epa .context-lead{font-size:30px;line-height:1.5;margin-top:20px}
+.epa .opening-context .track-events{padding-top:20px;gap:14px}
+.epa .opening-context .track-events b{min-width:145px;font-size:29px}
+.epa .opening-context .track-events p{font-size:27px}
+.epa .context-points{display:flex;flex-direction:column;gap:16px;margin:25px 0}
+.epa .context-points p{font-size:29px;line-height:1.5;padding-left:18px;border-left:3px solid var(--border-strong)}
+.epa .slide:nth-child(5) .slide-content{gap:20px}
+.epa .slide:nth-child(5) .oral-strip{font-size:27px;padding:18px 24px}
+.epa .slide:nth-child(13) .slide-content{gap:20px}
+.epa .slide:nth-child(13) .versions td{padding:13px 22px;font-size:28px}
+.epa .rationale-attribution{display:flex;align-items:center;gap:24px}
+.epa .rationale-attribution p{font-size:24px;color:var(--text-2)}
+.epa .rationale-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.epa .rationale-grid article{padding:28px 30px 32px;background:var(--surface);border-top:3px solid var(--accent-2)}
+.epa .rationale-grid .num{display:block;font-size:40px;margin-bottom:20px;color:var(--accent-2)}
+.epa .rationale-grid h3{font-size:35px;line-height:1.4;margin-bottom:20px}
+.epa .rationale-grid p{font-size:28px;line-height:1.7;color:var(--text-2)}
+.epa .slide:nth-child(14) .fine{font-size:23px}
+.epa .bib-entry{grid-template-columns:43px minmax(0,1fr)}

@@ -1,0 +1,345 @@
+{
+  "checks": {
+    "pausedDuringPrelude": true,
+    "only2009ColumnHighlighted": true,
+    "frameEnclosesAllContent": true,
+    "noPhraseOnlyEffects": true,
+    "fastTimelineTimingPreserved": true,
+    "wholeColumnGlowLoops": true,
+    "textNeverMoves": true,
+    "frameAlwaysVisible": true,
+    "strongerBorder": true,
+    "hiddenTabPause": true,
+    "overviewStatic": true,
+    "printStatic": true,
+    "reducedMotionStatic": true,
+    "stopsOnOtherSlide": true,
+    "revisitRestarts": true,
+    "presenterPreviewStatic": true,
+    "mobileNoOverflow": true
+  },
+  "frames": [
+    {
+      "time": 4200,
+      "text": "2009新高中正式實施應用學習置於高中選修制度D54 · 制度節點",
+      "rect": [
+        1147.796875,
+        310.15625,
+        325.609375,
+        420.46875
+      ],
+      "children": [
+        [
+          1147.796875,
+          310.15625,
+          325.609375,
+          73.59375
+        ],
+        [
+          1147.796875,
+          415.75,
+          325.609375,
+          4
+        ],
+        [
+          1147.796875,
+          459.75,
+          325.609375,
+          89.875
+        ],
+        [
+          1147.796875,
+          571.625,
+          325.609375,
+          100
+        ],
+        [
+          1147.796875,
+          693.625,
+          147.5625,
+          37
+        ]
+      ],
+      "glow": {
+        "name": "epa-policy-frame-arrive, epa-policy-glow",
+        "opacity": 0.874018,
+        "duration": "0.6s, 4.2s",
+        "iterations": "1, infinite",
+        "state": "running, running",
+        "filter": "opacity(1)",
+        "border": "2px",
+        "shadow": "oklab(0.462555 -0.0741496 -0.011335 / 0.195007) 0px 0px 20.6008px 3.10013px, oklab(0.462555 -0.0741496 -0.011335 / 0.08) 0px 0px 0px 3.20026px"
+      },
+      "parentOpacity": 1
+    },
+    {
+      "time": 5300,
+      "text": "2009新高中正式實施應用學習置於高中選修制度D54 · 制度節點",
+      "rect": [
+        1147.796875,
+        310.15625,
+        325.609375,
+        420.46875
+      ],
+      "children": [
+        [
+          1147.796875,
+          310.15625,
+          325.609375,
+          73.59375
+        ],
+        [
+          1147.796875,
+          415.75,
+          325.609375,
+          4
+        ],
+        [
+          1147.796875,
+          459.75,
+          325.609375,
+          89.875
+        ],
+        [
+          1147.796875,
+          571.625,
+          325.609375,
+          100
+        ],
+        [
+          1147.796875,
+          693.625,
+          147.5625,
+          37
+        ]
+      ],
+      "glow": {
+        "name": "epa-policy-frame-arrive, epa-policy-glow",
+        "opacity": 1,
+        "duration": "0.6s, 4.2s",
+        "iterations": "1, infinite",
+        "state": "running, running",
+        "filter": "opacity(1)",
+        "border": "2px",
+        "shadow": "oklab(0.462555 -0.0741496 -0.011335 / 0.24) 0px 0px 26px 4px, oklab(0.462555 -0.0741496 -0.011335 / 0.08) 0px 0px 0px 5px"
+      },
+      "parentOpacity": 1
+    },
+    {
+      "time": 6500,
+      "text": "2009新高中正式實施應用學習置於高中選修制度D54 · 制度節點",
+      "rect": [
+        1147.796875,
+        310.15625,
+        325.609375,
+        420.46875
+      ],
+      "children": [
+        [
+          1147.796875,
+          310.15625,
+          325.609375,
+          73.59375
+        ],
+        [
+          1147.796875,
+          415.75,
+          325.609375,
+          4
+        ],
+        [
+          1147.796875,
+          459.75,
+          325.609375,
+          89.875
+        ],
+        [
+          1147.796875,
+          571.625,
+          325.609375,
+          100
+        ],
+        [
+          1147.796875,
+          693.625,
+          147.5625,
+          37
+        ]
+      ],
+      "glow": {
+        "name": "epa-policy-frame-arrive, epa-policy-glow",
+        "opacity": 0.848522,
+        "duration": "0.6s, 4.2s",
+        "iterations": "1, infinite",
+        "state": "running, running",
+        "filter": "opacity(1)",
+        "border": "2px",
+        "shadow": "oklab(0.462555 -0.0741496 -0.011335 / 0.185901) 0px 0px 19.5081px 2.91802px, oklab(0.462555 -0.0741496 -0.011335 / 0.08) 0px 0px 0px 2.83603px"
+      },
+      "parentOpacity": 1
+    },
+    {
+      "time": 8400,
+      "text": "2009新高中正式實施應用學習置於高中選修制度D54 · 制度節點",
+      "rect": [
+        1147.796875,
+        310.15625,
+        325.609375,
+        420.46875
+      ],
+      "children": [
+        [
+          1147.796875,
+          310.15625,
+          325.609375,
+          73.59375
+        ],
+        [
+          1147.796875,
+          415.75,
+          325.609375,
+          4
+        ],
+        [
+          1147.796875,
+          459.75,
+          325.609375,
+          89.875
+        ],
+        [
+          1147.796875,
+          571.625,
+          325.609375,
+          100
+        ],
+        [
+          1147.796875,
+          693.625,
+          147.5625,
+          37
+        ]
+      ],
+      "glow": {
+        "name": "epa-policy-frame-arrive, epa-policy-glow",
+        "opacity": 0.874018,
+        "duration": "0.6s, 4.2s",
+        "iterations": "1, infinite",
+        "state": "running, running",
+        "filter": "opacity(1)",
+        "border": "2px",
+        "shadow": "oklab(0.462555 -0.0741496 -0.011335 / 0.195007) 0px 0px 20.6008px 3.10013px, oklab(0.462555 -0.0741496 -0.011335 / 0.08) 0px 0px 0px 3.20026px"
+      },
+      "parentOpacity": 1
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "cycle": [
+    {
+      "time": 3200,
+      "opacity": 0.72,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 3410,
+      "opacity": 0.726847,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 3620,
+      "opacity": 0.748396,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 3830,
+      "opacity": 0.784897,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 4040,
+      "opacity": 0.83339,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 4250,
+      "opacity": 0.88661,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 4460,
+      "opacity": 0.935103,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 4670,
+      "opacity": 0.971604,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 4880,
+      "opacity": 0.993153,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 5090,
+      "opacity": 1,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 5300,
+      "opacity": 1,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 5510,
+      "opacity": 1,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 5720,
+      "opacity": 0.993153,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 5930,
+      "opacity": 0.971604,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 6140,
+      "opacity": 0.935103,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 6350,
+      "opacity": 0.88661,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 6560,
+      "opacity": 0.83339,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 6770,
+      "opacity": 0.784897,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 6980,
+      "opacity": 0.748396,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 7190,
+      "opacity": 0.726847,
+      "filter": "opacity(1)"
+    },
+    {
+      "time": 7400,
+      "opacity": 0.72,
+      "filter": "opacity(1)"
+    }
+  ],
+  "passed": true
+}

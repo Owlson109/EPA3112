@@ -1,0 +1,196 @@
+{
+  "date": "2026-11-17",
+  "introPages": [
+    {
+      "n": 2,
+      "heading": "運動興趣，如何連結學習與出路？",
+      "sources": [
+        "D12",
+        "D41"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 3,
+      "heading": "先有制度，才有更多課程選擇",
+      "sources": [
+        "D45",
+        "D35"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 4,
+      "heading": "三所院校，開辦時間並不相同",
+      "sources": [
+        "D05",
+        "D05"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 5,
+      "heading": "機構調整與學生需要，形成兩層背景",
+      "sources": [
+        "D02",
+        "D100"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 6,
+      "heading": "資助從建議走向實施",
+      "sources": [
+        "D09",
+        "D11"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 7,
+      "heading": "認可何時開始？學分代表甚麼？",
+      "sources": [
+        "D41",
+        "D09"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 8,
+      "heading": "從課綱與評審，追蹤內容的變化",
+      "sources": [
+        "D12",
+        "D41"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 9,
+      "heading": "補強訓練內容，也釐清資格定位",
+      "sources": [
+        "D42",
+        "D42"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 10,
+      "heading": "兩條政策方向：進階路徑與修讀彈性",
+      "sources": [
+        "D17",
+        "D57"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 11,
+      "heading": "政策如何成為學生可選的安排？",
+      "sources": [
+        "D20",
+        "D29"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 12,
+      "heading": "學習場地與升學路徑，逐步發展",
+      "sources": [
+        "D15",
+        "D101"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 13,
+      "heading": "瑜伽到伸展，先對齊文件版本",
+      "sources": [
+        "D25",
+        "D24"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 14,
+      "heading": "名稱與內容調整，回應哪些需要？",
+      "sources": [
+        "O09",
+        "D36"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    },
+    {
+      "n": 15,
+      "heading": "教育目的、認可與需要，連成發展主線",
+      "sources": [
+        "D12",
+        "D41"
+      ],
+      "highlights": 4,
+      "contexts": 4,
+      "contextBlur": "blur(0.85px)",
+      "issues": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "checks": {
+    "coverBypass": true,
+    "overlappingReveal": true,
+    "autoCompletion": true,
+    "timelineResumes": true,
+    "returnToCoverBypass": true,
+    "spaceSkipsWithoutAdvancing": true,
+    "cancelOldTimers": true,
+    "nextButtonSkips": true,
+    "overviewCancels": true,
+    "reducedMotionCancels": true,
+    "reducedMotionBypass": true,
+    "printBypass": true,
+    "togglePersists": true,
+    "previewBypass": true,
+    "remotePresenterStartsIntro": true,
+    "mobile": {
+      "noHorizontalOverflow": true,
+      "skipHeight": 44
+    }
+  }
+}

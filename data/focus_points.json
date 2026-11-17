@@ -1,0 +1,86 @@
+[
+  {
+    "slide": 2,
+    "selector": "[data-focus=\"course-aims\"]",
+    "label": "三項教育目的",
+    "tone": "accent"
+  },
+  {
+    "slide": 3,
+    "selector": ".timeline-focus",
+    "label": "2009年新高中及應用學習整欄",
+    "tone": "accent"
+  },
+  {
+    "slide": 4,
+    "selector": "[data-focus=\"hkct-supply\"]",
+    "label": "港專 HKCT 整列供應紀錄",
+    "tone": "accent"
+  },
+  {
+    "slide": 5,
+    "selector": "[data-focus=\"diverse-needs\"]",
+    "label": "回應多元需要",
+    "tone": "accent"
+  },
+  {
+    "slide": 6,
+    "selector": "[data-focus=\"full-subsidy\"]",
+    "label": "2016/17 全數資助最多兩個 ApL 課程",
+    "tone": "accent"
+  },
+  {
+    "slide": 7,
+    "selector": "[data-focus=\"qf-recognition\"]",
+    "label": "QF 3 資歷認可",
+    "tone": "accent"
+  },
+  {
+    "slide": 8,
+    "selector": "[data-focus=\"curriculum-review\"]",
+    "label": "2016.11 評審要求：檢討內容及課程結構",
+    "tone": "accent"
+  },
+  {
+    "slide": 9,
+    "selector": "[data-focus=\"cardio-training\"]",
+    "label": "必要條件：加入心肺功能訓練",
+    "tone": "accent"
+  },
+  {
+    "slide": 10,
+    "selector": "[data-focus=\"flexible-study\"]",
+    "label": "2020.09 學校課程檢討：更靈活的修讀安排",
+    "tone": "accent"
+  },
+  {
+    "slide": 11,
+    "selector": "[data-focus=\"course-options\"]",
+    "label": "本科公布中四／中五開課選項",
+    "tone": "accent"
+  },
+  {
+    "slide": 12,
+    "selector": "[data-focus=\"progression-paths\"]",
+    "label": "相關升學及職業方向",
+    "tone": "accent"
+  },
+  {
+    "slide": 13,
+    "selector": "[data-focus=\"mode-two-experience\"]",
+    "label": "模式二：中四及中五新班的授課經驗",
+    "tone": "oral"
+  },
+  {
+    "slide": 14,
+    "selector": "[data-focus=\"school-market-needs\"]",
+    "label": "上司轉述：學校與市場需要",
+    "tone": "oral"
+  },
+  {
+    "slide": 15,
+    "selector": "[data-focus=\"closing-analysis\"]",
+    "label": "綜合分析：教育目標、認可要求與學校需要",
+    "tone": "accent"
+  }
+]

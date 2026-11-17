@@ -1,0 +1,13 @@
+/* Local Songti TC Bold on macOS; no web-font request or proprietary font copy.
+   Windows uses SimSun where installed; other systems use their Ming/serif face. */
+@font-face{
+ font-family:'EPA Songti';
+ src:local('Songti TC Bold'),local('STSongti-TC-Bold');
+ font-weight:700;font-style:normal;font-display:swap;
+}
+:root{--epa-heading-font:'EPA Songti','Songti TC','Songti SC','STSong','SimSun','Noto Serif CJK TC','PMingLiU',serif}
+h1,h2,h3{
+ font-family:var(--epa-heading-font)!important;
+ font-weight:700!important;
+ font-synthesis:weight;
+}

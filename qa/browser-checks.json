@@ -1,0 +1,989 @@
+{
+  "date": "2026-11-17",
+  "slides": [
+    {
+      "n": 1,
+      "title": "兩張證書，一個課程的發展",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 112,
+        "top": 112,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 822
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 2,
+      "title": "科目674：把運動興趣連結升學與職業探索",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 3,
+      "title": "多元學習制度，為運動課程提供發展空間",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 4,
+      "title": "三所機構，三條供應時序",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 5,
+      "title": "開辦背景：機構調整與多元學習需要",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 974,
+        "top": 974,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 66
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 6,
+      "title": "資助逐步擴展，支援修讀選擇",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 7,
+      "title": "資歷認可：在DSE以外建立進階基礎",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 974,
+        "top": 974,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 66
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 8,
+      "title": "課程修訂：技能、教學與成果的對應",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 9,
+      "title": "2019評審：補強訓練內容、釐清資格定位",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 10,
+      "title": "2020：深化職專教育，擴闊修讀選擇",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 11,
+      "title": "政策落實：學生可提早開始修讀",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 12,
+      "title": "場地與升學路徑：從修讀走向後續選擇",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 974,
+        "top": 974,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 66
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 13,
+      "title": "瑜伽到伸展：先對齊文件版本與班別",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 974,
+        "top": 974,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 66
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 14,
+      "title": "為何改為運動伸展？需要、接受程度與定位",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 34.5
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 15,
+      "title": "從運動興趣出發，在制度與需要之間調整",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 96,
+        "y": 974,
+        "top": 974,
+        "left": 96,
+        "right": 1824,
+        "bottom": 1040,
+        "width": 1728,
+        "height": 66
+      },
+      "content": {
+        "x": 96,
+        "y": 226.390625,
+        "top": 226.390625,
+        "left": 96,
+        "right": 1824,
+        "bottom": 934,
+        "width": 1728,
+        "height": 707.609375
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 0
+    },
+    {
+      "n": 16,
+      "title": "資料來源（1/2）｜正文及逐字稿",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 76,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 76,
+        "right": 1844,
+        "bottom": 1040,
+        "width": 1768,
+        "height": 34.5
+      },
+      "content": {
+        "x": 76,
+        "y": 146.796875,
+        "top": 146.796875,
+        "left": 76,
+        "right": 1844,
+        "bottom": 992,
+        "width": 1768,
+        "height": 845.203125
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 42
+    },
+    {
+      "n": 17,
+      "title": "資料來源（2/2）｜核證、研究報告與時間線",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "top": 0,
+        "left": 0,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 1920,
+        "height": 1080
+      },
+      "footer": {
+        "x": 76,
+        "y": 1005.5,
+        "top": 1005.5,
+        "left": 76,
+        "right": 1844,
+        "bottom": 1040,
+        "width": 1768,
+        "height": 34.5
+      },
+      "content": {
+        "x": 76,
+        "y": 146.796875,
+        "top": 146.796875,
+        "left": 76,
+        "right": 1844,
+        "bottom": 992,
+        "width": 1768,
+        "height": 845.203125
+      },
+      "problems": [],
+      "headingFont": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "headingWeight": "700",
+      "notesHidden": true,
+      "bibliographyEntries": 39
+    }
+  ],
+  "overflow": [],
+  "errors": [],
+  "externalRequests": [],
+  "checks": {
+    "slideCount": 17,
+    "referenceSlides": 2,
+    "noKing": true,
+    "bibliography": {
+      "unique": 81,
+      "expected": 81,
+      "missing": [],
+      "duplicated": []
+    },
+    "sourceIdsExist": true,
+    "printVisibleSlides": 17,
+    "keyboardNavigation": true,
+    "tocVisible": true,
+    "tocNavigation": true,
+    "sourceDialog": true,
+    "drawerFont": {
+      "initial": "22px",
+      "plus": "24px",
+      "minus": "22px",
+      "passed": true
+    },
+    "drawerPersistence": true,
+    "presenterFont": {
+      "initial": "22px",
+      "plus": "24px",
+      "minus": "22px",
+      "passed": true
+    },
+    "presenterSync": true,
+    "presenterFrames": 3,
+    "readerFont": {
+      "initial": "22px",
+      "plus": "24px",
+      "minus": "22px",
+      "passed": true
+    },
+    "readerPersistence": true,
+    "storyline": {
+      "title": "逐頁故事線",
+      "tableRows": 20,
+      "sections": 0,
+      "text": "主線\n\n從運動興趣出發，理解多元學習制度如何支持本科，再追蹤資助、認可及內容修訂，最後以瑜伽／伸展案例討論課程如何回應需要。\n\n頁碼\t這一頁的標題\t一句話重點\n1\t兩張證書，一個課程的發展\t以兩張證書引出課程目的、認可與內容調整三個問題。\n2\t科目674：把運動興趣連結升學與職業探索\t先說明有文獻支持的教育用意，再界定證據層次。\n3\t多元學習制度，為運動課程提供發展空間\t建立制度時序，避免把制度試點當成本科開辦。\n4\t三所機構，三條供應時序\t用原表直接核對院校供應。\n5\t開辦背景：機構調整與多元學習需要\t用直接資料回答機構及政策背景，將待查範圍收窄至特定立項與承接。\n6\t資助逐步擴展，支援修讀選擇\t分開政策公布、落實學年與個人付款經驗。\n7\t資歷認可：在DSE以外建立進階基礎\t釐清最早找到的",
+      "horizontalOverflow": false,
+      "pageNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "hasSeventeenPages": true
+    },
+    "previewVisibleSlides": 1,
+    "overviewVisible": true,
+    "viewport1280": {
+      "viewport": [
+        1280,
+        720
+      ],
+      "horizontalOverflow": false,
+      "deckWidth": 1280
+    },
+    "viewport390": {
+      "viewport": [
+        390,
+        844
+      ],
+      "horizontalOverflow": false,
+      "deckWidth": 390
+    },
+    "bodyFontCSS": "\"PingFang TC\", \"Heiti TC\", \"Noto Sans CJK TC\", \"Microsoft JhengHei\", Arial, sans-serif",
+    "printLinkTargets": {
+      "publicLinks": 125,
+      "removedPrivateLinks": 90,
+      "remainingLocal": 0
+    }
+  },
+  "bibliographySources": 81,
+  "motion": {
+    "normal": [
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "running",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "running",
+        "duration": "7s"
+      }
+    ],
+    "reduced": [],
+    "print": [],
+    "preview": [],
+    "overview": [],
+    "overviewAudience": [
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::before",
+        "name": "epa-node-breathe",
+        "state": "paused",
+        "duration": "7s"
+      },
+      {
+        "slide": 3,
+        "active": true,
+        "tag": "DIV",
+        "class": "dot",
+        "pseudo": "::after",
+        "name": "epa-timeline-flow",
+        "state": "paused",
+        "duration": "7s"
+      }
+    ]
+  },
+  "platformHeadingFonts": [
+    {
+      "familyName": "Songti TC",
+      "postScriptName": "STSongti-TC-Bold",
+      "isCustomFont": false,
+      "glyphCount": 18
+    }
+  ],
+  "platformBodyFonts": [
+    {
+      "familyName": "PingFang TC",
+      "postScriptName": "PingFangTC-Regular",
+      "isCustomFont": false,
+      "glyphCount": 10
+    }
+  ],
+  "pdfExported": true
+}

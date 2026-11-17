@@ -1,0 +1,18 @@
+{
+  "mid": {
+    "oldTitle": 0,
+    "main": 0.502237
+  },
+  "final": {
+    "overlayHidden": true,
+    "titleOpacity": 1,
+    "slideOpacity": 1,
+    "filter": "none",
+    "entryRestarts": 0
+  },
+  "titleMovement": [
+    0,
+    0
+  ],
+  "passed": true
+}

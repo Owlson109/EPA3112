@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-17",
+  "frames": [
+    {
+      "time": 0,
+      "outgoingPage": 1,
+      "outgoingOpacity": 1,
+      "outgoingTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 0,
+      "titleOpacity": 0,
+      "paperOpacity": 0,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 200,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0.772176,
+      "outgoingTransform": "matrix(0.994304, 0, 0, 0.994304, 0, -5.01213)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 0.227824,
+      "titleOpacity": 0,
+      "paperOpacity": 0,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 450,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0.164198,
+      "outgoingTransform": "matrix(0.979105, 0, 0, 0.979105, 0, -18.3876)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 0.835802,
+      "titleOpacity": 0.68607,
+      "paperOpacity": 0.616471,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 700,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0.0111034,
+      "outgoingTransform": "matrix(0.975278, 0, 0, 0.975278, 0, -21.7557)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 0.988897,
+      "titleOpacity": 0.96558,
+      "paperOpacity": 0.904792,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 950,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0,
+      "outgoingTransform": "matrix(0.975, 0, 0, 0.975, 0, -22)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 1,
+      "titleOpacity": 1,
+      "paperOpacity": 0.977521,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 1350,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0,
+      "outgoingTransform": "matrix(0.975, 0, 0, 0.975, 0, -22)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 1,
+      "titleOpacity": 1,
+      "paperOpacity": 1,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    },
+    {
+      "time": 2500,
+      "outgoingPage": 1,
+      "outgoingOpacity": 0,
+      "outgoingTransform": "matrix(0.975, 0, 0, 0.975, 0, -22)",
+      "outgoingVisibility": "visible",
+      "stageOpacity": 1,
+      "titleOpacity": 1,
+      "paperOpacity": 1,
+      "currentOpacity": 0,
+      "outgoingInert": true
+    }
+  ],
+  "checks": {
+    "coverToDocumentsContinuous": true,
+    "skipClearsOutgoing": true,
+    "bodySlideAlsoRetained": true,
+    "reverseCancelsOutgoing": true,
+    "reference16Bypass": true,
+    "reference17Bypass": true,
+    "reverseReferenceBypass": true,
+    "returnFromReferenceHasIntro": true,
+    "referenceButtonCancelsPrelude": true,
+    "reference16DirectLoad": true,
+    "reference17DirectLoad": true,
+    "coverDirectLoad": true
+  },
+  "errors": [],
+  "passed": true
+}

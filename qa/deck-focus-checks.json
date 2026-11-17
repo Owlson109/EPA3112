@@ -1,0 +1,493 @@
+{
+  "pages": [
+    {
+      "slide": 2,
+      "selector": "[data-focus=\"course-aims\"]",
+      "label": "三項教育目的",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "01從實踐理解理論運動科學、體適能與健康、教練法02培養職業相關能力基礎技能、思考、人際關係與態度03探索升學與就業發展興趣，為後續學習做好準備",
+        "bounds": [
+          923.09375,
+          278.453125,
+          900.90625,
+          481.484375
+        ],
+        "frame": {
+          "left": 915.09375,
+          "top": 270.453125,
+          "right": 1832,
+          "bottom": 767.9375
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 3,
+      "selector": ".timeline-focus",
+      "label": "2009年新高中及應用學習整欄",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "2009新高中正式實施應用學習置於高中選修制度D54 · 制度節點",
+        "bounds": [
+          1147.796875,
+          310.15625,
+          325.609375,
+          420.46875
+        ],
+        "frame": {
+          "left": 1137.796875,
+          "top": 294.15625,
+          "right": 1483.40625,
+          "bottom": 746.625
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 4,
+      "selector": "[data-focus=\"hkct-supply\"]",
+      "label": "港專 HKCT 整列供應紀錄",
+      "tone": "accent",
+      "peak": {
+        "tag": "TR",
+        "text": "港專 HKCT運動及體適能教練————●●",
+        "bounds": [
+          96,
+          626.609375,
+          1728,
+          128.640625
+        ],
+        "frame": {
+          "left": 98,
+          "top": 628.609375,
+          "right": 1822,
+          "bottom": 753.25
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 5,
+      "selector": "[data-focus=\"diverse-needs\"]",
+      "label": "回應多元需要",
+      "tone": "accent",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "政策說明回應多元需要配合學生的興趣及學習需要定期檢視課程組合，回應持份者期望連結香港社會及經濟發展2015職教報告 §2.5及註3立法會會議 §34、39",
+        "bounds": [
+          978,
+          268.828125,
+          846,
+          424.46875
+        ],
+        "frame": {
+          "left": 970,
+          "top": 260.828125,
+          "right": 1832,
+          "bottom": 701.296875
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 6,
+      "selector": "[data-focus=\"full-subsidy\"]",
+      "label": "2016/17 全數資助最多兩個 ApL 課程",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "實行學年2016/17全數資助最多兩個 ApL 課程2016預算答覆／2017落實回顧",
+        "bounds": [
+          1268,
+          270.4375,
+          556,
+          384.40625
+        ],
+        "frame": {
+          "left": 1260,
+          "top": 262.4375,
+          "right": 1832,
+          "bottom": 662.84375
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 7,
+      "selector": "[data-focus=\"qf-recognition\"]",
+      "label": "QF 3 資歷認可",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "資歷架構QF 32016 年 11 月評審摘要",
+        "bounds": [
+          96,
+          260.1875,
+          601.0625,
+          135.125
+        ],
+        "frame": {
+          "left": 88,
+          "top": 252.1875,
+          "right": 705.0625,
+          "bottom": 403.3125
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 8,
+      "selector": "[data-focus=\"curriculum-review\"]",
+      "label": "2016.11 評審要求：檢討內容及課程結構",
+      "tone": "accent",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "評審要求2016.11檢討內容及課程結構適當加入專項技能與教授實習以配合名稱及學習成效提交期限：2018.02.28D41 · 印刷頁 3",
+        "bounds": [
+          534.25,
+          262.890625,
+          413.25,
+          515
+        ],
+        "frame": {
+          "left": 526.25,
+          "top": 254.890625,
+          "right": 955.5,
+          "bottom": 785.890625
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 9,
+      "selector": "[data-focus=\"cardio-training\"]",
+      "label": "必要條件：加入心肺功能訓練",
+      "tone": "accent",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "必要條件 · §2.13在實踐單元加入心肺功能訓練提交修訂課綱、教案及教材提交期限2020.04.15",
+        "bounds": [
+          96,
+          257.359375,
+          841.5,
+          461.6875
+        ],
+        "frame": {
+          "left": 88,
+          "top": 249.359375,
+          "right": 945.5,
+          "bottom": 727.046875
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 10,
+      "selector": "[data-focus=\"flexible-study\"]",
+      "label": "2020.09 學校課程檢討：更靈活的修讀安排",
+      "tone": "accent",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "09月學校課程檢討學校課程檢討專責小組最後報告提早於中四修讀放寬第四選修科資助鼓勵校內安排及初中導引D57 · §3.7.1",
+        "bounds": [
+          997.5,
+          244.015625,
+          826.5,
+          551.546875
+        ],
+        "frame": {
+          "left": 989.5,
+          "top": 236.015625,
+          "right": 1832,
+          "bottom": 803.5625
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 11,
+      "selector": "[data-focus=\"course-options\"]",
+      "label": "本科公布中四／中五開課選項",
+      "tone": "accent",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "3本科公布2023–25 概覽中四：2022 年 9 月中五：2023 年 9 月港專本科頁 · 印刷頁 100",
+        "bounds": [
+          1301.328125,
+          251.21875,
+          522.671875,
+          473.96875
+        ],
+        "frame": {
+          "left": 1293.328125,
+          "top": 243.21875,
+          "right": 1832,
+          "bottom": 733.1875
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 12,
+      "selector": "[data-focus=\"progression-paths\"]",
+      "label": "相關升學及職業方向",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "課程及院校提出的路徑相關升學相關高級文憑、運動學士等課程職業領域體適能、運動活動及康體設施",
+        "bounds": [
+          96,
+          650.359375,
+          1728,
+          168.140625
+        ],
+        "frame": {
+          "left": 88,
+          "top": 642.359375,
+          "right": 1832,
+          "bottom": 826.5
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 13,
+      "selector": "[data-focus=\"mode-two-experience\"]",
+      "label": "模式二：中四及中五新班的授課經驗",
+      "tone": "oral",
+      "peak": {
+        "tag": "DIV",
+        "text": "模式二 · 授課經驗 · 2025.09中四新班 → 2026–28年度／2028 DSE中五新班 → 2025–27年度／2027 DSE兩級新班改伸展；2024 入讀學生仍修瑜伽。",
+        "bounds": [
+          96,
+          687.421875,
+          991.65625,
+          212.859375
+        ],
+        "frame": {
+          "left": 88,
+          "top": 679.421875,
+          "right": 1095.65625,
+          "bottom": 908.28125
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.643137 0.286275 0.176471 / 0.55)",
+        "ink": "#a4492d",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 14,
+      "selector": "[data-focus=\"school-market-needs\"]",
+      "label": "上司轉述：學校與市場需要",
+      "tone": "oral",
+      "peak": {
+        "tag": "ARTICLE",
+        "text": "01學校與市場需要配合學校需求考慮學生對「瑜伽」名稱的接受程度宗教因素亦在考慮之內",
+        "bounds": [
+          96,
+          330.46875,
+          556,
+          406.375
+        ],
+        "frame": {
+          "left": 88,
+          "top": 322.46875,
+          "right": 660,
+          "bottom": 744.84375
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.643137 0.286275 0.176471 / 0.55)",
+        "ink": "#a4492d",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    },
+    {
+      "slide": 15,
+      "selector": "[data-focus=\"closing-analysis\"]",
+      "label": "綜合分析：教育目標、認可要求與學校需要",
+      "tone": "accent",
+      "peak": {
+        "tag": "DIV",
+        "text": "綜合分析課程持續協調教育目標、認可要求與學校需要。",
+        "bounds": [
+          96,
+          734.09375,
+          1728,
+          105.5
+        ],
+        "frame": {
+          "left": 88,
+          "top": 726.09375,
+          "right": 1832,
+          "bottom": 847.59375
+        },
+        "opacity": 1,
+        "filter": "opacity(1)",
+        "border": "2px",
+        "color": "color(srgb 0.0705882 0.4 0.380392 / 0.55)",
+        "ink": "#126661",
+        "clipped": false,
+        "contained": true,
+        "content": "\"\"",
+        "names": "epa-policy-frame-arrive, epa-policy-glow"
+      },
+      "minimumOpacity": 0.72,
+      "preludePaused": true,
+      "layoutPreserved": true
+    }
+  ],
+  "checks": {
+    "coverAndReferencesUnmarked": true,
+    "oneFocusPerBodySlide": true,
+    "hkctRowComplete": true,
+    "printStatic": true,
+    "overviewStatic": true,
+    "presenterPreviewStatic": true,
+    "hiddenTabPause": true,
+    "mobileNoOverflow": true
+  },
+  "errors": [],
+  "externalRequests": [],
+  "passed": true
+}

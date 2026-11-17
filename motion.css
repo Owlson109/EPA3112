@@ -1,0 +1,154 @@
+/* Restrained chronological reveals; data-anim uses the supplied skill runtime. */
+.epa{--anim-dur:.6s;--anim-ease:cubic-bezier(.22,.7,.2,1)}
+.epa .slide{transform:translate3d(30px,0,0);transition:opacity .48s var(--anim-ease),transform .62s var(--anim-ease)}
+.epa .slide.is-prev{transform:translate3d(-30px,0,0)}
+.epa .slide.is-active{transform:translate3d(0,0,0)}
+@keyframes epa-reveal{from{opacity:0;transform:translate3d(0,18px,0)}to{opacity:1;transform:none}}
+.epa .anim-fade-up{animation-name:epa-reveal}
+.epa .anim-stagger-list > *{animation:epa-reveal .58s var(--anim-ease) both;animation-delay:calc(.12s + var(--step,0)*.14s)}
+.epa .anim-stagger-list > :nth-child(2){--step:1}
+.epa .anim-stagger-list > :nth-child(3){--step:2}
+.epa .anim-stagger-list > :nth-child(4){--step:3}
+.epa .anim-stagger-list > :nth-child(5){--step:4}
+.epa .anim-stagger-list > :nth-child(6){--step:5}
+.epa .tl .row.anim-stagger-list > .item{animation-duration:.65s;animation-delay:calc(.18s + var(--step,0)*.2s)}
+.epa .tl .row.anim-stagger-list .dot::after{content:'';position:absolute;inset:0;transform-origin:left center;background:var(--accent);animation:epa-line .75s var(--anim-ease) both;animation-delay:calc(.25s + var(--step,0)*.2s)}
+@keyframes epa-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.epa .steps.anim-stagger-list > .link-arrow{animation-name:epa-connector;animation-duration:.45s}
+@keyframes epa-connector{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.epa .slide.is-active h2{animation:epa-reveal .65s var(--anim-ease) both}
+.epa .progress-bar>span{transition:width .65s var(--anim-ease)}
+.epa .notes-overlay>.note-font-toolbar{position:sticky;top:-28px;z-index:2;margin:0 0 20px;box-shadow:0 4px 16px color-mix(in srgb,var(--text-1) 8%,transparent)}
+/* A recurring light travels along chronological segments, without moving text.
+   Only the active audience slide loops. Tables of separate institutions do not. */
+.epa .slide.is-active :is(.tl,[data-flow="timeline"]) .dot::after{
+ content:'';position:absolute;inset:-1px 0;pointer-events:none;transform:none;
+ background:linear-gradient(90deg,transparent 0%,color-mix(in srgb,var(--accent) 18%,transparent) 12%,var(--accent) 58%,color-mix(in srgb,var(--accent) 45%,transparent) 72%,transparent 100%);
+ background-size:65% 100%;background-repeat:no-repeat;
+ animation:epa-timeline-flow 7s linear infinite;
+ animation-delay:calc(.9s + var(--step,0)*.3s);
+ animation-fill-mode:both;
+}
+.epa .slide.is-active :is(.tl,[data-flow="timeline"]) .dot::before{
+ animation:epa-node-breathe 7s ease-out infinite;
+ animation-delay:calc(1.2s + var(--step,0)*.3s);
+}
+@keyframes epa-timeline-flow{
+ 0%,8%{background-position:-220% 0;opacity:0}
+ 15%{opacity:1}
+ 75%{opacity:1}
+ 90%,100%{background-position:320% 0;opacity:0}
+}
+@keyframes epa-node-breathe{
+ 0%,12%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 0%,transparent)}
+ 20%{box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 16%,transparent)}
+ 36%{box-shadow:0 0 0 12px color-mix(in srgb,var(--accent) 0%,transparent)}
+}
+/* Slide 3: a chronological build in the existing five-column layout.
+   The evidence prelude pauses these child animations at their first frame;
+   its completion (or skip) starts the 0.1 s / 0.6 s / 1.1 s / 1.6 s / 2.1 s rhythm.
+   Keeping this screen-only preserves the complete print and preview layouts. */
+@keyframes epa-chronology-text{
+ from{opacity:0;transform:translate3d(0,14px,0);filter:blur(2px)}
+ to{opacity:1;transform:translate3d(0,0,0);filter:blur(0)}
+}
+@keyframes epa-chronology-line{from{background-size:0% 100%}to{background-size:100% 100%}}
+@keyframes epa-chronology-node{from{opacity:0;transform:scale(.25)}to{opacity:1;transform:scale(1)}}
+/* One softly breathing focus frame per body slide. A separate entrance
+   preserves content reveals; the frame then stays at least 72% opaque.
+   Evidence colours are inherited from the marked content, including oral accounts. */
+@keyframes epa-policy-frame-arrive{from{filter:opacity(0)}to{filter:opacity(1)}}
+@keyframes epa-policy-glow{
+ 0%,100%{opacity:.72;box-shadow:0 0 14px 2px color-mix(in srgb,var(--focus-color,var(--accent)) 14%,transparent),0 0 0 1px color-mix(in srgb,var(--focus-color,var(--accent)) 8%,transparent)}
+ 45%,55%{opacity:1;box-shadow:0 0 26px 4px color-mix(in srgb,var(--focus-color,var(--accent)) 24%,transparent),0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 8%,transparent)}
+}
+@media screen and (prefers-reduced-motion:no-preference){
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .item{
+  --chronology-delay:calc(.1s + var(--step,0)*.5s);
+  animation:none!important;opacity:1!important;transform:none!important;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .year,
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events h3,
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events p,
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .tag{
+  --detail-delay:0s;
+  animation:epa-chronology-text .48s var(--anim-ease) calc(var(--chronology-delay) + var(--detail-delay)) both;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events h3{--detail-delay:.12s}
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events p{--detail-delay:.2s}
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .tag{--detail-delay:.28s}
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .dot{
+  background:linear-gradient(var(--border-strong),var(--border-strong)) left center / 100% 100% no-repeat;
+  animation:epa-chronology-line .5s linear var(--chronology-delay) both;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .dot::before{
+  transform-origin:center;
+  animation:epa-chronology-node .38s var(--anim-ease) var(--chronology-delay) both,
+   epa-node-breathe 7s ease-out calc(3s + var(--step,0)*.3s) infinite;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .dot::after{
+  animation-delay:calc(2.7s + var(--step,0)*.3s);
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .takeaway{
+  animation:epa-chronology-text .55s var(--anim-ease) 2.6s both;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]){
+  position:relative;isolation:isolate;overflow:visible;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active .timeline-focus{
+  --focus-inset:-16px -10px;--focus-enter:2.4s;--focus-loop:3.2s;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]{--focus-inset:2px}
+ .epa:not([data-preview]) .deck>.slide.is-active [data-focus-tone="oral"]{
+  --focus-color:var(--accent-2);--focus-surface:var(--oral-bg);
+ }
+ /* Paint a table-row frame from inside its first cell. A generated child of
+    the row itself would create an anonymous cell and shift the data columns. */
+ .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::before,
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::before{
+  content:'';position:absolute;inset:var(--focus-inset,-8px);z-index:-1;pointer-events:none;
+  border:2px solid color-mix(in srgb,var(--focus-color,var(--accent)) 55%,transparent);border-radius:var(--radius-sm);
+  background:linear-gradient(110deg,color-mix(in srgb,var(--focus-color,var(--accent)) 3%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 8%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 3%,var(--focus-surface,var(--bg))));
+  animation:epa-policy-frame-arrive .6s var(--anim-ease) var(--focus-enter,.45s) both,
+   epa-policy-glow 4.2s ease-in-out var(--focus-loop,1.1s) infinite both;
+ }
+ .epa[data-motion-paused] .deck>.slide:nth-child(3) .five-events *,
+ .epa[data-motion-paused] .deck>.slide:nth-child(3) .takeaway,
+ .epa:has(.overview.open) .deck>.slide:nth-child(3) .five-events *,
+ .epa:has(.overview.open) .deck>.slide:nth-child(3) .takeaway{animation-play-state:paused!important}
+}
+/* The documented policy -> circular -> course-offering path receives the same
+   slow treatment on its existing top borders, without extra animated arrows. */
+.epa .steps .step{position:relative}
+.epa .slide.is-active .steps .step::after{
+ content:'';position:absolute;top:-3px;left:0;width:100%;height:4px;pointer-events:none;
+ background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--surface) 88%,var(--accent)),transparent);
+ background-size:55% 100%;background-repeat:no-repeat;
+ animation:epa-timeline-flow 8s linear infinite;
+ animation-delay:calc(1s + var(--flow-step,0)*1.4s);animation-fill-mode:both;
+}
+.epa .steps .step:nth-child(3){--flow-step:1}
+.epa .steps .step:nth-child(5){--flow-step:2}
+/* Freeze the audience background while the overview is open or the tab hidden. */
+.epa:has(.overview.open) .deck .slide *::before,
+.epa:has(.overview.open) .deck .slide *::after,
+.epa[data-motion-paused] .slide *::before,
+.epa[data-motion-paused] .slide *::after{animation-play-state:paused!important}
+/* Previews and overview are reference views; every item is immediately visible. */
+body[data-preview] .slide,body[data-preview] .slide *,body[data-preview] .slide *::before,body[data-preview] .slide *::after,
+.epa .overview .slide,.epa .overview .slide *,.epa .overview .slide *::before,.epa .overview .slide *::after{animation:none!important;transition:none!important}
+body[data-preview] [data-anim],body[data-preview] .anim-stagger-list>*,.epa .overview [data-anim],.epa .overview .anim-stagger-list>*{opacity:1!important;transform:none!important}
+body[data-preview] .tl .dot::after,.epa .overview .tl .dot::after{background:var(--accent)!important;opacity:1!important;transform:none!important}
+body[data-preview] .steps .step::after,.epa .overview .steps .step::after{display:none!important}
+@media(prefers-reduced-motion:reduce){
+ .epa .slide,.epa .slide *,.epa .slide *::before,.epa .slide *::after,.epa .progress-bar>span{animation:none!important;transition:none!important}
+ .epa [data-anim],.epa .anim-stagger-list>*{opacity:1!important;transform:none!important}
+ .epa .tl .dot::after{background:var(--accent)!important;opacity:1!important;transform:none!important}
+ .epa .steps .step::after{display:none!important}
+}
+@media print{
+ .epa .slide,.epa .slide *,.epa .slide *::before,.epa .slide *::after{animation:none!important;transition:none!important}
+ .epa [data-anim],.epa .anim-stagger-list>*{opacity:1!important;transform:none!important}
+ .epa .tl .dot::after{background:var(--accent)!important;opacity:1!important;transform:none!important}
+ .epa .steps .step::after{display:none!important}
+}

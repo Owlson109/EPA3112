@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "390": {
+      "title": "港專「運動及體適能教練」的發展",
+      "singleLine": true,
+      "fits": true,
+      "subtitleClear": true,
+      "contentClear": true,
+      "font": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "noPrelude": true
+    },
+    "1280": {
+      "title": "港專「運動及體適能教練」的發展",
+      "singleLine": true,
+      "fits": true,
+      "subtitleClear": true,
+      "contentClear": true,
+      "font": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "noPrelude": true
+    },
+    "desktop": {
+      "title": "港專「運動及體適能教練」的發展",
+      "singleLine": true,
+      "fits": true,
+      "subtitleClear": true,
+      "contentClear": true,
+      "font": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "noPrelude": true
+    },
+    "print": {
+      "title": "港專「運動及體適能教練」的發展",
+      "singleLine": true,
+      "fits": true,
+      "subtitleClear": true,
+      "contentClear": true,
+      "font": "\"EPA Songti\", \"Songti TC\", \"Songti SC\", STSong, SimSun, \"Noto Serif CJK TC\", PMingLiU, serif",
+      "noPrelude": true
+    }
+  },
+  "errors": [],
+  "passed": true
+}
