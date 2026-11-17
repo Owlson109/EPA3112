@@ -1,13 +1,10 @@
-/* Local Songti TC Bold on macOS; no web-font request or proprietary font copy.
-   Windows uses SimSun where installed; other systems use their Ming/serif face. */
-@font-face{
- font-family:'EPA Songti';
- src:local('Songti TC Bold'),local('STSongti-TC-Bold');
- font-weight:700;font-style:normal;font-display:swap;
-}
-:root{--epa-heading-font:'EPA Songti','Songti TC','Songti SC','STSong','SimSun','Noto Serif CJK TC','PMingLiU',serif}
-h1,h2,h3{
- font-family:var(--epa-heading-font)!important;
- font-weight:700!important;
- font-synthesis:weight;
-}
+/* Bundled Noto CJK TC fonts; SIL Open Font License, assets/fonts/OFL.txt. */
+@font-face{font-family:'EPA Songti';src:url('assets/fonts/serif-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'EPA Heiti';src:url('assets/fonts/sans-regular.woff2') format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'EPA Heiti';src:url('assets/fonts/sans-bold.woff2') format('woff2');font-weight:501 900;font-style:normal;font-display:swap}
+:root{--epa-heading-font:'EPA Songti',serif;--font-sans:'EPA Heiti',sans-serif!important;--font:'EPA Heiti',sans-serif!important;--font-display:var(--font-sans)!important;--font-serif:var(--font-sans)!important;--font-mono:var(--font-sans)!important}
+body,.notes-body,.pcard-notes .pcard-body{font-family:'EPA Heiti',sans-serif!important}
+h1,h2,h3{font-family:var(--epa-heading-font)!important;font-weight:700!important;font-synthesis:none}
+/* Reserve the page-number slot after the bundled font changes text widths. */
+.epa .source-refs{min-width:0;flex:1;max-width:calc(100% - 155px)}
+.epa .page-label{flex-shrink:0}

@@ -635,6 +635,7 @@
   body.is-dragging-card * { user-select: none !important; }
   body.is-dragging-card iframe { pointer-events: none !important; }
 </style>
+<link rel="stylesheet" href="${new URL('heading-font.css', deckUrl).href}">
 </head>
 <body>
 
