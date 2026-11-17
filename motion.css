@@ -54,14 +54,16 @@
 }
 @keyframes epa-chronology-line{from{background-size:0% 100%}to{background-size:100% 100%}}
 @keyframes epa-chronology-node{from{opacity:0;transform:scale(.25)}to{opacity:1;transform:scale(1)}}
-/* One softly breathing focus frame per body slide. A separate entrance
-   preserves content reveals; the frame then stays at least 72% opaque.
-   Evidence colours are inherited from the marked content, including oral accounts. */
+/* A stable double-line frame, with two soft highlights travelling around its
+   edge. Only the decoration moves; the text and frame geometry stay fixed.
+   Colours follow the existing evidence / oral-account palette. */
+@property --epa-focus-angle{syntax:'<angle>';inherits:false;initial-value:0deg}
 @keyframes epa-policy-frame-arrive{from{filter:opacity(0)}to{filter:opacity(1)}}
 @keyframes epa-policy-glow{
- 0%,100%{opacity:.72;box-shadow:0 0 14px 2px color-mix(in srgb,var(--focus-color,var(--accent)) 14%,transparent),0 0 0 1px color-mix(in srgb,var(--focus-color,var(--accent)) 8%,transparent)}
- 45%,55%{opacity:1;box-shadow:0 0 26px 4px color-mix(in srgb,var(--focus-color,var(--accent)) 24%,transparent),0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 8%,transparent)}
+ 0%,100%{opacity:.88;box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--focus-surface,var(--bg)) 85%,transparent),inset 0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 20%,transparent),0 0 14px 1px color-mix(in srgb,var(--focus-color,var(--accent)) 14%,transparent),0 5px 14px -10px color-mix(in srgb,var(--focus-color,var(--accent)) 28%,transparent)}
+ 45%,55%{opacity:1;box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--focus-surface,var(--bg)) 85%,transparent),inset 0 0 0 5px color-mix(in srgb,var(--focus-color,var(--accent)) 30%,transparent),0 0 32px 5px color-mix(in srgb,var(--focus-color,var(--accent)) 28%,transparent),0 7px 22px -9px color-mix(in srgb,var(--focus-color,var(--accent)) 34%,transparent)}
 }
+@keyframes epa-focus-orbit{from{--epa-focus-angle:0deg}to{--epa-focus-angle:360deg}}
 @media screen and (prefers-reduced-motion:no-preference){
  .epa:not([data-preview]) .deck>.slide.is-active:nth-child(3) .five-events .item{
   --chronology-delay:calc(.1s + var(--step,0)*.5s);
@@ -96,22 +98,40 @@
   position:relative;isolation:isolate;overflow:visible;
  }
  .epa:not([data-preview]) .deck>.slide.is-active .timeline-focus{
-  --focus-inset:-16px -10px;--focus-enter:2.4s;--focus-loop:3.2s;
+  --focus-inset:-16px -14px;--focus-enter:2.4s;--focus-loop:3.2s;
  }
- .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]{--focus-inset:2px}
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]{--focus-inset:2px;--focus-radius:8px}
  .epa:not([data-preview]) .deck>.slide.is-active [data-focus="course-aims"]{--focus-inset:-8px -30px}
+ .epa:not([data-preview]) .deck>.slide.is-active [data-focus="qf-recognition"]{--focus-inset:-16px -20px}
  .epa:not([data-preview]) .deck>.slide.is-active [data-focus-tone="oral"]{
   --focus-color:var(--accent-2);--focus-surface:var(--oral-bg);
  }
  /* Paint a table-row frame from inside its first cell. A generated child of
     the row itself would create an anonymous cell and shift the data columns. */
  .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::before,
+ .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::after,
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::before,
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::after{
+  content:'';position:absolute;inset:var(--focus-inset,-10px -12px);width:auto;height:auto;
+  box-sizing:border-box;border-radius:var(--focus-radius,12px);z-index:-1;pointer-events:none;transform:none;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::before,
  .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::before{
-  content:'';position:absolute;inset:var(--focus-inset,-8px);z-index:-1;pointer-events:none;
-  border:2px solid color-mix(in srgb,var(--focus-color,var(--accent)) 55%,transparent);border-radius:var(--radius-sm);
-  background:linear-gradient(110deg,color-mix(in srgb,var(--focus-color,var(--accent)) 3%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 8%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 3%,var(--focus-surface,var(--bg))));
+  border:1px solid color-mix(in srgb,var(--focus-color,var(--accent)) 58%,transparent);
+  background:linear-gradient(135deg,color-mix(in srgb,var(--focus-color,var(--accent)) 2%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 6%,var(--focus-surface,var(--bg))),color-mix(in srgb,var(--focus-color,var(--accent)) 2%,var(--focus-surface,var(--bg))));
   animation:epa-policy-frame-arrive .6s var(--anim-ease) var(--focus-enter,.45s) both,
-   epa-policy-glow 4.2s ease-in-out var(--focus-loop,1.1s) infinite both;
+   epa-policy-glow 3.8s ease-in-out var(--focus-loop,1.1s) infinite both;
+ }
+ .epa:not([data-preview]) .deck>.slide.is-active :is(.timeline-focus,[data-focus]:not(tr))::after,
+ .epa:not([data-preview]) .deck>.slide.is-active tr[data-focus]>td:first-child::after{
+  /* The mask leaves a 5px edge. Light never sweeps across the words. */
+  padding:5px;border:0;opacity:.96;
+  background:conic-gradient(from var(--epa-focus-angle),transparent 0deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 32deg,var(--focus-color,var(--accent)) 68deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 81deg,transparent 100deg,transparent 180deg,color-mix(in srgb,var(--focus-color,var(--accent)) 12%,transparent) 212deg,var(--focus-color,var(--accent)) 248deg,color-mix(in srgb,var(--focus-color,var(--accent)) 24%,var(--surface)) 261deg,transparent 280deg,transparent 360deg);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  animation:epa-policy-frame-arrive .6s var(--anim-ease) var(--focus-enter,.45s) both,
+   epa-focus-orbit 5.6s linear var(--focus-loop,1.1s) infinite both;
  }
  .epa[data-motion-paused] .deck>.slide:nth-child(3) .five-events *,
  .epa[data-motion-paused] .deck>.slide:nth-child(3) .takeaway,
