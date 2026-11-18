@@ -561,8 +561,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 197852,
-    "sha256": "93a3512b7e12c2e7a1c5a715c16fc4e5a8c8e3f932d6ac03c3151dfffd1d6b27"
+    "bytes": 216034,
+    "sha256": "8aa041f8c49e38c60236acd696203f8ac2252c688dba6d0763979e753eb89009"
   },
   {
     "path": "motion.css",
@@ -1101,8 +1101,8 @@
   },
   {
     "path": "scripts/build.py",
-    "bytes": 21350,
-    "sha256": "1167fb411b2396e8f57b9d6b80be08736909b1298ac39b5ac2975bbd207ac9b8"
+    "bytes": 21862,
+    "sha256": "3c419d7c3bc7f8b0882a5e2d32b3a6c3b2ccb3ae34a20b4ae8c1ff03e4150592"
   },
   {
     "path": "scripts/prepare_research.py",

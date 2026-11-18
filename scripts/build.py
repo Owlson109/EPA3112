@@ -3,6 +3,7 @@ Python 3 standard library only. Run: python3 scripts/build.py
 """
 from pathlib import Path
 from html import escape as esc
+from hashlib import sha256
 import json, re, os
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -43,6 +44,10 @@ def notes(s):
         return '<p class="note-meta">資料來源附頁 · 查閱及答問用途，不計入正文17分鐘。</p>'+''.join('<p>'+p+'</p>' for p in s['notes'])
     return f'<p class="note-meta">講者 {s["speaker"]} · 第 {s["number"]} 頁 · 配時 {clock(s["seconds"])}</p><p class="note-purpose">本頁目的：{esc(s["purpose"])}</p>'+''.join('<p>'+p+'</p>' for p in s['notes'])+f'<p class="transition"><strong>過渡：</strong>{esc(s["transition"])}</p><p class="note-ref">來源：{refs(s)}</p>'
 
+def asset_url(path):
+    version = sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+    return f'{path}?v={version}'
+
 # The official scaffold supplies the document skeleton and shared engine links.
 scaffold=(ROOT/'template/index.html').read_text()
 head=scaffold.split('<body',1)[0]
@@ -54,7 +59,12 @@ assets=Path(os.path.relpath(ROOT/'assets',ROOT)).as_posix()
 head=re.sub(r'href="[^"]*/assets/([^"]+)"',lambda m:f'href="{assets}/{m[1]}"',head)
 head=re.sub(r'href="[^"]*style\.css"',f'href="{Path(os.path.relpath(ROOT/"style.css",ROOT)).as_posix()}"',head)
 head=head.replace('themes/tokyo-night.css','themes/academic-paper.css')
-head=head.replace('</head>','<link rel="stylesheet" href="motion.css">\n<link rel="stylesheet" href="revision.css">\n<link rel="stylesheet" href="heading-font.css">\n<link rel="stylesheet" href="evidence-intro.css">\n<link rel="stylesheet" href="course-pages.css">\n</head>')
+# Ship the certificate geometry with its markup, including the clipped lens copies.
+# Keep the stylesheet at its original URL for already-open older decks.
+cover_css = (ROOT / 'evidence-intro.css').read_text(encoding='utf-8')
+extra_styles = ''.join(f'<link rel="stylesheet" href="{name}">\n' for name in ('motion.css','revision.css','heading-font.css'))
+head = head.replace('</head>', extra_styles + f'<style id="cover-evidence-style">\n{cover_css}\n</style>\n<link rel="stylesheet" href="course-pages.css">\n</head>')
+head = re.sub(r'(<link\b[^>]*\bhref=")([^"]+\.css)(")', lambda m: m[1] + asset_url(m[2]) + m[3], head)
 
 def masthead(slide):
     era=esc(slide['era'])
@@ -85,7 +95,8 @@ dialogs=f'''<dialog id="source-dialog" aria-labelledby="source-title"><div class
 <dialog id="toc-dialog" aria-labelledby="toc-title"><div class="dialog-top"><span>正文15頁 · 配時17分鐘 · 來源附頁{len(reference_slides)}頁</span><button data-close aria-label="關閉目錄">關閉</button></div><h2 id="toc-title">簡報目錄</h2><ol class="toc-list">{toc}</ol></dialog>'''
 data=json.dumps(sources,ensure_ascii=False).replace('<','\\u003c')
 intro_data=json.dumps(intros,ensure_ascii=False).replace('<','\\u003c')
-(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa"><main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+f'</script><script src="evidence-intro.js"></script><script src="{assets}/runtime.js"></script><script src="notes-controls.js"></script><script src="app.js"></script></body></html>',encoding='utf-8')
+deck_scripts = ''.join(f'<script src="{asset_url(name)}"></script>' for name in ('evidence-intro.js', f'{assets}/runtime.js', 'notes-controls.js', 'app.js'))
+(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa"><main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
 
 nav='<nav><a href="index.html">開啟簡報</a><a href="index.html#/16">來源附頁</a><a href="storyline.html">逐頁故事線</a><a href="speaker-notes.html">三人講稿</a><a href="official-research.html">官方文件核證</a><a href="report-review.html">四份報告</a><a href="appendix.html">研究附錄</a></nav>'
 def reader(filename,title,intro,body):
