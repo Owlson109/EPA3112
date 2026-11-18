@@ -55,8 +55,8 @@
   },
   {
     "slide": 11,
-    "selector": "[data-focus=\"course-options\"]",
-    "label": "本科公布中四／中五開課選項",
+    "selector": "[data-focus=\"junior-taster\"]",
+    "label": "初中導引政策及港專兩場本科體驗",
     "tone": "accent"
   },
   {
@@ -74,13 +74,13 @@
   {
     "slide": 14,
     "selector": "[data-focus=\"school-market-needs\"]",
-    "label": "上司轉述：學校與市場需要",
+    "label": "學校與學生對課程名稱的接受程度",
     "tone": "oral"
   },
   {
     "slide": 15,
     "selector": "[data-focus=\"closing-analysis\"]",
-    "label": "綜合分析：政策機會、質素要求與校本協調",
+    "label": "綜合分析：從體能評估、選擇練習到安全帶領訓練",
     "tone": "accent"
   }
 ]

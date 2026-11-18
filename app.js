@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   const motionVisibility=()=>document.body.toggleAttribute('data-motion-paused',document.hidden);
   document.addEventListener('visibilitychange',motionVisibility);motionVisibility();
   if(new URLSearchParams(location.search).has('preview'))return;
+  // On short landscape displays keep the source links clear of the toolbar.
+  const dock=document.querySelector('.viewer-dock');
+  const shortScreen=matchMedia('(orientation:landscape) and (max-height:600px)');
+  const fitControls=()=>{dock.open=!shortScreen.matches;};
+  fitControls();
+  shortScreen.addEventListener('change',fitControls);
   const sources=JSON.parse(document.querySelector('#source-data').textContent);
   const byId=new Map(sources.map(s=>[s.id,s]));
   const sourceDialog=document.querySelector('#source-dialog');

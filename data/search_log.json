@@ -422,6 +422,19 @@
         "https://applications.edb.gov.hk/circular/upload/EDBCM/EDBCM25048C.pdf"
       ],
       "findings": "2026通函§3、7–9補足職專教育定位、持份者協調及撥款機制；2025通函有相應模式二要求。D57線上全文超出抓取大小，改核已保存官方原件PDF34–35頁。"
+    },
+    {
+      "round": "junior-taster-674",
+      "date": "2026-11-18",
+      "queries": [
+        "教育局 2025–27 初中應用學習導引課程 科目674",
+        "2023 政府進度報告 §16 初中導引"
+      ],
+      "result_urls": [
+        "https://www.legco.gov.hk/yr2023/chinese/counmtg/motion/cm20230607-wcs-prpt-c.pdf",
+        "https://www.edb.gov.hk/attachment/en/curriculum-development/cross-kla-studies/applied-learning/repository/Junior%20Taster%20Programmes%20%282025-27%20Cohort%202027%20HKDSE%29%20info.pdf"
+      ],
+      "findings": "D95第5頁第16段交代措施。D102第28頁分列2024年5月11日網上示範、5月18日港專賽馬會馬鞍山校園實體體驗。"
     }
   ]
 }

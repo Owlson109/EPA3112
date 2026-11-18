@@ -33,7 +33,7 @@ def build_bibliography(root, sources, main_slides, reports, timeline, claims):
         ('正文及逐字稿引用', main_ids, '對應正文第1–15頁；來源編號與頁底引註一致。'),
         ('補充核證文件', claim_ids, '用於核證筆記及版本比對；未重複列出正文已引用的文件。'),
         ('四份延伸研究報告', report_ids, '使用者提供的研究報告；核讀相關段落，非逐頁通讀。'),
-        ('延伸時間線參考', time_ids, '包括交接資料及備查記錄；核讀狀態依每項標示，待核內容保留限制。'),
+        ('延伸時間線參考', time_ids, '各項對應研究附錄的事件、屆別或認可期。'),
     ]
     records = []
     for label, ids, description in groups:
@@ -41,14 +41,11 @@ def build_bibliography(root, sources, main_slides, reports, timeline, claims):
         entries = []
         for sid in ordered:
             source = byid[sid]
-            state = source.get('review_state', source.get('verification_status', '未另記錄'))
-            if sid == 'O03':
-                state = '推測／非事實證據；僅時間線備查'
             record = dict(
                 id=sid, group=label, title=source['title'],
-                date_or_version=source.get('document_date_or_version', '未註日期'),
-                author=authors.get(sid, ''), locator=source.get('locator', '頁碼待核'),
-                url=source.get('url', ''), review_state=state,
+                date_or_version=source['document_date_or_version'],
+                author=authors.get(sid, ''), locator=source['locator'],
+                url=source.get('url', ''), review_state=source['review_state'],
                 used_in=dict(uses[sid]),
             )
             entries.append(record)
@@ -58,18 +55,9 @@ def build_bibliography(root, sources, main_slides, reports, timeline, claims):
         labels = {'正文及逐字稿引用': '', '補充核證文件': '核證', '四份延伸研究報告': '研究', '延伸時間線參考': '時間線'}
         kind = f'<span class="bib-kind">{labels[entry["group"]]}</span>' if labels[entry['group']] else ''
         title = entry['title']
-        if sid in ('U11', 'U12', 'U13'):
-            title = re.sub(r'(?:\s*\(\d+\))*\.pdf$', '', title, flags=re.I)
         author = esc(entry['author']) + '。' if entry['author'] else ''
-        flag = ''
-        if sid == 'O03':
-            flag = '〔推測，非事實證據〕'
-        elif sid.startswith('O'):
-            flag = '〔上司經本人轉述〕' if sid == 'O09' else ('〔本人補充〕' if sid == 'O04' else '〔交接口述〕')
-        elif sid in ('U11', 'U12', 'U13'):
-            flag = '〔按原檔名，書目待核〕'
-        elif '待核' in entry['review_state']:
-            flag = '〔相關頁待核〕'
+        flag = {'O01':'〔組員修讀經驗〕', 'O02':'〔導師轉述〕',
+                'O04':'〔組員任教經驗〕', 'O09':'〔課程團隊說明，組員轉述〕'}.get(sid, '')
         return (
             f'<article class="bib-entry" data-bibliography-id="{sid}">'
             f'<span class="bib-id">{sid}</span><div class="bib-copy">'
@@ -95,11 +83,12 @@ def build_bibliography(root, sources, main_slides, reports, timeline, claims):
             '<div class="bibliography-list">' + ''.join(entry_html(e) for e in entries[a:b]) + '</div>'
             for a, b in zip(bounds, bounds[1:])) + '</div>'
 
+    main_public = {sid for sid in main_ids if sid.startswith('D')}
     pages = [
-        ('正文及逐字稿', [r for r in records if r['id'] in main_ids],
-         f'正文及逐字稿共{len(main_ids)}項。D：公開文件；C：證書；U：使用者資料；O：口述／轉述。'),
-        ('核證、研究報告與時間線', [r for r in records if r['id'] not in main_ids],
-         f'補充核證{len(claim_ids)}項、延伸研究報告{len(report_ids)}項、時間線參考{len(time_ids)}項。待核、推測及轉述按各自證據範圍使用。'),
+        ('正文及逐字稿的公開文件', [r for r in records if r['id'] in main_public],
+         f'正文及逐字稿引用 {len(main_public)} 項公開文件。證書、修讀及任教經驗列於下一頁。'),
+        ('證書、經驗與延伸資料', [r for r in records if r['id'] not in main_public],
+         f'正文個案資料 {len(main_ids-main_public)} 項（C 證書、O 經驗及轉述）、補充核證 {len(claim_ids)} 項、研究報告 {len(report_ids)} 項、時間線參考 {len(time_ids)} 項。'),
     ]
     appendix = []
     for i, (label, entries, description) in enumerate(pages, 1):
@@ -112,7 +101,7 @@ def build_bibliography(root, sources, main_slides, reports, timeline, claims):
             notes=[f'本頁列出{label}。點文件名稱可查看完整網址及引用限制。PDF中的文件名稱連至公開原文；私人資料沒有公開連結。'],
             transition='按需查閱下一頁來源，或返回正文。',
         ))
-    metadata = dict(updated_on='2026-11-17', evidence_checked_through='2026-11-17',
+    metadata = dict(updated_on='2026-11-18', evidence_checked_through='2026-11-18',
                     main_slides=len(main_slides), appendix_slides=len(appendix),
                     total_slides=len(main_slides) + len(appendix), source_count=len(records),
                     groups=[dict(title=label, count=len(ids)) for label, ids, _ in groups], sources=records)

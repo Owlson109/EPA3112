@@ -1,23 +1,16 @@
 {
-  "date": "2026-11-17",
+  "passed": true,
   "pages": 17,
-  "main_pages": 15,
-  "reference_pages": 2,
-  "size_points": [
-    0,
-    0,
-    1440,
-    810
-  ],
-  "public_source_links": 126,
+  "all_body_text_present": true,
+  "all_81_sources_present": true,
+  "public_source_links": 128,
   "local_file_links": 0,
-  "notes_in_pdf": false,
-  "bibliography_source_count": 81,
-  "all_bibliography_ids_present": true,
-  "evidence_limit_flags_present": true,
-  "cohort_dates_verified": true,
-  "attributed_explanation_verified": true,
-  "sha256": "6add0fb9d6df7f61307e50420619c8f55e1f855cc487872476a02304c6f23f4e",
-  "venue_corrected": "何文田校區",
-  "cover_single_line": true
+  "sha256": "6edea2749abb71066b50c528eb62234475671ad1ba5015f6a05e0b60b85fc1d7",
+  "visually_reviewed_changed_pages": [
+    2,
+    11,
+    15,
+    16,
+    17
+  ]
 }

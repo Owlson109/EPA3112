@@ -1,18 +1,18 @@
 {
-  "updated_on": "2026-11-17",
-  "evidence_checked_through": "2026-11-17",
+  "updated_on": "2026-11-18",
+  "evidence_checked_through": "2026-11-18",
   "main_slides": 15,
   "appendix_slides": 2,
   "total_slides": 17,
-  "source_count": 81,
+  "source_count": 78,
   "groups": [
     {
       "title": "正文及逐字稿引用",
-      "count": 43
+      "count": 48
     },
     {
       "title": "補充核證文件",
-      "count": 12
+      "count": 9
     },
     {
       "title": "四份延伸研究報告",
@@ -20,7 +20,7 @@
     },
     {
       "title": "延伸時間線參考",
-      "count": 22
+      "count": 17
     }
   ],
   "sources": [
@@ -169,15 +169,13 @@
         "正文／逐字稿": [
           "5",
           "6",
-          "7",
-          "15"
+          "7"
         ],
         "主張核證": [
           "A08",
           "A35",
           "A36",
-          "A37",
-          "A44"
+          "A37"
         ],
         "延伸時間線": [
           "T016",
@@ -265,12 +263,14 @@
       "used_in": {
         "正文／逐字稿": [
           "8",
-          "12"
+          "12",
+          "13"
         ],
         "主張核證": [
           "A12",
           "A19",
-          "A38"
+          "A38",
+          "A45"
         ],
         "延伸時間線": [
           "T036"
@@ -283,7 +283,7 @@
       "title": "2020年職專教育專責小組檢討報告",
       "date_or_version": "2020-01；提交2020-01-23另見D18",
       "author": "",
-      "locator": "印刷34／PDF36，§3.7；印刷40–42／PDF42–44，§3.27–3.33（核讀隨包U07）",
+      "locator": "印刷34／PDF36，§3.7；印刷40–42／PDF42–44，§3.27–3.33",
       "url": "https://www.edb.gov.hk/attachment/tc/edu-system/other-edu-training/vocational-other-edu-program/VPET_TF_Report_2019_c.pdf",
       "review_state": "已核相關頁",
       "used_in": {
@@ -311,13 +311,12 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "11",
-          "15"
+          "11"
         ],
         "主張核證": [
           "A17",
           "A43",
-          "A44"
+          "A46"
         ],
         "延伸時間線": [
           "T014",
@@ -373,11 +372,14 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "13"
+          "13",
+          "14"
         ],
         "主張核證": [
           "A21",
-          "A22"
+          "A22",
+          "A41",
+          "A45"
         ],
         "延伸時間線": [
           "T056"
@@ -399,8 +401,7 @@
           "14"
         ],
         "主張核證": [
-          "A21",
-          "A41"
+          "A21"
         ],
         "延伸時間線": [
           "T055"
@@ -439,16 +440,37 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "11",
-          "15"
+          "11"
         ],
         "主張核證": [
           "A18",
-          "A43",
-          "A44"
+          "A43"
         ],
         "延伸時間線": [
           "T051"
+        ]
+      }
+    },
+    {
+      "id": "D30",
+      "group": "正文及逐字稿引用",
+      "title": "考評局：674科2025年評核方案",
+      "date_or_version": "2025考試年度",
+      "author": "",
+      "locator": "PDF1，2025年科目674評核方案，課業2、4及7",
+      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Subject_Information/apl/Science/674/674-AS-2025-E.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "15"
+        ],
+        "主張核證": [
+          "A02",
+          "A44",
+          "A47"
+        ],
+        "延伸時間線": [
+          "T057"
         ]
       }
     },
@@ -480,17 +502,21 @@
       "title": "教育局本科課程資料2026–28",
       "date_or_version": "2026–28屆；2025-11擬稿",
       "author": "",
-      "locator": "PDF2，課程結構；2025年11月擬稿",
+      "locator": "PDF1學習成果、PDF2課程結構、PDF4–5學與教及課程支柱（2025年11月擬稿）",
       "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/applied-learning/course-information/2026-2028/45_Ex%20%26%20Fitness%20Coaching%2826-28%29_c.pdf",
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
           "13",
-          "14"
+          "14",
+          "15"
         ],
         "主張核證": [
           "A22",
-          "A41"
+          "A41",
+          "A44",
+          "A45",
+          "A48"
         ],
         "延伸時間線": [
           "T061"
@@ -509,13 +535,11 @@
       "used_in": {
         "正文／逐字稿": [
           "2",
-          "11",
-          "15"
+          "11"
         ],
         "主張核證": [
           "A42",
-          "A43",
-          "A44"
+          "A43"
         ],
         "延伸時間線": [
           "T062"
@@ -528,7 +552,7 @@
       "title": "香港學術及職業資歷評審局 港專學程評審摘要 2016年11月",
       "date_or_version": "封面2016-11；發布2017-01-16見D60",
       "author": "",
-      "locator": "印刷1–4／PDF2–5；封面2016年11月",
+      "locator": "印刷1–4／PDF2–5，評定、必要條件及§3.1課程目標",
       "url": "https://hkcaavq.edu.hk/upload/report/578/file/HKCT_LPA_20170116.pdf",
       "review_state": "已核相關頁",
       "used_in": {
@@ -536,6 +560,7 @@
           "2",
           "7",
           "8",
+          "14",
           "15"
         ],
         "主張核證": [
@@ -545,7 +570,8 @@
           "A26",
           "A34",
           "A42",
-          "A44"
+          "A44",
+          "A49"
         ],
         "延伸時間線": [
           "T028",
@@ -560,7 +586,7 @@
       "title": "香港學術及職業資歷評審局 港專評審摘要 2019年11月",
       "date_or_version": "封面2019-11；現場評審2019-09-25",
       "author": "",
-      "locator": "封面；印刷6–7／PDF7–8；印刷10–11／PDF11–12",
+      "locator": "印刷6–7／PDF7–8，§2.7–2.9；印刷10–11／PDF11–12，§2.13–2.14",
       "url": "https://hkcaavq.edu.hk/upload/report/1121/file/Summary%20Report_HKCT_1_LPA_4Re-LPA_VA1007_20200120.pdf",
       "review_state": "已核相關頁",
       "used_in": {
@@ -569,6 +595,7 @@
           "7",
           "9",
           "12",
+          "14",
           "15"
         ],
         "主張核證": [
@@ -577,7 +604,8 @@
           "A15",
           "A26",
           "A42",
-          "A44"
+          "A44",
+          "A49"
         ],
         "延伸時間線": [
           "T037",
@@ -593,15 +621,17 @@
       "title": "香港學術及職業資歷評審局 港專評審摘要 2022年7月",
       "date_or_version": "封面2022-07；檔名日期2022-10-05",
       "author": "",
-      "locator": "印刷5–6／PDF6–7",
+      "locator": "印刷5–6／PDF6–7，§2.7–2.9；印刷11／PDF12，本科目標；印刷14／PDF15，單元表",
       "url": "https://hkcaavq.edu.hk/upload/report/1573/file/Summary%20Report_LPA_ReLPA_HKCT_20221005.pdf",
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "7"
+          "7",
+          "14"
         ],
         "主張核證": [
-          "A10"
+          "A10",
+          "A49"
         ],
         "延伸時間線": [
           "T049"
@@ -620,13 +650,11 @@
       "used_in": {
         "正文／逐字稿": [
           "7",
-          "13",
-          "14"
+          "13"
         ],
         "主張核證": [
           "A10",
-          "A22",
-          "A41"
+          "A22"
         ],
         "延伸時間線": [
           "T058",
@@ -652,6 +680,24 @@
         ],
         "延伸時間線": [
           "T005"
+        ]
+      }
+    },
+    {
+      "id": "D49",
+      "group": "正文及逐字稿引用",
+      "title": "考評局：2022年文憑試歷年乙類科目統計",
+      "date_or_version": "2022DSE統計第7節",
+      "author": "",
+      "locator": "表7f，PDF42（2021及2022英文名稱）、50（2016全體）；表7e，PDF35（日校）",
+      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Exam_Report/Examination_Statistics/dseexamstat22_7.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "9"
+        ],
+        "延伸時間線": [
+          "T048"
         ]
       }
     },
@@ -829,6 +875,51 @@
       }
     },
     {
+      "id": "D87",
+      "group": "正文及逐字稿引用",
+      "title": "考評局2016文憑試統計第7節",
+      "date_or_version": "2016 DSE統計第7節",
+      "author": "",
+      "locator": "表7e印刷114／PDF13（日校）；表7f印刷120／PDF19（全體）",
+      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Exam_Report/Examination_Statistics/dseexamstat16_7.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "15"
+        ],
+        "主張核證": [
+          "A27",
+          "A44"
+        ],
+        "延伸時間線": [
+          "T066"
+        ]
+      }
+    },
+    {
+      "id": "D95",
+      "group": "正文及逐字稿引用",
+      "title": "2023政府就教育相關議案的進度報告（CB(3)676/2023(01)）",
+      "date_or_version": "2023年議案跟進報告",
+      "author": "",
+      "locator": "PDF5，§16–19",
+      "url": "https://www.legco.gov.hk/yr2023/chinese/counmtg/motion/cm20230607-wcs-prpt-c.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "11"
+        ],
+        "主張核證": [
+          "A33",
+          "A50"
+        ],
+        "延伸時間線": [
+          "T068",
+          "T079"
+        ]
+      }
+    },
+    {
       "id": "D100",
       "group": "正文及逐字稿引用",
       "title": "立法會教育事務委員會2015年3月16日會議紀錄（CB(4)1085/14-15）",
@@ -839,11 +930,13 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "5"
+          "5",
+          "14"
         ],
         "主張核證": [
           "A35",
-          "A36"
+          "A36",
+          "A49"
         ],
         "延伸時間線": [
           "T077"
@@ -869,6 +962,27 @@
       }
     },
     {
+      "id": "D102",
+      "group": "正文及逐字稿引用",
+      "title": "教育局《初中應用學習導引課程》活動表（2025–27 年度）",
+      "date_or_version": "2024.05 活動 · 2025–27 年度",
+      "author": "",
+      "locator": "印刷／PDF 第28頁，科目674，網上及實體場",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/cross-kla-studies/applied-learning/repository/Junior%20Taster%20Programmes%20%282025-27%20Cohort%202027%20HKDSE%29%20info.pdf#page=28",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "11"
+        ],
+        "主張核證": [
+          "A50"
+        ],
+        "延伸時間線": [
+          "T079"
+        ]
+      }
+    },
+    {
       "id": "C01",
       "group": "正文及逐字稿引用",
       "title": "港專2014–2016屆證書（觀眾版已匿名化）",
@@ -879,12 +993,14 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "1"
+          "1",
+          "15"
         ],
         "主張核證": [
           "A01",
           "A07",
-          "A20"
+          "A20",
+          "A44"
         ],
         "延伸時間線": [
           "T018",
@@ -903,11 +1019,13 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "1"
+          "1",
+          "15"
         ],
         "主張核證": [
           "A01",
-          "A20"
+          "A20",
+          "A44"
         ],
         "延伸時間線": [
           "T038",
@@ -923,7 +1041,7 @@
       "author": "",
       "locator": "交接包02_RESEARCH，第8節；口述整理，無正式逐字稿",
       "url": "",
-      "review_state": "已讀交接口述整理；未重新訪談",
+      "review_state": "組員修讀經驗",
       "used_in": {
         "正文／逐字稿": [
           "5",
@@ -942,12 +1060,12 @@
     {
       "id": "O02",
       "group": "正文及逐字稿引用",
-      "title": "舊導師經Nelson轉述",
+      "title": "2017年新班教學安排（導師轉述）",
       "date_or_version": "描述2017年9月新一屆",
       "author": "",
-      "locator": "交接包02_RESEARCH，第8節；口述整理，無正式逐字稿",
+      "locator": "組員整理的導師回憶，2017年9月新一屆",
       "url": "",
-      "review_state": "已讀交接口述整理；未重新訪談",
+      "review_state": "導師轉述",
       "used_in": {
         "正文／逐字稿": [
           "8"
@@ -986,43 +1104,23 @@
     {
       "id": "O09",
       "group": "正文及逐字稿引用",
-      "title": "Nelson轉述上司及補充：瑜伽改運動伸展的理由",
+      "title": "運動伸展單元的調整考慮（課程團隊說明，組員轉述）",
       "date_or_version": "2026-11-17本對話補充；所述為2025新班調整",
       "author": "",
-      "locator": "本對話：學校／市場需要、學生接受程度、宗教考慮、名稱與運動應用定位",
+      "locator": "2026.11.17書面轉述，涉及2025新班",
       "url": "",
-      "review_state": "本人提供的上司轉述",
+      "review_state": "組員書面轉述",
       "used_in": {
         "正文／逐字稿": [
-          "14",
-          "15"
+          "14"
         ],
         "主張核證": [
           "A26",
           "A40",
-          "A41",
-          "A44"
+          "A41"
         ],
         "延伸時間線": [
           "T078"
-        ]
-      }
-    },
-    {
-      "id": "D30",
-      "group": "補充核證文件",
-      "title": "考評局：674科2025年評核方案",
-      "date_or_version": "2025考試年度",
-      "author": "",
-      "locator": "PDF1，Assessment Scheme，Task 4",
-      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Subject_Information/apl/Science/674/674-AS-2025-E.pdf",
-      "review_state": "已核相關頁",
-      "used_in": {
-        "主張核證": [
-          "A02"
-        ],
-        "延伸時間線": [
-          "T057"
         ]
       }
     },
@@ -1151,24 +1249,6 @@
       }
     },
     {
-      "id": "D87",
-      "group": "補充核證文件",
-      "title": "考評局2016文憑試統計第7節",
-      "date_or_version": "2016 DSE統計第7節",
-      "author": "",
-      "locator": "表7e印刷114／PDF13（日校）；表7f印刷120／PDF19（全體）",
-      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Exam_Report/Examination_Statistics/dseexamstat16_7.pdf",
-      "review_state": "已核相關頁",
-      "used_in": {
-        "主張核證": [
-          "A27"
-        ],
-        "延伸時間線": [
-          "T066"
-        ]
-      }
-    },
-    {
       "id": "D90",
       "group": "補充核證文件",
       "title": "教育局應用學習概覽2026–28",
@@ -1195,24 +1275,6 @@
       "used_in": {
         "主張核證": [
           "A32"
-        ]
-      }
-    },
-    {
-      "id": "D95",
-      "group": "補充核證文件",
-      "title": "2023政府就教育相關議案的進度報告（CB(3)676/2023(01)）",
-      "date_or_version": "2023年議案跟進報告",
-      "author": "",
-      "locator": "PDF5，§16–19",
-      "url": "https://www.legco.gov.hk/yr2023/chinese/counmtg/motion/cm20230607-wcs-prpt-c.pdf",
-      "review_state": "已核相關頁",
-      "used_in": {
-        "主張核證": [
-          "A33"
-        ],
-        "延伸時間線": [
-          "T068"
         ]
       }
     },
@@ -1294,9 +1356,9 @@
       "title": "2014年施政報告",
       "date_or_version": "2014年施政報告",
       "author": "",
-      "locator": "第101–108段",
+      "locator": "PDF27–28，§101–108",
       "url": "https://www.policyaddress.gov.hk/2014/chi/pdf/PA2014.pdf",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T015"
@@ -1306,12 +1368,12 @@
     {
       "id": "D13",
       "group": "延伸時間線參考",
-      "title": "政府公布新學制中期檢討建議",
+      "title": "教育局總結新學制中期檢討",
       "date_or_version": "2015-06-29",
       "author": "",
-      "locator": "新聞公報；搜尋應用學習及等級",
+      "locator": "2015.06.29，課程建議中「40個應用學習課程」一項及公開評核建議",
       "url": "https://www.info.gov.hk/gia/general/201506/29/P201506290549.htm",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T023"
@@ -1321,12 +1383,12 @@
     {
       "id": "D14",
       "group": "延伸時間線參考",
-      "title": "考評局ApL常見問題：成績匯報",
+      "title": "考評局：應用學習科目成績匯報",
       "date_or_version": "現行動態FAQ；制度自2018DSE",
       "author": "",
-      "locator": "成績匯報／Attained with Distinction (I)/(II)項",
+      "locator": "乙類科目常見問題，第1問「應用學習科目的成績如何匯報？」",
       "url": "https://www.hkeaa.edu.hk/tc/hkdse/assessment/subject_information/category_b_subjects/faq_index/faq_03.html",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T023",
@@ -1337,12 +1399,12 @@
     {
       "id": "D18",
       "group": "延伸時間線參考",
-      "title": "立法會CB(4)764/19-20(01)：職專教育檢討報告",
+      "title": "立法會教育事務委員會：推廣職業專才教育專責小組檢討報告",
       "date_or_version": "2020-07-03",
       "author": "",
-      "locator": "第3段",
+      "locator": "PDF1，§2–3；PDF2，§5",
       "url": "https://www.legco.gov.hk/yr19-20/chinese/panels/ed/papers/ed20200703cb4-764-1-c.pdf",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T039"
@@ -1352,12 +1414,12 @@
     {
       "id": "D19",
       "group": "延伸時間線參考",
-      "title": "政府成立推廣職專教育和資歷架構督導委員會",
+      "title": "政府成立推廣職業專才教育和資歷架構督導委員會",
       "date_or_version": "2020-09-01",
       "author": "",
-      "locator": "新聞公報全文",
+      "locator": "2020.09.01，新聞公報首兩段及委員任期段",
       "url": "https://www.info.gov.hk/gia/general/202009/01/P2020090100286.htm",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T041"
@@ -1382,12 +1444,12 @@
     {
       "id": "D28",
       "group": "延伸時間線參考",
-      "title": "立法會十一題：文憑試科目安排",
+      "title": "立法會十一題：香港中學文憑考試的科目安排",
       "date_or_version": "2021-06-16",
       "author": "",
-      "locator": "立法會十一題政府答覆",
+      "locator": "2021.06.16，政府答覆（二）及（三）",
       "url": "https://www.info.gov.hk/gia/general/202106/16/P2021061600308.htm",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T046"
@@ -1397,12 +1459,12 @@
     {
       "id": "D32",
       "group": "延伸時間線參考",
-      "title": "職專教育官方網站：兩屆專責小組",
+      "title": "職專教育官方網站：推廣職業專才教育專責小組",
       "date_or_version": "動態官方專責小組介紹",
       "author": "",
-      "locator": "2014及2018專責小組／2015及2020報告段",
+      "locator": "「推廣職業教育專責小組」及「推廣職業專才教育專責小組」兩節",
       "url": "https://www.vpet.edu.hk/tc/overview/task-force-on-promotion-of-vpet/",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T016",
@@ -1413,12 +1475,12 @@
     {
       "id": "D34",
       "group": "延伸時間線參考",
-      "title": "2006年政府應用學習相關新聞公報",
+      "title": "職業導向課程資歷獲廣泛認可",
       "date_or_version": "2006-08-08",
       "author": "",
-      "locator": "政府新聞公報全文",
+      "locator": "2006.08.08，新聞公報首兩段",
       "url": "https://www.info.gov.hk/gia/general/200608/08/P200608080151.htm",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T007"
@@ -1428,12 +1490,12 @@
     {
       "id": "D46",
       "group": "延伸時間線參考",
-      "title": "2017年施政報告",
-      "date_or_version": "2017-10施政報告",
+      "title": "行政長官2017年施政報告",
+      "date_or_version": "2017.10.11",
       "author": "",
-      "locator": "第125段",
+      "locator": "PDF39，§125；繁體網頁同段",
       "url": "https://www.policyaddress.gov.hk/2017/sim/pdf/PA2017.pdf",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T031"
@@ -1443,12 +1505,12 @@
     {
       "id": "D47",
       "group": "延伸時間線參考",
-      "title": "2022年施政報告 職專教育",
+      "title": "行政長官2022年施政報告：職專教育",
       "date_or_version": "2022年施政報告",
       "author": "",
-      "locator": "第122(v)段",
+      "locator": "§122（v）「加強中學生應用學習及職場體驗」",
       "url": "https://www.policyaddress.gov.hk/2022/tc/p122.html",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T052"
@@ -1456,29 +1518,14 @@
       }
     },
     {
-      "id": "D49",
-      "group": "延伸時間線參考",
-      "title": "考評局 2022年文憑試統計 第7節 應用學習",
-      "date_or_version": "2022DSE統計第7節",
-      "author": "",
-      "locator": "印刷／PDF42名稱對照；50頁2016全體考生；35頁日校數不同",
-      "url": "https://www.hkeaa.edu.hk/DocLibrary/HKDSE/Exam_Report/Examination_Statistics/dseexamstat22_7.pdf",
-      "review_state": "已取得待核讀",
-      "used_in": {
-        "延伸時間線": [
-          "T048"
-        ]
-      }
-    },
-    {
       "id": "D53",
       "group": "延伸時間線參考",
-      "title": "政府新聞公報 學校課程檢討專責小組提交報告",
+      "title": "學校課程檢討專責小組向教育局提交檢討報告",
       "date_or_version": "2020-09-22",
       "author": "",
-      "locator": "新聞公報全文",
+      "locator": "2020.09.22，公報首段及六個方向性建議",
       "url": "https://www.info.gov.hk/gia/general/202009/22/P2020092200320p.htm",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T042"
@@ -1488,12 +1535,12 @@
     {
       "id": "D55",
       "group": "延伸時間線參考",
-      "title": "2021年施政報告",
+      "title": "行政長官2021年施政報告：多元進階路徑",
       "date_or_version": "2021年施政報告",
       "author": "",
-      "locator": "印刷47／PDF55，第142段",
+      "locator": "印刷47／PDF55，§142",
       "url": "https://www.policyaddress.gov.hk/2021/chi/pdf/PA2021.pdf",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T045"
@@ -1503,27 +1550,12 @@
     {
       "id": "D58",
       "group": "延伸時間線參考",
-      "title": "教育局 優化高中課程",
+      "title": "教育局：優化高中課程",
       "date_or_version": "動態網頁；記述2021-04優化",
       "author": "",
-      "locator": "優化高中課程措施及善用釋出課時段",
+      "locator": "「高中四個核心科目」及「高中選修科目（包括應用學習和其他語言）」",
       "url": "https://www.edb.gov.hk/tc/curriculum-development/renewal/opt_ss_curriculum.html",
-      "review_state": "已取得待核讀",
-      "used_in": {
-        "延伸時間線": [
-          "T045"
-        ]
-      }
-    },
-    {
-      "id": "D59",
-      "group": "延伸時間線參考",
-      "title": "2021年施政報告 多元進階路徑",
-      "date_or_version": "2021年施政報告",
-      "author": "",
-      "locator": "第142段",
-      "url": "https://www.policyaddress.gov.hk/2021/chi/p140.html",
-      "review_state": "已取得待核讀",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T045"
@@ -1533,15 +1565,30 @@
     {
       "id": "D60",
       "group": "延伸時間線參考",
-      "title": "評審局評審報告公開索引：港專2017年1月16日條目",
+      "title": "評審局：港專運動及體適能教練與公關及傳訊課程評審索引",
       "date_or_version": "2017-01-16發布索引",
       "author": "",
-      "locator": "搜尋日期2017-01-16及Sports and Fitness Coaching／Public Relations",
-      "url": "https://hkcaavq.edu.hk/zh-hant/accreditation/accreditation_reports/summary_reports?page=303",
-      "review_state": "已取得待核讀",
+      "locator": "索引2017.01.16，港專雙課程條目；原件D41",
+      "url": "https://hkcaavq.edu.hk/zh-hant/accreditation/accreditation_reports/summary_reports?page=304",
+      "review_state": "已核相關頁",
       "used_in": {
         "延伸時間線": [
           "T029"
+        ]
+      }
+    },
+    {
+      "id": "D64",
+      "group": "延伸時間線參考",
+      "title": "應用學習課程及評估指引2009原版",
+      "date_or_version": "2009原版",
+      "author": "",
+      "locator": "印刷1／PDF8，§1.1–1.2",
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/applied-learning/curriculum-documents/past-documents/ApL%20C%20and%20A%20Guide_C.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "延伸時間線": [
+          "T007"
         ]
       }
     },
@@ -1557,66 +1604,6 @@
       "used_in": {
         "延伸時間線": [
           "T069"
-        ]
-      }
-    },
-    {
-      "id": "U11",
-      "group": "延伸時間線參考",
-      "title": "The Development of Senior secondary Tertiary Education, 1978 (Policy Paper 4) (1).pdf",
-      "date_or_version": "版本以原件為準",
-      "author": "",
-      "locator": "交接包07_UPLOADS索引；精確引用頁碼待核",
-      "url": "",
-      "review_state": "交接／備查",
-      "used_in": {
-        "延伸時間線": [
-          "T001"
-        ]
-      }
-    },
-    {
-      "id": "U12",
-      "group": "延伸時間線參考",
-      "title": "A Perspective on Education in Hong Kong, 1982 (Policy paper 6) (1) (2).pdf",
-      "date_or_version": "版本以原件為準",
-      "author": "",
-      "locator": "交接包07_UPLOADS索引；精確引用頁碼待核",
-      "url": "",
-      "review_state": "交接／備查",
-      "used_in": {
-        "延伸時間線": [
-          "T002"
-        ]
-      }
-    },
-    {
-      "id": "U13",
-      "group": "延伸時間線參考",
-      "title": "Education Commision Report No.2 1986 (POLICY Paper 8) (1).pdf",
-      "date_or_version": "版本以原件為準",
-      "author": "",
-      "locator": "交接包07_UPLOADS索引；精確引用頁碼待核",
-      "url": "",
-      "review_state": "交接／備查",
-      "used_in": {
-        "延伸時間線": [
-          "T003"
-        ]
-      }
-    },
-    {
-      "id": "O03",
-      "group": "延伸時間線參考",
-      "title": "舊生過渡安排推測",
-      "date_or_version": "2017年",
-      "author": "",
-      "locator": "交接包02_RESEARCH，第8節；口述整理，無正式逐字稿",
-      "url": "",
-      "review_state": "推測／非事實證據；僅時間線備查",
-      "used_in": {
-        "延伸時間線": [
-          "T030"
         ]
       }
     }

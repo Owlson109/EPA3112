@@ -93,7 +93,11 @@
   const row=rows.get(index+1);
   if(index===0||!row||row.enabled===false||!enabled||reduced.matches||print.matches||document.hidden)return;
   focusBefore=document.activeElement;
-  const top=el('div','evidence-intro-top');top.append(el('span','','EPA3112 ／ 從文件看發展'),el('span','',String(index+1).padStart(2,'0')+' / 17'));
+  const courseEdition=slide.dataset.layout==='course-edition';
+  overlay.dataset.layout=courseEdition?'course-edition':'';
+  overlay.dataset.slideTheme=slide.dataset.slideTheme||'';
+  const top=el('div','evidence-intro-top');
+  top.append(el('span','',courseEdition?'EPA3112　／　證據摘讀':'EPA3112 ／ 從文件看發展'),el('span','',String(index+1).padStart(2,'0')+' / 17'));
   const title=el('h2','',row.heading);
   const docs=el('div','evidence-documents');
   for(const card of row.cards){
@@ -109,9 +113,21 @@
    for(const line of card.lines){const p=el('p','evidence-line');p.append(el('span','evidence-highlight',line));lines.append(p);}
    const after=el('p','evidence-context context-after',card.context_after);
    after.setAttribute('aria-hidden','true');
-   excerpt.append(before,lines,after);content.append(excerpt);paper.append(head,el('h3','',card.title),content,el('p','evidence-paper-locator',card.locator));docs.append(paper);
+   excerpt.append(before,lines,after);content.append(excerpt);
+   const cardTitle=el('h3','',card.title);
+   let heading=cardTitle;
+   if(courseEdition){
+    heading=el('div','evidence-document-heading');heading.append(cardTitle);
+    if(card.facsimile){
+     const figure=el('figure','source-facsimile'),img=el('img');
+     img.src=card.facsimile;img.alt='';
+     figure.append(img,el('figcaption','','原頁 · PDF '+card.pdf_page));heading.append(figure);
+    }
+   }
+   paper.append(head,heading,content,el('p','evidence-paper-locator',card.locator));docs.append(paper);
   }
-  const foot=el('div','evidence-intro-foot');foot.append(el('span','','文件重點 → 課程發展'),el('span','evidence-progress'));
+  const foot=el('div','evidence-intro-foot');
+  foot.append(el('span','',courseEdition?'重點摘述　／　頁碼見各卡下方':'文件重點 → 課程發展'),el('span','evidence-progress'));
   const backdrop=el('div','evidence-backdrop'),bridge=el('div','evidence-bridge');
   backdrop.setAttribute('aria-hidden','true');bridge.setAttribute('aria-hidden','true');
   overlay.replaceChildren(backdrop,top,title,docs,foot,bridge);
