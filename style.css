@@ -25,7 +25,7 @@
 .epa .source-refs a{color:var(--text-2);text-decoration:none;border-bottom:1px dotted var(--border-strong)}
 .epa .source-refs a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .epa .source-refs b{color:var(--accent);font-weight:650}
-.epa .page-label{white-space:nowrap;font-family:var(--font-mono);font-size:23px;color:var(--accent)}
+.epa .page-label{position:absolute;right:0;bottom:0;line-height:1.5;letter-spacing:normal;font-weight:400;font-variant-numeric:tabular-nums;white-space:nowrap;font-family:var(--font-mono);font-size:23px;color:var(--accent)}
 .epa .source-refs .source-label{font-size:18px;letter-spacing:.08em;color:var(--text-3)}
 .epa .cover-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;height:780px;align-items:center}
 .epa .cover-copy h1{font-size:83px;line-height:1.25;letter-spacing:-.04em;margin:25px 0 20px;font-weight:650}
@@ -206,7 +206,7 @@
 .epa .bib-meta{font-size:13.5px;line-height:1.25;color:var(--text-2);overflow-wrap:anywhere}
 .epa .bib-kind{font-size:11px;line-height:1.2;color:var(--accent);margin-right:5px;padding:1px 3px;background:var(--surface-2);font-weight:500;white-space:nowrap}
 .epa .bib-flag{color:var(--oral-ink)}
-.epa .reference-slide .deck-footer{font-size:16px;left:76px;right:76px}
+.epa .reference-slide .deck-footer{font-size:16px;left:76px}
 .viewer-tools{position:fixed;z-index:45;right:14px;bottom:8px;display:flex;gap:4px;padding:4px;border:1px solid var(--border);border-radius:8px;background:var(--surface);font-family:var(--font-sans)}
 .viewer-tools button,.viewer-tools a{border:0;padding:5px 8px;font:12px var(--font-sans);line-height:1.4;color:var(--text-2);background:transparent;border-radius:4px;cursor:pointer;text-decoration:none}
 .viewer-tools button:hover,.viewer-tools a:hover{color:var(--accent);background:var(--surface-2)}

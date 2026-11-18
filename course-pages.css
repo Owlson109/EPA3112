@@ -20,11 +20,10 @@
 .epa .slide[data-layout="course-edition"] .chapter-part.here::after {content:"";height:4px;position:absolute;bottom:-1px;inset-inline:0;background:currentColor;}
 .epa .slide[data-layout="course-edition"] .section-mark {justify-self:end;line-height:30px;white-space:nowrap;}
 .epa .slide[data-layout="course-edition"]>h2 {font-size:57px;letter-spacing:-.035em;margin:0 0 28px;line-height:1.32;}
-.epa .slide[data-layout="course-edition"] .deck-footer {padding-top:15px;border-top:1px solid var(--border-strong);bottom:35px;align-items:baseline;min-height:50px;}
+.epa .slide[data-layout="course-edition"] .deck-footer {padding-top:15px;border-top:1px solid var(--border-strong);align-items:baseline;min-height:50px;}
 .epa .slide[data-layout="course-edition"] .source-refs {gap:3px 18px;line-height:1.48;}
 .epa .slide[data-layout="course-edition"] .source-label {padding-right:12px;border-right:1px solid var(--border-strong);font-weight:700;}
 .epa .slide[data-layout="course-edition"] .source-refs a {font-size:19px;}
-.epa .slide[data-layout="course-edition"] .page-label {font-size:22px;font-weight:700;letter-spacing:.08em;}
 .epa .slide[data-layout="course-edition"] .tag {border-radius:3px;letter-spacing:.025em;}
 
 /* Effective periods are drawn on one time scale, including the overlap. */
