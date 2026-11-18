@@ -6,8 +6,8 @@
   },
   {
     "path": "EPA3112_簡報.pdf",
-    "bytes": 3401975,
-    "sha256": "bbbe213cca596f4b4a272ba977f4a9edf85d0d0572a4f4136d6ffb3b1ef516e8"
+    "bytes": 3403132,
+    "sha256": "f2058ac8b5aaf8b4d54d767f42ceb4418adef266bb96204c070b17051ff65a09"
   },
   {
     "path": "LICENSE",
@@ -31,8 +31,8 @@
   },
   {
     "path": "appendix.html",
-    "bytes": 88986,
-    "sha256": "0877e54626d829055b4b076f2fcb3533f637e0f3891256a792b66d71c31e5359"
+    "bytes": 89153,
+    "sha256": "50fb9bcdfa38388c60db72deedaa78b056fb6b45ab7f1499520510d7c64ecf4c"
   },
   {
     "path": "assets/animations/animations.css",
@@ -416,13 +416,13 @@
   },
   {
     "path": "data/bibliography.csv",
-    "bytes": 27592,
-    "sha256": "58ce7d0a4667c81af5241fa88320c16261f0141dc1e76ab1f5bbf254e7c15ac4"
+    "bytes": 27621,
+    "sha256": "fb27559e11cc635eb10ef7d06a916b4d2e1bc55c4ac3062005b01d176bbbd00c"
   },
   {
     "path": "data/bibliography.json",
-    "bytes": 48313,
-    "sha256": "aa0ed9539736e214a23496c5a134ca3b95cfbcee942f38aaab29133216d0a4d2"
+    "bytes": 48358,
+    "sha256": "c9bd5c98fc6eba3eeea3336f37500f11b82dafae42909fe01fc2bd7f0d0afc73"
   },
   {
     "path": "data/changelog.csv",
@@ -436,28 +436,28 @@
   },
   {
     "path": "data/claim_audit.csv",
-    "bytes": 16198,
-    "sha256": "190acc32d7e5d8945d0ffcc90f6d2b733d48ac57029dffa9f7932176389cee10"
+    "bytes": 16651,
+    "sha256": "5378a7343aeb424cd27ef9d95586ec21f0856c2e056b20222a420e17d512f77a"
   },
   {
     "path": "data/claim_audit.json",
-    "bytes": 24186,
-    "sha256": "914957035da4cfa7aa80743779d31f4128b6b36bd8e7bd3018062fed2180f2f6"
+    "bytes": 24643,
+    "sha256": "40d9fe8dd60fd3d7f4d8b70ad29228bf9609067ea5359201bb71e136ff72b436"
   },
   {
     "path": "data/claim_source_matrix.csv",
-    "bytes": 16198,
-    "sha256": "190acc32d7e5d8945d0ffcc90f6d2b733d48ac57029dffa9f7932176389cee10"
+    "bytes": 16651,
+    "sha256": "5378a7343aeb424cd27ef9d95586ec21f0856c2e056b20222a420e17d512f77a"
   },
   {
     "path": "data/content.csv",
-    "bytes": 36618,
-    "sha256": "752957679a5ba7e75ce2f08da4692a664590b3373869157c24e507e80daed576"
+    "bytes": 36104,
+    "sha256": "b8d470778445101546ccc4e8bfc115fd75f42e6f4c40c927a4321211821d64a8"
   },
   {
     "path": "data/content.json",
-    "bytes": 39697,
-    "sha256": "f1cf5ba7c97d1538b5f57e37191fc373b1a74325e540b25cf0a1c41df5c338bb"
+    "bytes": 39195,
+    "sha256": "ba1b70b7191bf5229597dc43ac181139b23e6e93525f16efda37cc8eee25a571"
   },
   {
     "path": "data/evidence_intros.json",
@@ -486,18 +486,18 @@
   },
   {
     "path": "data/sources.csv",
-    "bytes": 54877,
-    "sha256": "8b417a302cd84b4eab6f5bf5cf1c393ccd8afeb44742587c8988282b0cfb12da"
+    "bytes": 55050,
+    "sha256": "c21354438f8b0678084e4b8a429f4036b316a7e6e0379ca12ab4ca42e876e6d6"
   },
   {
     "path": "data/sources.json",
-    "bytes": 86608,
-    "sha256": "b0b26aae088e3c42ad6e5242877ba72ab540669cc752829248660ec5ffe278b2"
+    "bytes": 86781,
+    "sha256": "c94e3be8ca2ca61ac0914dc2066a5d83bc39b8f033e6055b3d3f600b1c2ae124"
   },
   {
     "path": "data/speaker_timing.json",
     "bytes": 998,
-    "sha256": "6654198974475c599548d240b7b61ccd7f6a5903daa53c187afa91210a106ee8"
+    "sha256": "edc53a3905bdcbeffdf9894118b19ccd9ebb09ddf9b869b40521d0b06cbbb155"
   },
   {
     "path": "data/timeline.csv",
@@ -566,8 +566,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 220257,
-    "sha256": "087b0aeb5607b7b4eb92c8be69a16e2d81ab5b87949a658929ae535d1bf2f1a2"
+    "bytes": 220154,
+    "sha256": "1261b0c478136aa7b35d5c34846d4f28f185dee66c59cbc33ebe6b7544a9f408"
   },
   {
     "path": "motion.css",
@@ -581,8 +581,8 @@
   },
   {
     "path": "official-research.html",
-    "bytes": 122095,
-    "sha256": "916e80947c03cf373f6bc3baef6a39e7d91dfe3d78f27b7d90b9f6223e63fb16"
+    "bytes": 122745,
+    "sha256": "ea77ec4dd17bb0e76a24d68cb81ccb28c5dff63429ab51b6f8ac5004ae70fc9d"
   },
   {
     "path": "qa/auto-held-mobile.png",
@@ -1131,13 +1131,13 @@
   },
   {
     "path": "speaker-notes.html",
-    "bytes": 29479,
-    "sha256": "f1632a27e94e54516f2f3e7b2a8092c9c4908194200666a08f51d2dc422ecbaa"
+    "bytes": 29081,
+    "sha256": "c5ff1d3825db6937642f9148ee708611d38a0e98bb527edf6d99967df575cc2c"
   },
   {
     "path": "speaker-notes.txt",
-    "bytes": 15652,
-    "sha256": "ba01762a500833ba836bc1e6fdace8cb739ec26511d0efcc51851d16f0d9a7c7"
+    "bytes": 15073,
+    "sha256": "9e2a5dfd8d3a749061b33398ced1e82b6a824c843bfef3c7c72e34b0124735ce"
   },
   {
     "path": "storyline.html",
