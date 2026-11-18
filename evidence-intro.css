@@ -1,22 +1,129 @@
-/* A wide cover with an unbroken course name and paired primary evidence. */
-.epa .cover-redesign{display:flex;flex-direction:column;gap:30px}
-.epa .cover-heading{position:relative}
+/* A single display surface keeps the two records at the same reading scale. */
+.epa .cover-redesign{display:grid;gap:42px}
 .epa .cover-heading h1{font-size:80px;line-height:1.18;letter-spacing:-.025em;margin:0;white-space:nowrap}
-.epa .cover-heading h1>span{display:inline}
-.epa .cover-heading h1 em{display:inline;font-size:inherit;line-height:inherit;margin:0}
-.epa .cover-heading>p{font-size:30px;color:var(--text-2);margin:18px 0 0}
-.epa .cover-evidence-row{display:grid;grid-template-columns:420px 1fr;gap:70px;align-items:center}
-.epa .cover-thread{border-top:3px solid var(--accent);padding-top:24px}
-.epa .cover-period{display:flex;flex-direction:column;align-items:flex-start;margin:25px 0;gap:2px;color:var(--accent)}
-.epa .cover-period b{font-size:43px;font-weight:600;line-height:1.3}
-.epa .cover-period>span{font-size:25px;color:var(--border-strong);padding-left:110px}
-.epa .cover-thread .cover-question{font-size:29px;line-height:1.7}
-.epa .cover-themes{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;font-size:20px;color:var(--text-2)}
-.epa .cover-themes span{border-top:1px solid var(--border-strong);padding-top:10px}
-.epa .cover-certificate-pair{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-left:45px;border-left:1px solid var(--border)}
-.epa .cover-certificate-pair .lbl{margin-bottom:14px;font-size:27px}
-.epa .cover-certificate-pair .img-frame{height:460px;aspect-ratio:auto;background:var(--surface);border:1px solid var(--border);border-radius:3px}
-.epa .cover-certificate-pair .img-cap{font-size:23px;margin-top:12px}
+.epa .cover-heading>p{font-size:30px;color:var(--text-2);margin:14px 0 0}
+.epa .cover-certificate-pair{
+  --mount-muted:color-mix(in srgb,var(--bg) 76%,var(--accent));
+  --mount-rule:color-mix(in srgb,var(--bg) 27%,transparent);
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:42px 0;
+  background:color-mix(in srgb,var(--text-1) 83%,var(--accent));color:var(--bg)
+}
+.epa .certificate-record{
+  --paper-inset:42px;--caption-gap:42px;
+  position:relative;display:grid;grid-template-columns:340px minmax(0,1fr);
+  align-items:center;gap:var(--caption-gap);margin:0;padding:0 42px 0 var(--paper-inset)
+}
+.epa .certificate-record+.certificate-record{border-left:1px solid var(--mount-rule)}
+.epa .certificate-mount{position:relative;display:block}
+.epa .certificate-paper,.epa .certificate-lens-copy{
+  display:block;width:340px;height:480px;aspect-ratio:auto;overflow:hidden;
+  border:0;border-radius:0;background:var(--surface)
+}
+.epa .certificate-paper{box-shadow:0 8px 20px color-mix(in srgb,var(--text-1) 45%,transparent)}
+.epa .certificate-photo img{
+  /* Map the four paper corners (44,182), (819,165), (831,1296), (36,1287)
+     in the anonymised 864 × 1536 photo to the 340 × 480 display above. */
+  position:absolute;left:0;top:0;width:864px;height:1536px;max-width:none;transform-origin:0 0;
+  transform:matrix3d(.451531367,.009827352,0,.0000307753,
+                     .003269005,.448011640,0,.0000233787,
+                     0,0,1,0,-20.462339,-81.970522,0,1)
+}
+
+/* The glass and its enlarged copy share a focus point on the 340 × 480 paper.
+   This keeps the lettering beneath the centre registered throughout a move. */
+@property --cert-focus-x{syntax:"<length>";inherits:true;initial-value:0px}
+@property --cert-focus-y{syntax:"<length>";inherits:true;initial-value:0px}
+@property --cert-magnification{syntax:"<number>";inherits:true;initial-value:1}
+.epa .certificate-lens{
+  --cert-focus-x:203px;--cert-focus-y:272px;--cert-magnification:3.15;
+  --lens-size:1.2;--reading-path:certificate-magnify-course;
+  --lens-rim:color-mix(in srgb,var(--accent) 66%,var(--text-1));
+  --lens-glint:color-mix(in srgb,var(--bg) 90%,transparent);
+  display:none;position:absolute;left:var(--cert-focus-x);top:var(--cert-focus-y);
+  width:calc(336px * var(--lens-size));height:calc(82px * var(--lens-size));
+  margin:calc(-41px * var(--lens-size)) 0 0 calc(-168px * var(--lens-size));
+  isolation:isolate;pointer-events:none
+}
+.epa .certificate-mount-qf .certificate-lens{
+  --cert-focus-x:169px;--cert-focus-y:290px;--cert-magnification:3;--reading-path:certificate-read-2024
+}
+.epa .certificate-lens::before{
+  content:"";position:absolute;left:calc(12px * var(--lens-size));top:calc(100% - 12px * var(--lens-size));
+  width:calc(32px * var(--lens-size));height:calc(8px * var(--lens-size));
+  border:1px solid var(--lens-glint);border-radius:6px;background:var(--lens-rim);
+  transform:rotate(140deg);transform-origin:left center
+}
+.epa .certificate-lens-glass{
+  display:block;position:absolute;inset:0;border-radius:calc(36px * var(--lens-size));overflow:hidden;background:var(--surface);
+  box-shadow:0 0 0 2px var(--lens-rim),0 0 0 3.5px var(--lens-glint),0 6px 14px color-mix(in srgb,var(--text-1) 30%,transparent)
+}
+.epa .certificate-lens-glass::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 66%,transparent),transparent 29%,transparent 71%,color-mix(in srgb,var(--bg) 66%,transparent));
+  box-shadow:inset 0 0 0 2px var(--lens-glint),inset 0 -4px 8px color-mix(in srgb,var(--accent) 12%,transparent)
+}
+.epa .certificate-lens-copy{
+  position:absolute;left:50%;top:50%;transform-origin:0 0;
+  transform:scale(calc(var(--cert-magnification) * var(--lens-size))) translate(calc(0px - var(--cert-focus-x)),calc(0px - var(--cert-focus-y)))
+}
+@keyframes certificate-lens-reveal{
+  0%,2%,100%{opacity:0;transform:scale(.94)}
+  8%,92%{opacity:1;transform:scale(1)}
+  98%{opacity:0;transform:scale(.94)}
+}
+@keyframes certificate-magnify-course{
+  0%,2%{--cert-magnification:1.35}
+  8%,100%{--cert-magnification:3.15}
+}
+@keyframes certificate-read-2024{
+  /* English course name, Chinese qualification, then the printed QF Level row. */
+  0%,2%{--cert-focus-x:169px;--cert-focus-y:287px;--cert-magnification:1.35}
+  8%,35%{--cert-focus-x:169px;--cert-focus-y:290px;--cert-magnification:3}
+  42%,62%{--cert-focus-x:169px;--cert-focus-y:208px;--cert-magnification:3.12}
+  71%,100%{--cert-focus-x:175px;--cert-focus-y:341px;--cert-magnification:2.34}
+}
+@media screen and (prefers-reduced-motion:no-preference){
+  .epa:not([data-preview]) .deck>.slide:is(.is-active,.evidence-outgoing) .certificate-lens{
+    --reading-cycle:16s cubic-bezier(.42,0,.22,1) infinite both;
+    display:block;animation:certificate-lens-reveal var(--reading-cycle),var(--reading-path) var(--reading-cycle)
+  }
+  .epa:is([data-motion-paused],:has(dialog[open],.overview.open,.notes-overlay.open)) .slide .certificate-lens{
+    animation-play-state:paused!important
+  }
+}
+@media screen and (prefers-reduced-motion:reduce){
+  .epa:not([data-preview]) .deck>.slide.is-active .certificate-lens{display:block}
+  .epa .certificate-mount-qf .certificate-lens{--cert-focus-y:208px;--cert-magnification:3.12}
+}
+@media screen{
+  .epa:not([data-preview]) .deck>.slide .certificate-record{--paper-inset:58px;--caption-gap:88px}
+}
+.epa .certificate-cohort{font-size:26px;font-weight:500;letter-spacing:.035em;color:var(--mount-muted)}
+.epa .certificate-name{margin:18px 0 28px;line-height:1.12}
+.epa .certificate-name strong{display:block;font:700 70px/1.12 var(--epa-heading-font);letter-spacing:-.035em}
+.epa .certificate-name>span{display:block;margin-top:7px;font-size:29px;line-height:1.3}
+.epa .certificate-fields{border-top:1px solid var(--mount-rule);padding-top:19px}
+.epa .certificate-fields p{font-size:24px;line-height:1.65}
+.epa .certificate-open{
+  display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:6px 0;
+  border:0;background:transparent;color:var(--mount-muted);cursor:zoom-in;
+  font:500 22px/1.4 var(--font-sans)
+}
+/* Include the glass overhang in the paper's existing zoom button. */
+.epa .certificate-open::after{content:"";position:absolute;inset:0 auto 0 0;width:calc(var(--paper-inset) + 340px + var(--caption-gap) - 6px)}
+.epa .certificate-open:hover,.epa .certificate-open:focus-visible{color:var(--surface);text-decoration:underline;text-underline-offset:5px}
+.epa .certificate-open:focus-visible{outline-color:var(--surface);outline-offset:5px}
+.epa .certificate-glass{display:inline-block;position:relative;width:16px;height:16px;border:2px solid currentColor;border-radius:50%;margin-right:3px}
+.epa .certificate-glass::after{content:"";position:absolute;left:11px;top:11px;width:9px;height:2px;background:currentColor;transform:rotate(45deg);transform-origin:left}
+.epa #certificate-dialog{width:min(680px,94vw);height:min(92vh,1120px);height:min(92dvh,1120px);max-height:none;padding:16px 20px 20px}
+.epa #certificate-dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr);gap:12px}
+.epa #certificate-dialog h2{margin:0;font-size:clamp(18px,3vw,25px)}
+.epa .certificate-enlargement{display:grid;place-items:center;grid-template: minmax(0,1fr) / minmax(0,1fr);overflow:hidden;background:var(--bg-soft)}
+body[data-preview] .certificate-open,.epa .overview .certificate-open{display:none}
+@media print{
+  .epa .certificate-open{display:none}
+  .epa #certificate-dialog[open]{display:none!important}
+}
 
 /* One shared timeline: papers depart while a warm light band and the actual
    slide overlap. Prepared content stays in its final layout after the reveal. */

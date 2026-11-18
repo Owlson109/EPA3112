@@ -1,5 +1,37 @@
 ﻿number,title,era,speaker,seconds,refs,body,notes,purpose,transition,layout,theme
-1,兩張證書，一個課程的發展,問題起點,A,45,"[""C01"", ""C02""]","<div class=""cover-redesign""><header class=""cover-heading"" data-anim=""fade-up""><h1><span>港專「運動及體適能教練」</span><em>的發展</em></h1><p>教育目的、資歷認可與課程調整</p></header><div class=""cover-evidence-row""><div class=""cover-thread"" data-anim=""fade-up""><span class=""eyebrow"">兩張證書 · 一條發展線</span><div class=""cover-period""><b>2014–2016</b><span>↓</span><b>2022–2024</b></div><p class=""cover-question"">名稱與認可標示，<br>如何隨課程發展而改變？</p><div class=""cover-themes""><span>教育目的</span><span>資歷認可</span><span>課程調整</span></div></div><div class=""cover-certificate-pair"" data-anim=""stagger-list""><article><p class=""lbl"">2016 頒發 <span class=""tag"">C01</span></p><figure class=""img-frame contain""><img src=""images/C01_redacted.png"" alt=""2014–2016屆證書，個人姓名與序號已遮蔽""></figure><p class=""img-cap"">Sports and Fitness Coaching</p></article><article><p class=""lbl"">2024 頒發 <span class=""tag"">C02</span></p><figure class=""img-frame contain""><img src=""images/C02_redacted.png"" alt=""2022–2024屆證書，個人姓名與序號已遮蔽""></figure><p class=""img-cap"">Exercise and Fitness Coaching</p></article></div></div></div>","[""大家好。請大家先望一望呢兩張港專證書。左邊係2016年，英文寫 <strong>Sports and Fitness Coaching</strong>；右邊係2024年，改用 <strong>Exercise and Fitness Coaching</strong>，仲列出資歷架構第三級。兩張證書講緊嘅，都係「運動及體適能教練」。"", ""點解同一門課，前後會有呢啲分別？我哋會用公開文件，同組員由修讀到任教嘅經驗，追查兩件事：認可幾時出現，同埋學生喺課堂實際要學啲乜。""]",從兩張港專證書提出研究問題：這門課培養甚麼能力，認可和教學內容又怎樣演變？,要讀懂證書上面嗰個「教練」名稱，先要知道，呢科想教識高中生做啲乜。,,
+1,兩張證書，一個課程的發展,問題起點,A,45,"[""C01"", ""C02""]","<div class=""cover-redesign"">
+<header class=""cover-heading"" data-anim=""fade-up""><h1><span>港專「運動及體適能教練」</span><em>的發展</em></h1><p>從兩張證書出發，探討課程的教育目的、資歷認可與教學內容。</p></header>
+<div class=""cover-certificate-pair"" role=""group"" aria-label=""兩屆港專證書對照"">
+<figure class=""certificate-record"">
+  <span class=""certificate-mount"">
+    <span class=""img-frame contain certificate-paper""><img src=""images/C01_redacted.png"" alt=""港專 2014–2016 屆證書，姓名及序號已遮蔽""></span>
+    <span class=""certificate-lens"" aria-hidden=""true""><span class=""certificate-lens-glass"">
+      <span class=""img-frame contain certificate-lens-copy""><img src=""images/C01_redacted.png"" alt=""""></span>
+    </span></span>
+  </span>
+  <figcaption>
+    <p class=""certificate-cohort"">2014–2016 屆</p>
+    <p class=""certificate-name"" lang=""en""><strong>Sports</strong> <span>and Fitness Coaching</span></p>
+    <div class=""certificate-fields""><p><time datetime=""2016-07-31"">2016 年 7 月 31 日</time>頒發</p><p>修畢應用學習課程</p></div>
+    <button class=""certificate-open"" type=""button"" data-certificate=""2016 年頒發的港專證書"" aria-haspopup=""dialog"" aria-label=""放大 2016 年頒發的港專證書""><span class=""certificate-glass"" aria-hidden=""true""></span>放大證書</button>
+  </figcaption>
+</figure>
+<figure class=""certificate-record"">
+  <span class=""certificate-mount certificate-mount-qf"">
+    <span class=""img-frame contain certificate-paper certificate-photo""><img src=""images/C02_redacted.png"" alt=""港專 2022–2024 屆證書，姓名及序號已遮蔽""></span>
+    <span class=""certificate-lens"" aria-hidden=""true""><span class=""certificate-lens-glass"">
+      <span class=""img-frame contain certificate-lens-copy certificate-photo""><img src=""images/C02_redacted.png"" alt=""""></span>
+    </span></span>
+  </span>
+  <figcaption>
+    <p class=""certificate-cohort"">2022–2024 屆</p>
+    <p class=""certificate-name"" lang=""en""><strong>Exercise</strong> <span>and Fitness Coaching</span></p>
+    <div class=""certificate-fields""><p><time datetime=""2024-09-11"">2024 年 9 月 11 日</time>頒發</p><p>證書列明資歷架構第三級</p></div>
+    <button class=""certificate-open"" type=""button"" data-certificate=""2024 年頒發的港專證書"" aria-haspopup=""dialog"" aria-label=""放大 2024 年頒發的港專證書""><span class=""certificate-glass"" aria-hidden=""true""></span>放大證書</button>
+  </figcaption>
+</figure>
+</div>
+</div>","[""大家好。請大家先望一望呢兩張港專證書。左邊係2016年，英文寫 <strong>Sports and Fitness Coaching</strong>；右邊係2024年，改用 <strong>Exercise and Fitness Coaching</strong>，仲列出資歷架構第三級。兩張證書講緊嘅，都係「運動及體適能教練」。"", ""點解同一門課，前後會有呢啲分別？我哋會用公開文件，同組員由修讀到任教嘅經驗，追查兩件事：認可幾時出現，同埋學生喺課堂實際要學啲乜。""]",從兩張港專證書提出研究問題：這門課培養甚麼能力，認可和教學內容又怎樣演變？,要讀懂證書上面嗰個「教練」名稱，先要知道，呢科想教識高中生做啲乜。,,
 2,科目674：把運動興趣連結升學與職業探索,課程目的,A,60,"[""D12"", ""D41"", ""D37"", ""D42""]","<div class=""identity-grid""><div class=""identity""><span class=""eyebrow"">應用學習 · 應用科學／運動</span><b>674</b><h3>運動及體適能教練</h3><p>香港專業進修學校 HKCT</p><p class=""course-target"">高中選修 · 中四或中五開始</p></div><div class=""research-path"" data-focus=""course-aims"" data-anim=""stagger-list""><div class=""rule-row""><span class=""num"">01</span><div><h3>從實踐理解理論</h3><p>運動科學、體適能與健康、教練法</p></div></div><div class=""rule-row""><span class=""num"">02</span><div><h3>培養職業相關能力</h3><p>基礎技能、思考、人際關係與態度</p></div></div><div class=""rule-row""><span class=""num"">03</span><div><h3>探索升學與就業</h3><p>發展興趣，為後續學習做好準備</p></div></div></div></div><div class=""policy-position""><span class=""tag"">職專教育定位</span><p>多元高中選擇 → 職業相關學習 → 升學與就業探索</p></div><div class=""evidence-key""><span class=""tag"">文件</span>公開目標與制度<span class=""tag oral"">經驗／轉述</span>親歷與內部說明<span class=""tag inference"">綜合分析</span>對照文件與經驗所得的解讀</div>","[""港專呢門課嘅科目編號係674，屬於應用學習入面「應用科學」嘅運動課程。大家可以想像一個鍾意運動嘅高中生：自己識做一組動作，輪到要向同學講解，佢就要明白點解咁做，亦要學識溝通同留意安全。"", ""呢個例子串起課程嘅三個教育目的：從實踐理解運動科學、發展職業相關能力，亦畀學生試下自己適唔適合再向運動行業發展。完成高中呢門課，專業教練資格仍要按相關機構嘅要求取得。畫面上綠色係文件，啡紅色係親歷或轉述，藍色係我哋對資料嘅分析。""]",科目 674 以運動實踐連結理論，讓高中生培養教練相關能力，探索升學與職業方向。,咁，一個對運動有興趣嘅學生，幾時開始可以將呢類學習揀做高中選修科？,,
 3,多元學習制度，為運動課程提供發展空間,2003–2012,A,75,"[""D45"", ""D35"", ""D01"", ""D54""]","
 <div class=""tl five-events""><div class=""row"" data-anim=""stagger-list"">

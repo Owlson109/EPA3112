@@ -24,6 +24,24 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   addEventListener('afterprint',()=>{for(const [a,href]of printLinks){if(href!==null)a.setAttribute('href',href);}printLinks.clear();});
   let returnFocus=null;
+  const certificateDialog=document.querySelector('#certificate-dialog');
+  const certificateStage=certificateDialog?.querySelector('.certificate-enlargement');
+  function fitCertificate(){
+    const paper=certificateStage.firstElementChild;
+    if(!certificateDialog.open||!paper)return;
+    const scale=Math.min(certificateStage.clientWidth/paper.offsetWidth,certificateStage.clientHeight/paper.offsetHeight);
+    paper.style.transform='scale('+scale+')';
+  }
+  if(certificateStage)new ResizeObserver(fitCertificate).observe(certificateStage);
+  function openCertificate(trigger){
+    returnFocus=trigger;
+    certificateDialog.querySelector('h2').textContent=trigger.dataset.certificate;
+    const paper=trigger.closest('figure').querySelector('.certificate-paper');
+    certificateStage.replaceChildren(paper.cloneNode(true));
+    certificateDialog.showModal();
+    fitCertificate();
+  }
+  window.addEventListener('epa:slide-change',()=>{if(certificateDialog?.open)certificateDialog.close();});
   const field=(label,value)=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value||'未另記錄';return [dt,dd];};
   function openSource(id,trigger){
     const s=byId.get(id);if(!s)return;
@@ -41,6 +59,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   const key=k=>document.dispatchEvent(new KeyboardEvent('keydown',{key:k,bubbles:true,cancelable:true}));
   document.addEventListener('click',e=>{
+    const certificate=e.target.closest('[data-certificate]');if(certificate){openCertificate(certificate);return;}
     const ref=e.target.closest('[data-source]');if(ref){e.preventDefault();openSource(ref.dataset.source,ref);return;}
     const jump=e.target.closest('[data-slide]');if(jump){toc.close();location.hash='/'+jump.dataset.slide;return;}
     const close=e.target.closest('[data-close]');if(close){close.closest('dialog').close();return;}
