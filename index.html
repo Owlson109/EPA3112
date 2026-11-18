@@ -34,10 +34,16 @@
   border:0;border-radius:0;background:var(--surface)
 }
 .epa .certificate-paper{box-shadow:0 8px 20px color-mix(in srgb,var(--text-1) 45%,transparent)}
+.epa :is(.certificate-paper,.certificate-lens-copy):not(.certificate-photo)>img{
+  /* Filter at the scan's native pixel scale, then fit its 1536 px height to the mount. */
+  position:absolute;left:50%;top:0;width:1082px;height:1536px;max-width:none;
+  transform-origin:0 0;transform:scale(.3125) translateX(-50%);filter:url(#certificate-scan-detail)
+}
 .epa .certificate-photo img{
   /* Map the four paper corners (44,182), (819,165), (831,1296), (36,1287)
      in the anonymised 864 × 1536 photo to the 340 × 480 display above. */
   position:absolute;left:0;top:0;width:864px;height:1536px;max-width:none;transform-origin:0 0;
+  filter:url(#certificate-photo-detail);
   transform:matrix3d(.451531367,.009827352,0,.0000307753,
                      .003269005,.448011640,0,.0000233787,
                      0,0,1,0,-20.462339,-81.970522,0,1)
@@ -73,7 +79,7 @@
 }
 .epa .certificate-lens-glass::after{
   content:"";position:absolute;inset:0;border-radius:inherit;
-  background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 66%,transparent),transparent 29%,transparent 71%,color-mix(in srgb,var(--bg) 66%,transparent));
+  background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 35%,transparent),transparent 17%,transparent 83%,color-mix(in srgb,var(--bg) 27%,transparent));
   box-shadow:inset 0 0 0 2px var(--lens-glint),inset 0 -4px 8px color-mix(in srgb,var(--accent) 12%,transparent)
 }
 .epa .certificate-lens-copy{
@@ -137,6 +143,11 @@ body[data-preview] .certificate-open,.epa .overview .certificate-open{display:no
 @media print{
   .epa .certificate-open{display:none}
   .epa #certificate-dialog[open]{display:none!important}
+  /* A 2D paper crop lets PDF keep the photo's source resolution. */
+  .epa .certificate-photo img{
+    clip-path:polygon(44px 182px,819px 165px,831px 1296px,36px 1287px);
+    transform:matrix(.433046904,.002096704,-.000819786,.429275865,-16.692293,-75.351396)
+  }
 }
 
 /* One shared timeline: papers depart while a warm light band and the actual
@@ -231,7 +242,28 @@ body[data-preview] .evidence-intro,body[data-preview] .evidence-controls{display
 </style>
 <link rel="stylesheet" href="course-pages.css?v=ac102d4537cd">
 </head>
-<body class="tpl-presenter-mode-reveal epa"><main class="deck" data-w="1920" data-h="1080"><section class="slide" data-title="兩張證書，一個課程的發展" data-speaker="A" aria-label="第1頁：兩張證書，一個課程的發展">
+<body class="tpl-presenter-mode-reveal epa"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="0" height="0" style="position:absolute;pointer-events:none" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="certificate-scan-detail" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feConvolveMatrix order="3" kernelMatrix="0 -.12 0  -.12 1.48 -.12  0 -.12 0" divisor="1" preserveAlpha="true"/>
+    </filter>
+    <filter id="certificate-photo-detail" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <!-- Per-channel gains sampled from blank paper in the 864 × 1536 redacted photo.
+           Only the 32 × 48 illumination field is stored here. Multiply by 2.1 to decode. -->
+      <feImage x="0%" y="0%" width="100%" height="100%" preserveAspectRatio="none" result="paperGain"
+               xlink:href="data:image/png;base64,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"/>
+      <feComposite in="SourceGraphic" in2="paperGain" operator="arithmetic" k1="2.1"/>
+      <feConvolveMatrix order="3" kernelMatrix="0 -.19 0  -.19 1.76 -.19  0 -.19 0" divisor="1" preserveAlpha="true"/>
+      <feComponentTransfer>
+        <feFuncR type="gamma" amplitude="1.04" exponent="1.35" offset="-.018"/>
+        <feFuncG type="gamma" amplitude="1.04" exponent="1.35" offset="-.018"/>
+        <feFuncB type="gamma" amplitude="1.04" exponent="1.35" offset="-.018"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+<main class="deck" data-w="1920" data-h="1080"><section class="slide" data-title="兩張證書，一個課程的發展" data-speaker="A" aria-label="第1頁：兩張證書，一個課程的發展">
 <div class="slide-top"><span>EPA3112　／　港專應用學習課程研究</span><span class="section-mark">問題起點</span></div>
 <div class="slide-content"><div class="cover-redesign">
 <header class="cover-heading" data-anim="fade-up"><h1><span>港專「運動及體適能教練」</span><em>的發展</em></h1><p>從兩張證書出發，探討課程的教育目的、資歷認可與教學內容。</p></header>

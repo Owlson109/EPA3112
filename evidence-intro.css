@@ -20,10 +20,16 @@
   border:0;border-radius:0;background:var(--surface)
 }
 .epa .certificate-paper{box-shadow:0 8px 20px color-mix(in srgb,var(--text-1) 45%,transparent)}
+.epa :is(.certificate-paper,.certificate-lens-copy):not(.certificate-photo)>img{
+  /* Filter at the scan's native pixel scale, then fit its 1536 px height to the mount. */
+  position:absolute;left:50%;top:0;width:1082px;height:1536px;max-width:none;
+  transform-origin:0 0;transform:scale(.3125) translateX(-50%);filter:url(#certificate-scan-detail)
+}
 .epa .certificate-photo img{
   /* Map the four paper corners (44,182), (819,165), (831,1296), (36,1287)
      in the anonymised 864 × 1536 photo to the 340 × 480 display above. */
   position:absolute;left:0;top:0;width:864px;height:1536px;max-width:none;transform-origin:0 0;
+  filter:url(#certificate-photo-detail);
   transform:matrix3d(.451531367,.009827352,0,.0000307753,
                      .003269005,.448011640,0,.0000233787,
                      0,0,1,0,-20.462339,-81.970522,0,1)
@@ -59,7 +65,7 @@
 }
 .epa .certificate-lens-glass::after{
   content:"";position:absolute;inset:0;border-radius:inherit;
-  background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 66%,transparent),transparent 29%,transparent 71%,color-mix(in srgb,var(--bg) 66%,transparent));
+  background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 35%,transparent),transparent 17%,transparent 83%,color-mix(in srgb,var(--bg) 27%,transparent));
   box-shadow:inset 0 0 0 2px var(--lens-glint),inset 0 -4px 8px color-mix(in srgb,var(--accent) 12%,transparent)
 }
 .epa .certificate-lens-copy{
@@ -123,6 +129,11 @@ body[data-preview] .certificate-open,.epa .overview .certificate-open{display:no
 @media print{
   .epa .certificate-open{display:none}
   .epa #certificate-dialog[open]{display:none!important}
+  /* A 2D paper crop lets PDF keep the photo's source resolution. */
+  .epa .certificate-photo img{
+    clip-path:polygon(44px 182px,819px 165px,831px 1296px,36px 1287px);
+    transform:matrix(.433046904,.002096704,-.000819786,.429275865,-16.692293,-75.351396)
+  }
 }
 
 /* One shared timeline: papers depart while a warm light band and the actual

@@ -6,8 +6,8 @@
   },
   {
     "path": "EPA3112_簡報.pdf",
-    "bytes": 2592375,
-    "sha256": "15cc5b4818a4b6b62dcfd577f9f58a3231fd9688e55b6d076d95fb5b469cdb69"
+    "bytes": 3401975,
+    "sha256": "bbbe213cca596f4b4a272ba977f4a9edf85d0d0572a4f4136d6ffb3b1ef516e8"
   },
   {
     "path": "LICENSE",
@@ -511,8 +511,8 @@
   },
   {
     "path": "evidence-intro.css",
-    "bytes": 18008,
-    "sha256": "8db4ef0a39ae3fc2ab783826d90331a9ae7eda41730e35be490d74364348ffea"
+    "bytes": 18666,
+    "sha256": "b87bb1391c8f2161051820c021eb476c54676d6e3eab1ba8f19aa8c350c33e4f"
   },
   {
     "path": "evidence-intro.js",
@@ -533,6 +533,11 @@
     "path": "images/C02_redacted.png",
     "bytes": 651991,
     "sha256": "7e8e05f9fa9856629d7ec2ff681d781e800448bf61a6b026b0a8d418bd975840"
+  },
+  {
+    "path": "images/certificate-display.svg",
+    "bytes": 3565,
+    "sha256": "e07c3d10f4d12fc0dca9e58421e6739c5d8b036f0f9392f1f09d1623feb6e7a3"
   },
   {
     "path": "images/evidence/D09-p22.jpg",
@@ -561,8 +566,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 216034,
-    "sha256": "8aa041f8c49e38c60236acd696203f8ac2252c688dba6d0763979e753eb89009"
+    "bytes": 220257,
+    "sha256": "087b0aeb5607b7b4eb92c8be69a16e2d81ab5b87949a658929ae535d1bf2f1a2"
   },
   {
     "path": "motion.css",
@@ -1101,8 +1106,8 @@
   },
   {
     "path": "scripts/build.py",
-    "bytes": 21862,
-    "sha256": "3c419d7c3bc7f8b0882a5e2d32b3a6c3b2ccb3ae34a20b4ae8c1ff03e4150592"
+    "bytes": 21977,
+    "sha256": "d967f1f099dd76d8d99333db99254b7e95cc8ee7faf72c9ac99116717ae4d5f0"
   },
   {
     "path": "scripts/prepare_research.py",

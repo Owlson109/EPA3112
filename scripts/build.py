@@ -96,7 +96,8 @@ dialogs=f'''<dialog id="source-dialog" aria-labelledby="source-title"><div class
 data=json.dumps(sources,ensure_ascii=False).replace('<','\\u003c')
 intro_data=json.dumps(intros,ensure_ascii=False).replace('<','\\u003c')
 deck_scripts = ''.join(f'<script src="{asset_url(name)}"></script>' for name in ('evidence-intro.js', f'{assets}/runtime.js', 'notes-controls.js', 'app.js'))
-(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa"><main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
+certificate_filters = (ROOT / 'images/certificate-display.svg').read_text(encoding='utf-8')
+(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa">'+certificate_filters+'<main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
 
 nav='<nav><a href="index.html">開啟簡報</a><a href="index.html#/16">來源附頁</a><a href="storyline.html">逐頁故事線</a><a href="speaker-notes.html">三人講稿</a><a href="official-research.html">官方文件核證</a><a href="report-review.html">四份報告</a><a href="appendix.html">研究附錄</a></nav>'
 def reader(filename,title,intro,body):
