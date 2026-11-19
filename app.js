@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   shortScreen.addEventListener('change',fitControls);
   const sources=JSON.parse(document.querySelector('#source-data').textContent);
   const byId=new Map(sources.map(s=>[s.id,s]));
+  const analysisSources=JSON.parse(document.getElementById('analysis-sources').textContent);
+  const sourceFor=(id,link)=>(link.closest('[data-analysis-open]') && analysisSources[id]) || byId.get(id);
   const sourceDialog=document.querySelector('#source-dialog');
   const toc=document.querySelector('#toc-dialog');
   // Printed links point to public originals, never to the author's local paths.
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   addEventListener('beforeprint',()=>{
     document.querySelectorAll('.deck a[data-source]').forEach(a=>{
       printLinks.set(a,a.getAttribute('href'));
-      const url=byId.get(a.dataset.source)?.url;
+      const url=sourceFor(a.dataset.source,a)?.url;
       if(url&&/^https?:/.test(url))a.href=url;else a.removeAttribute('href');
     });
   });
@@ -44,7 +46,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   window.addEventListener('epa:slide-change',()=>{if(certificateDialog?.open)certificateDialog.close();});
   const field=(label,value)=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value||'未另記錄';return [dt,dd];};
   function openSource(id,trigger){
-    const s=byId.get(id);if(!s)return;
+    const s=sourceFor(id,trigger);if(!s)return;
     returnFocus=trigger;
     document.querySelector('#source-id').textContent=s.id+' · '+(s.document_date_or_version||'');
     document.querySelector('#source-title').textContent=s.title;
@@ -54,7 +56,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(s.url&&/^https?:/.test(s.url)){
       const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='開啟公開原文（需要網絡）';links.append(a,document.createElement('br'));
     }
-    const a=document.createElement('a');a.href='appendix.html#'+encodeURIComponent(s.id);a.target='_blank';a.rel='noopener';a.textContent='查看完整來源條目';links.append(a);
+    if(byId.has(id)){
+      const a=document.createElement('a');a.href='appendix.html#'+encodeURIComponent(s.id);a.target='_blank';a.rel='noopener';a.textContent='查看完整來源條目';links.append(a);
+    }
     sourceDialog.showModal();
   }
   const key=k=>document.dispatchEvent(new KeyboardEvent('keydown',{key:k,bubbles:true,cancelable:true}));

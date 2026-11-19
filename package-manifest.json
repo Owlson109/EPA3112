@@ -31,8 +31,8 @@
   },
   {
     "path": "app.js",
-    "bytes": 5860,
-    "sha256": "b0a4073b049b3d7d717c8624a2c4dd5b80428dfa7c08aa16a544e497ecc07600"
+    "bytes": 6103,
+    "sha256": "874ac302030ec349241a7e822be7e8677b0409ce5d5274fd089bbaa30b54b341"
   },
   {
     "path": "appendix.html",
@@ -231,8 +231,8 @@
   },
   {
     "path": "assets/runtime.js",
-    "bytes": 48135,
-    "sha256": "b68347e5afbbf8e010c6557670d7ec3e012e96a8b2804359473819062555f770"
+    "bytes": 51534,
+    "sha256": "184f04077dbf21eac82a458c0fb72ecc1de9bf33fdcfca8f142669fb44b129ea"
   },
   {
     "path": "assets/themes/academic-paper.css",
@@ -416,8 +416,8 @@
   },
   {
     "path": "course-pages.css",
-    "bytes": 19209,
-    "sha256": "ac102d4537cd4b874194582202408f4203f5d6881a0cece612e7b7e76a73c2eb"
+    "bytes": 24737,
+    "sha256": "083b9c78e7442de11376b2d520b7b1dca1c6853b574f3ec12c75ec5afa8c5a04"
   },
   {
     "path": "data/bibliography.csv",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 222449,
-    "sha256": "9c540bb832495665b96904e25c7c00e15d25565339e88480f809c3515f555df3"
+    "bytes": 239424,
+    "sha256": "b42a5b158e2440eb543a8a62b9887b2e45a890eabbac7c848f6bf2dc6a3df908"
   },
   {
     "path": "motion.css",
@@ -1116,8 +1116,8 @@
   },
   {
     "path": "scripts/build.py",
-    "bytes": 22701,
-    "sha256": "6b6ac03eeb356bf40710ffd9d67d0288cbeb255feef23a42ec9d8a0af22aeeed"
+    "bytes": 23148,
+    "sha256": "bca1e7451f7f28feacbbd5a814b7424c0560dc6ee9cc4f4669b742fb3ae24a98"
   },
   {
     "path": "scripts/prepare_research.py",
@@ -1168,6 +1168,11 @@
     "path": "template/README.md",
     "bytes": 3964,
     "sha256": "cc92770560dc7b1030e90b078e74c5f0b19cad25cac585b53164682a081c555f"
+  },
+  {
+    "path": "template/analysis-views.html",
+    "bytes": 16803,
+    "sha256": "93c313695764da83b21fb95abeb5a626e06e5ed22fa551c9b20f5be005e45db9"
   },
   {
     "path": "template/index.html",

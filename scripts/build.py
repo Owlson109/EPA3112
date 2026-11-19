@@ -81,9 +81,14 @@ for s in deck_slides:
     footer_refs='<span>資料核讀截至2026.11.18 · HTML點文件名稱查詳情；PDF點文件名稱開啟公開原文。完整網址、核讀狀態及使用位置見研究附錄。</span>' if s.get('appendix_number') else '<span class="source-label">來源</span>'+refs(s,True)
     layout_attr=' data-layout="course-edition"' if s.get('layout')=='course-edition' else ''
     theme_attr=' data-slide-theme="conclusion-dark"' if s.get('theme')=='conclusion-dark' else ''
+    body_html=s['body']
+    if s['number'] in (14,15):
+        label='<span class="tag inference">綜合分析</span>'
+        assert body_html.count(label)==1
+        body_html=body_html.replace(label,f'<button type="button" class="tag inference" data-open-analysis aria-label="綜合分析，顯示第{s["number"]}頁新版">綜合分析</button>')
     sections.append(f'''<section class="slide{appendix_class}"{layout_attr}{theme_attr} data-title="{esc(s['title'],quote=True)}" data-speaker="{s['speaker']}" aria-label="第{s['number']}頁：{esc(s['title'],quote=True)}">
 {masthead(s)}
-{title}<div class="slide-content">{s['body']}</div>
+{title}<div class="slide-content">{body_html}</div>
 <footer class="deck-footer"><div class="source-refs">{footer_refs}</div><span class="page-label">{s['number']:02d} / {total_slides}</span></footer>
 <aside class="notes">{notes(s)}</aside></section>''')
 toc=''.join(f'<li><button data-slide="{s["number"]}">{s["number"]:02d}　{esc(s["title"])}<small>'+('附頁 · 不計入正文配時' if s.get('appendix_number') else f'講者 {s["speaker"]} · {clock(s["seconds"])}')+'</small></button></li>' for s in deck_slides)
@@ -98,7 +103,8 @@ data=json.dumps(sources,ensure_ascii=False).replace('<','\\u003c')
 intro_data=json.dumps(intros,ensure_ascii=False).replace('<','\\u003c')
 deck_scripts = ''.join(f'<script src="{asset_url(name)}"></script>' for name in ('evidence-intro.js', f'{assets}/runtime.js', 'notes-controls.js', 'app.js'))
 certificate_filters = (ROOT / 'images/certificate-display.svg').read_text(encoding='utf-8')
-(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa">'+certificate_filters+'<main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
+analysis_views=(ROOT/'template/analysis-views.html').read_text(encoding='utf-8')
+(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa">'+certificate_filters+'<main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+analysis_views+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
 
 nav='<nav><a href="index.html">開啟簡報</a><a href="index.html#/16">來源附頁</a><a href="storyline.html">逐頁故事線</a><a href="speaker-notes.html">三人講稿</a><a href="official-research.html">官方文件核證</a><a href="report-review.html">四份報告</a><a href="appendix.html">研究附錄</a></nav>'
 def reader(filename,title,intro,body):

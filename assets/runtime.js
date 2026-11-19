@@ -132,6 +132,32 @@
       logoEl.style.display = (slide && slide.hasAttribute('data-no-logo')) ? 'none' : '';
     }
 
+    // Keep the section node stable for navigation, transitions and source dialogs.
+    const originalViews = new Map();
+    function setAnalysisView(i, enabled) {
+      const slide = slides[i];
+      if (enabled === originalViews.has(slide)) return false;
+      let view;
+      if (enabled) {
+        const template = document.getElementById('analysis-view-' + (i + 1));
+        if (!template) return false;
+        const original = slide.cloneNode(false);
+        original.append(...slide.childNodes);
+        originalViews.set(slide, original);
+        view = template.content.firstElementChild.cloneNode(true);
+      } else {
+        view = originalViews.get(slide);
+        originalViews.delete(slide);
+      }
+      slide.replaceChildren(...view.childNodes);
+      for (const attr of ['data-layout', 'data-slide-theme', 'data-title', 'aria-label']) {
+        if (view.hasAttribute(attr)) slide.setAttribute(attr, view.getAttribute(attr));
+        else slide.removeAttribute(attr);
+      }
+      slide.toggleAttribute('data-analysis-open', enabled);
+      return true;
+    }
+
     const previewOnlyIdx = getPreviewIdx();
     const isPreviewMode = previewOnlyIdx >= 0 && previewOnlyIdx < slides.length;
 
@@ -177,7 +203,10 @@
         if (!e.data) return;
         if (e.data.type === 'preview-goto') {
           const n = parseInt(e.data.idx, 10);
-          if (n >= 0 && n < slides.length) { showSlide(n); syncLogo(slides[n]); }
+          if (n >= 0 && n < slides.length) {
+            setAnalysisView(n, e.data.analysis === true);
+            showSlide(n); syncLogo(slides[n]);
+          }
         } else if (e.data.type === 'preview-theme' && e.data.name) {
           let link = document.getElementById('theme-link');
           if (!link) {
@@ -307,6 +336,23 @@
       document.body.appendChild(overview);
     }
 
+    function openAnalysis(i, fromRemote) {
+      if (i !== idx || !setAnalysisView(i, true)) return;
+      const slide = slides[i];
+      notes.innerHTML = slide.querySelector(NOTE_SEL).innerHTML;
+      slide.querySelectorAll('[data-anim]').forEach(el => el.classList.add('anim-' + el.dataset.anim));
+      if (!fromRemote) {
+        const heading = slide.querySelector('h2');
+        heading.tabIndex = -1;
+        heading.focus({preventScroll:true});
+        if (bc) bc.postMessage({type:'analysis-view', idx:i});
+      }
+    }
+    deck.addEventListener('click', e => {
+      const trigger = e.target.closest('[data-open-analysis]');
+      if (trigger && slides[idx].contains(trigger)) openAnalysis(idx, false);
+    });
+
     /* ===== navigation ===== */
     function go(n, fromRemote){
       n = Math.max(0, Math.min(total-1, n));
@@ -318,6 +364,7 @@
       }
       const slideChanged = !slides[n].classList.contains('is-active');
       const previousSlide = slideChanged ? slides.find(s => s.classList.contains('is-active')) : null;
+      if (slideChanged) setAnalysisView(n, false);
       slides.forEach((s,i) => {
         s.classList.toggle('is-active', i===n);
         s.classList.toggle('is-prev', i<n);
@@ -366,6 +413,20 @@
         bc.postMessage({ type: 'go', idx: n });
       }
       if (slideChanged) window.dispatchEvent(new CustomEvent('epa:slide-change', { detail: { index: n, slide: slides[n], previousSlide } }));
+      if (originalViews.has(previousSlide)) {
+        const previousIndex = slides.indexOf(previousSlide);
+        // Keep the actual displayed version during the outgoing evidence animation.
+        if (previousSlide.classList.contains('evidence-outgoing')) {
+          const afterExit = new MutationObserver(() => {
+            if (previousSlide.classList.contains('evidence-outgoing')) return;
+            afterExit.disconnect();
+            if (!previousSlide.classList.contains('is-active')) setAnalysisView(previousIndex, false);
+          });
+          afterExit.observe(previousSlide, {attributes:true, attributeFilter:['class']});
+        } else {
+          setAnalysisView(previousIndex, false);
+        }
+      }
     }
 
     /* ===== listen for remote navigation / theme changes ===== */
@@ -374,6 +435,8 @@
         if (!e.data) return;
         if (e.data.type === 'go' && typeof e.data.idx === 'number') {
           go(e.data.idx, true);
+        } else if (e.data.type === 'analysis-view') {
+          openAnalysis(e.data.idx, true);
         } else if (e.data.type === 'evidence-pause' && e.data.idx === idx) {
           window.dispatchEvent(new CustomEvent('epa:evidence-pause'));
         } else if (e.data.type === 'theme' && e.data.name) {
@@ -424,8 +487,11 @@
 
       // Collect slide titles + notes (HTML strings)
       const slideMeta = slides.map((s, i) => {
-        const note = s.querySelector(NOTE_SEL);
+        const note = (originalViews.get(s) || s).querySelector(NOTE_SEL);
+        const alternate = document.getElementById('analysis-view-' + (i + 1));
         return {
+          analysisNotes: alternate?.content.querySelector(NOTE_SEL)?.innerHTML,
+          analysisOpen: originalViews.has(s),
           title: s.getAttribute('data-title') ||
             (s.querySelector('h1,h2,h3')||{}).textContent || ('Slide '+(i+1)),
           notes: note ? note.innerHTML : ''
@@ -703,6 +769,7 @@
   var slideMeta = ${metaJSON};
   var total = ${total};
   var idx = ${startIdx};
+  var analysisIndex = slideMeta[idx].analysisOpen ? idx : -1;
   var deckUrl = ${deckUrlJSON};
   var STORAGE_KEY = ${embed(storageKey)};
   var bc;
@@ -904,7 +971,7 @@
 
   function postPreviewGoto(iframe, n) {
     try {
-      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n }, '*');
+      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n, analysis: iframe === iframeCur && n === analysisIndex }, '*');
     } catch(e) {}
   }
 
@@ -914,6 +981,7 @@
    */
   function update(n) {
     n = Math.max(0, Math.min(total - 1, n));
+    if (n !== idx) analysisIndex = -1;
     idx = n;
 
     /* Current preview — postMessage (smooth) */
@@ -940,7 +1008,7 @@
     }
 
     /* Notes */
-    var note = slideMeta[n].notes;
+    var note = n === analysisIndex ? slideMeta[n].analysisNotes : slideMeta[n].notes;
     notesBody.innerHTML = note || '<span class="empty">（这一页还没有逐字稿）</span>';
 
     /* Timer count */
@@ -962,6 +1030,10 @@
     bc.onmessage = function(e){
       if (!e.data) return;
       if (e.data.type === 'go') update(e.data.idx);
+      else if (e.data.type === 'analysis-view' && e.data.idx === idx && slideMeta[idx].analysisNotes) {
+        analysisIndex = idx;
+        update(idx);
+      }
       else if (e.data.type === 'theme' && e.data.name) {
         currentTheme = e.data.name;
         /* Forward theme change to preview iframes */
@@ -1021,7 +1093,7 @@
     if (idx + 1 < total) iframeNxt.src = deckUrl + '?preview=' + (idx + 2);
     /* Initialize notes/timer/count without touching iframes */
     var m = slideMeta[idx] || {};
-    notesBody.innerHTML = m.notes || '<span class="empty">（这一页还没有逐字稿）</span>';
+    notesBody.innerHTML = (analysisIndex === idx ? m.analysisNotes : m.notes) || '<span class="empty">（这一页还没有逐字稿）</span>';
     curMeta.textContent = (idx + 1) + '/' + total;
     nxtMeta.textContent = (idx + 2) + '/' + total;
     timerCount.textContent = (idx + 1) + ' / ' + total;
