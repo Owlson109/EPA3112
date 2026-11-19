@@ -4,11 +4,11 @@
   "main_slides": 15,
   "appendix_slides": 2,
   "total_slides": 17,
-  "source_count": 78,
+  "source_count": 79,
   "groups": [
     {
       "title": "正文及逐字稿引用",
-      "count": 48
+      "count": 49
     },
     {
       "title": "補充核證文件",
@@ -440,7 +440,6 @@
       "review_state": "已核相關頁",
       "used_in": {
         "正文／逐字稿": [
-          "11",
           "13"
         ],
         "主張核證": [
@@ -981,6 +980,21 @@
         ],
         "延伸時間線": [
           "T079"
+        ]
+      }
+    },
+    {
+      "id": "D103",
+      "group": "正文及逐字稿引用",
+      "title": "教育局通函第69/2020號：應用學習課程",
+      "date_or_version": "2020；69/2020",
+      "author": "",
+      "locator": "第6段（PDF頁2）、第27段（PDF頁5）及附錄一科目674（PDF頁7）",
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/renewal/CM/EDBCM20069C.pdf#page=7",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "11"
         ]
       }
     },

@@ -1591,5 +1591,26 @@
     "local_original_in_package": "原件保存在工作區 research/2026-11-18/source-review/D102.pdf。分享包提供教育局原文連結及頁碼。",
     "download_sha256": "06cca809e7dea2851fae720b50f5a72dcac953eb5d8e268e87e6849eb4d64c6d",
     "download_bytes": 1279817
+  },
+  {
+    "id": "D103",
+    "type": "A",
+    "title": "教育局通函第69/2020號：應用學習課程",
+    "document_date_or_version": "2020；69/2020",
+    "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/renewal/CM/EDBCM20069C.pdf#page=7",
+    "locator": "第6段（PDF頁2）、第27段（PDF頁5）及附錄一科目674（PDF頁7）",
+    "supports": "2020/21學年可提早於中四開課，應用學習作第四選修科可獲資助。港專本科中四可採模式一或模式二。",
+    "limits": "表內列出可供開辦的模式。",
+    "relationship": "制度適用",
+    "checked_on": "2026-11-19",
+    "same_source_group": "D103",
+    "local_original_in_package": "",
+    "download_sha256": "",
+    "verification_status": "已核讀引用的頁面、段落或欄位。",
+    "short": "教育局，通函69/2020，頁7",
+    "retrieval_status": "網上原文",
+    "download_bytes": "",
+    "review_state": "已核相關頁",
+    "source_group": "政府／教育局"
   }
 ]

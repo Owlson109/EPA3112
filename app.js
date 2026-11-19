@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   const key=k=>document.dispatchEvent(new KeyboardEvent('keydown',{key:k,bubbles:true,cancelable:true}));
   document.addEventListener('click',e=>{
+    const excerpt=e.target.closest('[data-course-excerpt]');
+    if(excerpt){e.preventDefault();returnFocus=excerpt;document.querySelector('#course-excerpt').showModal();return;}
     const certificate=e.target.closest('[data-certificate]');if(certificate){openCertificate(certificate);return;}
     const ref=e.target.closest('[data-source]');if(ref){e.preventDefault();openSource(ref.dataset.source,ref);return;}
     const jump=e.target.closest('[data-slide]');if(jump){toc.close();location.hash='/'+jump.dataset.slide;return;}
