@@ -16,8 +16,8 @@
   },
   {
     "path": "Nelson_第11至15頁講者稿.txt",
-    "bytes": 5544,
-    "sha256": "ee6f15219102c1ae69e5cb288e52c759c6979f3d7762d5566dbb84595e4fed60"
+    "bytes": 5905,
+    "sha256": "dfec54c7f43fb0e356e8efdbe2622325c4632fe41c4da66c91ebcf8590648966"
   },
   {
     "path": "README.md",
@@ -456,13 +456,13 @@
   },
   {
     "path": "data/content.csv",
-    "bytes": 36482,
-    "sha256": "883ee1d1a172b1e916c50eac9a1a3e1393dde3bb35b5df6312d3a8f9019fef52"
+    "bytes": 36839,
+    "sha256": "88c25b9ba78105ee05058e4f2526ae1006544dcb36b58299390176ae3dd3cf0b"
   },
   {
     "path": "data/content.json",
-    "bytes": 39603,
-    "sha256": "62a7627358b9a4249bc14be286e65080e46c22d4da034e69a9c058c6b0edb170"
+    "bytes": 39956,
+    "sha256": "9d5dc9d9dda28742625df7f4ca2417a18f3740167bfd3fd0843f9ae7ac8d3536"
   },
   {
     "path": "data/evidence_intros.json",
@@ -502,7 +502,7 @@
   {
     "path": "data/speaker_timing.json",
     "bytes": 998,
-    "sha256": "5d0ea35a348dea01ba976adaaffb9cb7a9d6556742cc20363743229dc28aafa4"
+    "sha256": "d4ac8e1e53d96e54de4ea3fa3a69f4770fb9306ab7df0106f3a59a9918b46706"
   },
   {
     "path": "data/timeline.csv",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 240584,
-    "sha256": "6bf0ddf83158f39bc5b4d3b7cb3d4333e1d3d3f1b18d55d0df285cf6bc9423f6"
+    "bytes": 241262,
+    "sha256": "49b3afcea2a7b578a26d1d94b81444d488270d52ebe00b449bf2b90b1c2bb998"
   },
   {
     "path": "motion.css",
@@ -1141,13 +1141,13 @@
   },
   {
     "path": "speaker-notes.html",
-    "bytes": 29691,
-    "sha256": "aab6bf1f9b59b0dd1e401891c451afe7308d41ca8bd904e06eaad5dd55f6bb77"
+    "bytes": 30047,
+    "sha256": "83cfc551ffcc146cda26353a3c054c288fb888ec2ddfa9e4a3bdd9c123907824"
   },
   {
     "path": "speaker-notes.txt",
-    "bytes": 15164,
-    "sha256": "674199090578c9659b66694f64136a79f5db6adc74f7ddf4a876c511f5e93ea1"
+    "bytes": 15526,
+    "sha256": "17e0b9c14e096ab59723e7d4b52f566cc8ace7d74b427fe0ba81c17029e930b0"
   },
   {
     "path": "storyline.html",
@@ -1171,8 +1171,8 @@
   },
   {
     "path": "template/analysis-views.html",
-    "bytes": 17327,
-    "sha256": "be3bc775554ea164da28f8da424dea4a1b761a8575b5a2b47fb8f641d1ce8552"
+    "bytes": 17649,
+    "sha256": "a3c326034fa087bc22e88a5475fb29d0cb80b41197719b4c126134712857bea9"
   },
   {
     "path": "template/index.html",
