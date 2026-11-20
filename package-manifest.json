@@ -16,8 +16,8 @@
   },
   {
     "path": "Nelson_第11至15頁講者稿.txt",
-    "bytes": 4562,
-    "sha256": "96eab27eea77cd536b5cc240926ba600119e58a39493c125df459ff5822cd0d7"
+    "bytes": 5544,
+    "sha256": "ee6f15219102c1ae69e5cb288e52c759c6979f3d7762d5566dbb84595e4fed60"
   },
   {
     "path": "README.md",
@@ -421,13 +421,13 @@
   },
   {
     "path": "data/bibliography.csv",
-    "bytes": 27936,
-    "sha256": "8d3501cb1f9dffdfa21e119b06b295ac1dd1afa634bcb98e10b197b4dd5d9c07"
+    "bytes": 27984,
+    "sha256": "4c669af5bc566938df249e3444ce51eb1423c79f770292566f65f2b32de1b67e"
   },
   {
     "path": "data/bibliography.json",
-    "bytes": 48883,
-    "sha256": "459f40937c7e2a842071e6fdb9ddc8e98de1ab6b7b67e43d641b0d538b5cb4de"
+    "bytes": 48979,
+    "sha256": "31689f018e4362d4f91fd927eb3f97cb297c57c6263cbf721dac45bec4c77102"
   },
   {
     "path": "data/changelog.csv",
@@ -456,13 +456,13 @@
   },
   {
     "path": "data/content.csv",
-    "bytes": 36390,
-    "sha256": "f3c32460f876be09199ecb5d9d4ea2666fbf6f6042b6531b87b254afa3bc8c87"
+    "bytes": 36482,
+    "sha256": "883ee1d1a172b1e916c50eac9a1a3e1393dde3bb35b5df6312d3a8f9019fef52"
   },
   {
     "path": "data/content.json",
-    "bytes": 39485,
-    "sha256": "7ee964cfef44017feacf6609a4ca730f0c7c1ec83de3bf3ebd9ee33bacf6696f"
+    "bytes": 39603,
+    "sha256": "62a7627358b9a4249bc14be286e65080e46c22d4da034e69a9c058c6b0edb170"
   },
   {
     "path": "data/evidence_intros.json",
@@ -502,7 +502,7 @@
   {
     "path": "data/speaker_timing.json",
     "bytes": 998,
-    "sha256": "10dc9a5b79777140aa778e724a1b538aa3fe67e6b9ba735445d0f5fc5d4362f3"
+    "sha256": "5d0ea35a348dea01ba976adaaffb9cb7a9d6556742cc20363743229dc28aafa4"
   },
   {
     "path": "data/timeline.csv",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 239424,
-    "sha256": "b42a5b158e2440eb543a8a62b9887b2e45a890eabbac7c848f6bf2dc6a3df908"
+    "bytes": 240584,
+    "sha256": "6bf0ddf83158f39bc5b4d3b7cb3d4333e1d3d3f1b18d55d0df285cf6bc9423f6"
   },
   {
     "path": "motion.css",
@@ -1111,13 +1111,13 @@
   },
   {
     "path": "scripts/bibliography.py",
-    "bytes": 6822,
-    "sha256": "24be400f8632218d7b865de4df590d99c8d78ea711aea33d8c4e5b9a5ac3263d"
+    "bytes": 6894,
+    "sha256": "3ebc023b9dfd880e9aba4410d03e20f7eada80f3e421c99becf77930e5073afa"
   },
   {
     "path": "scripts/build.py",
-    "bytes": 23148,
-    "sha256": "bca1e7451f7f28feacbbd5a814b7424c0560dc6ee9cc4f4669b742fb3ae24a98"
+    "bytes": 23270,
+    "sha256": "76f1c68f8e7b95df0b3313901ae5ed99205f422edc6b0539947b695c8963b006"
   },
   {
     "path": "scripts/prepare_research.py",
@@ -1141,13 +1141,13 @@
   },
   {
     "path": "speaker-notes.html",
-    "bytes": 29055,
-    "sha256": "c4475c1f38121a1c45f83ff058ac6fe96aa9a5b6784b8d313de419461c50a7c0"
+    "bytes": 29691,
+    "sha256": "aab6bf1f9b59b0dd1e401891c451afe7308d41ca8bd904e06eaad5dd55f6bb77"
   },
   {
     "path": "speaker-notes.txt",
-    "bytes": 15135,
-    "sha256": "938549564e1bb4a700e62993125deaacf039f6476a36af9cac525d22c6688bf5"
+    "bytes": 15164,
+    "sha256": "674199090578c9659b66694f64136a79f5db6adc74f7ddf4a876c511f5e93ea1"
   },
   {
     "path": "storyline.html",
@@ -1171,8 +1171,8 @@
   },
   {
     "path": "template/analysis-views.html",
-    "bytes": 16803,
-    "sha256": "93c313695764da83b21fb95abeb5a626e06e5ed22fa551c9b20f5be005e45db9"
+    "bytes": 17327,
+    "sha256": "be3bc775554ea164da28f8da424dea4a1b761a8575b5a2b47fb8f641d1ce8552"
   },
   {
     "path": "template/index.html",
