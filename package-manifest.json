@@ -416,8 +416,8 @@
   },
   {
     "path": "course-pages.css",
-    "bytes": 24737,
-    "sha256": "083b9c78e7442de11376b2d520b7b1dca1c6853b574f3ec12c75ec5afa8c5a04"
+    "bytes": 29047,
+    "sha256": "d9747ce6d5495b085d6d34d3d257b8b62f5e81957f75c80c760a50fe150cc0a1"
   },
   {
     "path": "data/bibliography.csv",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 249381,
-    "sha256": "37b2da4681d8723fb413e157e286ee41ee0d1222ae95439e5e1512d222ea9c44"
+    "bytes": 247468,
+    "sha256": "1af738952c22f6946a86169c73682ba359b1dd10099bbf5736a00b396271773e"
   },
   {
     "path": "motion.css",
@@ -1171,8 +1171,8 @@
   },
   {
     "path": "template/analysis-views.html",
-    "bytes": 18893,
-    "sha256": "a09f7a026a9e55345cbdfd2afd941fc324c7fdf02b8139d3a110106d50e9fac5"
+    "bytes": 16980,
+    "sha256": "538d0e60c2c4db8bb77f1a40af35b565a674cea75026d61de6cff047b950eb1e"
   },
   {
     "path": "template/index.html",
