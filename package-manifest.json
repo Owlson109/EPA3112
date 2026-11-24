@@ -16,8 +16,8 @@
   },
   {
     "path": "Nelson_第11至15頁講者稿.txt",
-    "bytes": 9294,
-    "sha256": "66de847046514b627c7ea2e76d63bdacc74cc26c150ad2e57ef29c7f94099ce7"
+    "bytes": 9203,
+    "sha256": "2fa053171d55793ed7c6dff8e909f275a489b49bf9ed31ca4167fc51e357b80f"
   },
   {
     "path": "README.md",
@@ -456,13 +456,13 @@
   },
   {
     "path": "data/content.csv",
-    "bytes": 37627,
-    "sha256": "52eb514374738bf5b3ded2c4fbaa60c5b23e4d87c25cba04c8e237df8510dc48"
+    "bytes": 37546,
+    "sha256": "e9ad8031a93516b9178155bc8e634067408248933c2d306e65e60b20c5c12a89"
   },
   {
     "path": "data/content.json",
-    "bytes": 40934,
-    "sha256": "9347e1e4ecd993065048f2d67857005e6554f808f9084aa371c06c039f9e64e3"
+    "bytes": 40857,
+    "sha256": "dad903fc0a4a734e9a178f3f57fc9c3251f2074565a2a896c334780c120ca5dc"
   },
   {
     "path": "data/evidence_intros.json",
@@ -502,7 +502,7 @@
   {
     "path": "data/speaker_timing.json",
     "bytes": 998,
-    "sha256": "71a97f7636f0b4e40c8e15602cc5bd72af60193e142ffe1d531fbf1b13ed8afa"
+    "sha256": "15e4e1ec458581b75326ca3c7d45334819ff9efa025d093a31f6fd2daf4c9891"
   },
   {
     "path": "data/timeline.csv",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 249559,
-    "sha256": "0e8eccd9665d65e6aa280bea1006e1d8e4fd9b88e556aaf8c04992cf6dbda97f"
+    "bytes": 249381,
+    "sha256": "37b2da4681d8723fb413e157e286ee41ee0d1222ae95439e5e1512d222ea9c44"
   },
   {
     "path": "motion.css",
@@ -1141,23 +1141,23 @@
   },
   {
     "path": "speaker-notes.html",
-    "bytes": 31835,
-    "sha256": "35859e21a87bd97326ebabf2bbe1dbb31dc4d5012b7e6f9b1f87829d6b8a3f76"
+    "bytes": 31755,
+    "sha256": "5ee3247c6836f2d567b962352382e3676f04a3432b436e3579c33f1992a1cf93"
   },
   {
     "path": "speaker-notes.txt",
-    "bytes": 15677,
-    "sha256": "45325e5daeb7ab1fd439685775e6981fcd7f81fe0ef5326812171de40babdda4"
+    "bytes": 15591,
+    "sha256": "d5b73644356946f5c0c8f4c279bbbc1ff2f02445ec58bb55f5ab40a30205b5a0"
   },
   {
     "path": "storyline.html",
-    "bytes": 6043,
-    "sha256": "8f0608b8e7050a74c501ca106e9cc865b422d664aa57075c0710958a34c9254a"
+    "bytes": 6049,
+    "sha256": "437c1c55e3f4958b66592da5b26ca9394bd515a295f399adae19db7ac36ddd24"
   },
   {
     "path": "storyline.txt",
-    "bytes": 3202,
-    "sha256": "b4fceb1de141417c2aa082064ae68fa8d6e685f46ea92e5ea9e04f3e989bd1cc"
+    "bytes": 3208,
+    "sha256": "43831471551fbdb10325130163babef532957821694e449dbd3eb35cfe26f16e"
   },
   {
     "path": "style.css",
@@ -1171,8 +1171,8 @@
   },
   {
     "path": "template/analysis-views.html",
-    "bytes": 18991,
-    "sha256": "e16a12c9ed47b06406baed822a6b796d9b724b73797d0f1798bc3173c59988be"
+    "bytes": 18893,
+    "sha256": "a09f7a026a9e55345cbdfd2afd941fc324c7fdf02b8139d3a110106d50e9fac5"
   },
   {
     "path": "template/index.html",
