@@ -2,14 +2,11 @@
   "passed": true,
   "pages": 17,
   "all_body_text_present": true,
-  "all_81_sources_present": true,
-  "public_source_links": 128,
+  "sources_present": 83,
+  "public_source_links": 143,
   "local_file_links": 0,
-  "sha256": "6edea2749abb71066b50c528eb62234475671ad1ba5015f6a05e0b60b85fc1d7",
-  "visually_reviewed_changed_pages": [
-    2,
-    11,
-    15,
+  "sha256": "97f384906aaa2b4e897fe320a5745e2edcb557f9f2c809b1e1444e17efd9b282",
+  "reference_slides": [
     16,
     17
   ]
