@@ -31,8 +31,8 @@
   },
   {
     "path": "app.js",
-    "bytes": 6103,
-    "sha256": "874ac302030ec349241a7e822be7e8677b0409ce5d5274fd089bbaa30b54b341"
+    "bytes": 6703,
+    "sha256": "d56f133703e1923fa90f8875e769832ad2cee166ea17e5462834b27efff107d6"
   },
   {
     "path": "appendix.html",
@@ -231,8 +231,8 @@
   },
   {
     "path": "assets/runtime.js",
-    "bytes": 51306,
-    "sha256": "f328431dce424d88a877de9b00267200cd3c7441b8306e514504244e97cfeaa2"
+    "bytes": 54689,
+    "sha256": "2eb65bfcc12b284dc0777e2223bba90767d4fa3e7e2ff1afe863245e91976d13"
   },
   {
     "path": "assets/themes/academic-paper.css",
@@ -521,8 +521,8 @@
   },
   {
     "path": "evidence-intro.js",
-    "bytes": 12325,
-    "sha256": "b3b480151d399e7517e3d60918dc7c88daa654103c1df34e171f61cc7116d0b7"
+    "bytes": 12423,
+    "sha256": "59deda3f5611764185ae21b8720ec50f26ecf6e0c9fcf25399f28dad17655b4e"
   },
   {
     "path": "heading-font.css",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 255421,
-    "sha256": "dc2a91b1a85b57a4d3a9a50c1b56fcf54250eca6aea56a4d5b5dcb11a5f3bb4b"
+    "bytes": 255922,
+    "sha256": "eadc5d08a0efc00f7fc133969289f64364fe74d57ef6ffe3b7b08ebc99074d14"
   },
   {
     "path": "motion.css",
@@ -1116,8 +1116,8 @@
   },
   {
     "path": "scripts/build.py",
-    "bytes": 23704,
-    "sha256": "a07d303f47a995f4a285812fbf29bc4c0a3e4955bd3c0cd96beed9c9b13130e8"
+    "bytes": 24191,
+    "sha256": "b74328edcf85b8fe3434af1123544ce3c7c67772c3411233c2a922fafa403914"
   },
   {
     "path": "scripts/prepare_research.py",
@@ -1183,5 +1183,15 @@
     "path": "template/style.css",
     "bytes": 5596,
     "sha256": "f5e6cfe5f8c20a46184c6d44b6fc7eed20bc23a7ee6d2faf34a7957e7d7ffe8a"
+  },
+  {
+    "path": "screen-layout.css",
+    "bytes": 19350,
+    "sha256": "74efcf793d4614bd7aa5ecd1f8a133133183a58e3aad3ff0307c7124a6375c88"
+  },
+  {
+    "path": "qa/screen-layout.json",
+    "bytes": 1075,
+    "sha256": "dfa9888c2040504ecc21dcfc02091010e61fc5a46fc464d7a15a3931d616e5b0"
   }
 ]

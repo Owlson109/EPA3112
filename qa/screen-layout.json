@@ -1,0 +1,44 @@
+{
+  "baseline_commit": "fddba590ba9881fbd41c23995da29d682a85a6c8",
+  "reference_sizes": {
+    "1920x1080": 19,
+    "1280x720": 19,
+    "960x540": 19
+  },
+  "exact_slide_screenshot_matches": 57,
+  "body_slides": 15,
+  "reference_slides": 2,
+  "alternate_views": [
+    14,
+    15
+  ],
+  "widescreen_highlight_frames_matching_original_captures": 14,
+  "chromium_layout_sizes": {
+    "360x800": 19,
+    "1600x1000": 19,
+    "768x1024": 19,
+    "390x844": 19,
+    "1280x800": 19,
+    "1024x768": 19,
+    "600x600": 19,
+    "320x712": 19,
+    "1080x2400": 19
+  },
+  "webkit_layout_sizes": {
+    "360x800": 19,
+    "1280x800": 19,
+    "1280x720": 19
+  },
+  "phone_evidence_highlight_frames_fully_visible": 14,
+  "phone_reader_pages_checked": 5,
+  "controls_checked": [
+    "touch scroll and swipe",
+    "slide index and overview",
+    "source, certificate and excerpt dialogs",
+    "analysis entry and reset",
+    "notes size and close",
+    "presenter previews, scroll position and rotation",
+    "P hold, resume and skip"
+  ],
+  "portrait_print_pages_identical_to_16_9_pdf": 17
+}

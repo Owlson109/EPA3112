@@ -55,11 +55,20 @@
 
     const w = parseInt(deck.getAttribute('data-w'), 10) || 1920;
     const h = parseInt(deck.getAttribute('data-h'), 10) || 1080;
-    deck.style.setProperty('--deck-w', w + 'px');
-    deck.style.setProperty('--deck-h', h + 'px');
+    const responsive = deck.hasAttribute('data-responsive');
 
     function fit() {
-      const scale = Math.min(window.innerWidth / w, window.innerHeight / h);
+      // On phones innerWidth can include the unscaled canvas's overflow.
+      const vw = document.documentElement.clientWidth, vh = document.documentElement.clientHeight;
+      if (!vw || !vh) return;
+      // Tall landscape screens keep the full design width. Portrait uses a
+      // narrower typesetting measure so the actual text can reflow.
+      const portrait = responsive && vw <= vh;
+      const width = portrait ? Math.max(720, Math.min(1200, vw * 1.5)) : w;
+      const scale = portrait ? vw / width : Math.min(vw / w, vh / h);
+      const height = responsive && vw * h < vh * w ? vh / scale : h;
+      deck.style.setProperty('--deck-w', width + 'px');
+      deck.style.setProperty('--deck-h', height + 'px');
       deck.style.setProperty('--deck-scale', String(scale));
     }
     fit();
@@ -155,6 +164,7 @@
         else slide.removeAttribute(attr);
       }
       slide.toggleAttribute('data-analysis-open', enabled);
+      slide.scrollTop = 0;
       return true;
     }
 
@@ -206,7 +216,11 @@
           if (n >= 0 && n < slides.length) {
             setAnalysisView(n, e.data.analysis === true);
             showSlide(n); syncLogo(slides[n]);
+            slides[n].scrollTop = e.data.scrollTop || 0;
           }
+        } else if (e.data.type === 'preview-scroll' && e.source === window.parent) {
+          const active = slides[e.data.idx];
+          if (active?.classList.contains('is-active')) active.scrollTop = e.data.scrollTop;
         } else if (e.data.type === 'preview-theme' && e.data.name) {
           let link = document.getElementById('theme-link');
           if (!link) {
@@ -364,7 +378,10 @@
       }
       const slideChanged = !slides[n].classList.contains('is-active');
       const previousSlide = slideChanged ? slides.find(s => s.classList.contains('is-active')) : null;
-      if (slideChanged) setAnalysisView(n, false);
+      if (slideChanged) {
+        setAnalysisView(n, false);
+        slides[n].scrollTop = 0;
+      }
       slides.forEach((s,i) => {
         s.classList.toggle('is-active', i===n);
         s.classList.toggle('is-prev', i<n);
@@ -373,7 +390,10 @@
       syncLogo(slides[n]);
       barFill.style.width = ((n+1)/total*100)+'%';
       const numEl = document.querySelector('.slide-number');
-      if (numEl) { numEl.setAttribute('data-current', n+1); numEl.setAttribute('data-total', total); }
+      if (numEl) {
+        numEl.setAttribute('data-current', n+1); numEl.setAttribute('data-total', total);
+        if (numEl.matches('button[data-action="toc"]')) numEl.setAttribute('aria-label', '第 ' + (n+1) + ' 頁，共 ' + total + ' 頁。開啟目錄');
+      }
 
       // notes (bottom overlay)
       const note = slides[n].querySelector(NOTE_SEL);
@@ -529,6 +549,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Presenter View</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -700,6 +721,21 @@
 
   body.is-dragging-card * { user-select: none !important; }
   body.is-dragging-card iframe { pointer-events: none !important; }
+  @media screen and (orientation:portrait) {
+    #stage {
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:minmax(110px,24%) minmax(150px,1fr) auto;
+      grid-template-areas:"current next" "notes notes" "timer timer";gap:7px;padding:7px 7px max(7px,env(safe-area-inset-bottom));overflow:auto;
+    }
+    #stage .pcard { position:relative;inset:auto!important;width:auto!important;height:auto!important;min-width:0;min-height:0; }
+    #card-cur { grid-area:current; } #card-nxt { grid-area:next; }
+    #card-notes { grid-area:notes; } #card-timer { grid-area:timer; }
+    .pcard-head { padding:6px 9px;gap:5px;cursor:default; }
+    .pcard-title { letter-spacing:0;font-size:10px; }
+    .hint-bar,.pcard-resize { display:none; }
+    .pcard-timer .pcard-body { flex-direction:row;align-items:center;flex-wrap:wrap;justify-content:space-between;gap:6px;padding:8px; }
+    .timer-display { font-size:24px; } .timer-controls { gap:4px; }
+    .timer-btn { min-height:38px;padding:5px 8px; }
+  }
 </style>
 <link rel="stylesheet" href="${new URL('heading-font.css', deckUrl).href}">
 </head>
@@ -786,6 +822,9 @@
   /* Restoring saved card positions needs the IDs and minimum sizes. */
   var CARD_IDS = ['card-cur','card-nxt','card-notes','card-timer'];
   var MIN_W = 180, MIN_H = 100;
+  var audience = window.opener;
+  var audienceDeck;
+  try { audienceDeck = audience && audience.document.querySelector('main.deck[data-responsive]'); } catch (ignore) {}
   applyLayout(readLayout());
 
   function defaultLayout() {
@@ -863,10 +902,15 @@
     var body = iframe.parentElement;
     var cw = body.clientWidth, ch = body.clientHeight;
     if (!cw || !ch) return;
-    var s = Math.min(cw / 1920, ch / 1080);
+    var fw = 1920, fh = 1080;
+    if (audienceDeck && !audience.closed && audience.innerWidth * 9 < audience.innerHeight * 16) {
+      fw = audience.innerWidth; fh = audience.innerHeight;
+    }
+    iframe.style.width = fw + 'px'; iframe.style.height = fh + 'px';
+    var s = Math.min(cw / fw, ch / fh);
     iframe.style.transform = 'scale(' + s + ')';
     /* Center the scaled iframe in the body */
-    var sw = 1920 * s, sh = 1080 * s;
+    var sw = fw * s, sh = fh * s;
     iframe.style.left = Math.max(0, (cw - sw) / 2) + 'px';
     iframe.style.top = Math.max(0, (ch - sh) / 2) + 'px';
   }
@@ -875,6 +919,19 @@
     rescaleIframe(iframeNxt);
   }
   window.addEventListener('resize', rescaleAll);
+  if (audienceDeck) {
+    var mirrorScroll = function(e) {
+      if (e.target === audienceDeck.children[idx] && iframeCur.contentWindow) {
+        iframeCur.contentWindow.postMessage({type:'preview-scroll',idx:idx,scrollTop:e.target.scrollTop}, '*');
+      }
+    };
+    audience.addEventListener('resize', rescaleAll);
+    audienceDeck.addEventListener('scroll', mirrorScroll, true);
+    window.addEventListener('pagehide', function(){
+      audience.removeEventListener('resize', rescaleAll);
+      audienceDeck.removeEventListener('scroll', mirrorScroll, true);
+    }, {once:true});
+  }
 
   /* ===== Drag (move card by header) ===== */
   document.querySelectorAll('[data-drag]').forEach(function(handle){
@@ -966,7 +1023,8 @@
 
   function postPreviewGoto(iframe, n) {
     try {
-      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n, analysis: iframe === iframeCur && n === analysisIndex }, '*');
+      var top = iframe === iframeCur && audienceDeck && audienceDeck.children[n] ? audienceDeck.children[n].scrollTop : 0;
+      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n, analysis: iframe === iframeCur && n === analysisIndex, scrollTop:top }, '*');
     } catch(e) {}
   }
 
@@ -1204,7 +1262,7 @@
         if (!target || !target.closest) return false;
         /* Don't steal the gesture from the overview grid, the notes drawer,
            or anything the author made scrollable or tappable. */
-        return !!target.closest('.overview, .notes-overlay, a, button, input, textarea, select, [data-no-swipe]');
+        return !!target.closest('dialog, .overview, .notes-overlay, a, button, input, textarea, select, [data-no-swipe]');
       }
 
       document.addEventListener('touchstart', function(e){

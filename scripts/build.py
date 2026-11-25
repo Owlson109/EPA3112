@@ -73,7 +73,7 @@ head=head.replace('themes/tokyo-night.css','themes/academic-paper.css')
 # Keep the stylesheet at its original URL for already-open older decks.
 cover_css = (ROOT / 'evidence-intro.css').read_text(encoding='utf-8')
 extra_styles = ''.join(f'<link rel="stylesheet" href="{name}">\n' for name in ('motion.css','revision.css','heading-font.css'))
-head = head.replace('</head>', extra_styles + f'<style id="cover-evidence-style">\n{cover_css}\n</style>\n<link rel="stylesheet" href="course-pages.css">\n</head>')
+head = head.replace('</head>', extra_styles + f'<style id="cover-evidence-style">\n{cover_css}\n</style>\n<link rel="stylesheet" href="course-pages.css">\n<link rel="stylesheet" href="screen-layout.css">\n</head>')
 head = re.sub(r'(<link\b[^>]*\bhref=")([^"]+\.css)(")', lambda m: m[1] + asset_url(m[2]) + m[3], head)
 
 def masthead(slide):
@@ -102,7 +102,9 @@ for s in deck_slides:
 <footer class="deck-footer"><div class="source-refs">{footer_refs}</div><span class="page-label">{s['number']:02d} / {total_slides}</span></footer>
 <aside class="notes">{notes(s)}</aside></section>''')
 toc=''.join(f'<li><button data-slide="{s["number"]}">{s["number"]:02d}　{esc(s["title"])}<small>'+('附頁 · 不計入正文配時' if s.get('appendix_number') else f'講者 {s["speaker"]} · {clock(s["seconds"])}')+'</small></button></li>' for s in deck_slides)
-controls='''<details class="viewer-dock" open><summary>控制</summary><nav class="viewer-tools" aria-label="簡報控制">
+controls='''<nav class="portrait-pager" aria-label="逐頁導覽">
+<button type="button" data-action="prev" aria-label="上一頁">← 上一頁</button><button type="button" class="slide-number" data-action="toc" aria-label="開啟簡報目錄"></button><button type="button" data-action="next" aria-label="下一頁">下一頁 →</button><button type="button" class="dismiss-notes" data-action="notes">關閉講稿</button>
+</nav><details class="viewer-dock" open><summary>控制</summary><nav class="viewer-tools" aria-label="簡報控制">
 <button data-action="prev" title="上一頁（←）" aria-label="上一頁">←</button><button data-action="next" title="下一頁（→）" aria-label="下一頁">→</button>
 <button data-action="toc">目錄</button><button data-action="notes" title="開關本頁講稿（N）">講稿 N</button><button data-action="presenter" title="開啟講者視窗（S）">講者 S</button><button data-action="fullscreen" title="全螢幕（F）">全螢幕 F</button><button data-evidence-toggle aria-pressed="true" title="開關每頁前的文件重點動畫">文件動畫：開</button><button data-slide="16">資料來源</button><a href="appendix.html" target="_blank" rel="noopener">附錄</a><button data-action="print">列印</button></nav></details>'''
 dialogs=f'''<dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-top"><span id="source-id"></span><button data-close aria-label="關閉來源">關閉</button></div><h2 id="source-title"></h2><dl id="source-fields"></dl><p id="source-links"></p></dialog>
@@ -114,7 +116,7 @@ intro_data=json.dumps(intros,ensure_ascii=False).replace('<','\\u003c')
 deck_scripts = ''.join(f'<script src="{asset_url(name)}"></script>' for name in ('evidence-intro.js', f'{assets}/runtime.js', 'notes-controls.js', 'app.js'))
 certificate_filters = (ROOT / 'images/certificate-display.svg').read_text(encoding='utf-8')
 analysis_views=(ROOT/'template/analysis-views.html').read_text(encoding='utf-8')
-(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa">'+certificate_filters+'<main class="deck" data-w="1920" data-h="1080">'+''.join(sections)+'</main>'+analysis_views+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
+(ROOT/'index.html').write_text(head+'<body class="tpl-presenter-mode-reveal epa">'+certificate_filters+'<main class="deck" data-w="1920" data-h="1080" data-responsive>'+''.join(sections)+'</main>'+analysis_views+controls+dialogs+'<script id="source-data" type="application/json">'+data+'</script><script id="evidence-intro-data" type="application/json">'+intro_data+'</script>'+deck_scripts+'</body></html>',encoding='utf-8')
 
 nav='<nav><a href="index.html">開啟簡報</a><a href="index.html#/16">來源附頁</a><a href="storyline.html">逐頁故事線</a><a href="speaker-notes.html">三人講稿</a><a href="official-research.html">官方文件核證</a><a href="report-review.html">四份報告</a><a href="appendix.html">研究附錄</a></nav>'
 def reader(filename,title,intro,body):

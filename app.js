@@ -2,13 +2,24 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const motionVisibility=()=>document.body.toggleAttribute('data-motion-paused',document.hidden);
   document.addEventListener('visibilitychange',motionVisibility);motionVisibility();
+  // Each small-screen course row carries the dates from the same table header.
+  const supply=document.querySelector('main.deck .supply');
+  if(supply){
+    const years=Array.from(supply.tHead.rows[0].cells,cell=>cell.textContent);
+    for(const row of supply.tBodies[0].rows){
+      Array.from(row.cells).slice(1).forEach(cell=>{cell.dataset.cohort=years[cell.cellIndex];});
+    }
+  }
   if(new URLSearchParams(location.search).has('preview'))return;
-  // On short landscape displays keep the source links clear of the toolbar.
+  // Compact screens keep the tools in a disclosure and leave the slide clear.
   const dock=document.querySelector('.viewer-dock');
-  const shortScreen=matchMedia('(orientation:landscape) and (max-height:600px)');
-  const fitControls=()=>{dock.open=!shortScreen.matches;};
+  const compactTools=matchMedia('(orientation:portrait), (orientation:landscape) and (max-height:600px)');
+  const fitControls=()=>{dock.open=!compactTools.matches;};
   fitControls();
-  shortScreen.addEventListener('change',fitControls);
+  compactTools.addEventListener('change',fitControls);
+  document.addEventListener('click',e=>{
+    if(matchMedia('(orientation:portrait)').matches && dock.open && !e.target.closest('.viewer-dock > summary'))dock.open=false;
+  });
   const sources=JSON.parse(document.querySelector('#source-data').textContent);
   const byId=new Map(sources.map(s=>[s.id,s]));
   const analysisSources=JSON.parse(document.getElementById('analysis-sources').textContent);
@@ -81,7 +92,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   // Preserve normal keyboard activation on links/buttons, and modal focus handling.
   document.addEventListener('keydown',e=>{
     if(document.querySelector('dialog[open]')){e.stopImmediatePropagation();return;}
-    if(e.target instanceof Element&&e.target.closest('a,button,input,textarea,select')&&['Enter',' '].includes(e.key))e.stopImmediatePropagation();
+    if(e.target instanceof Element&&e.target.closest('a,button,summary,input,textarea,select')&&['Enter',' '].includes(e.key))e.stopImmediatePropagation();
   },true);
   const deck=document.querySelector('.deck');
   function accessibility(){deck.querySelectorAll(':scope > .slide').forEach(s=>{const active=s.classList.contains('is-active')&&!document.body.hasAttribute('data-evidence-intro');s.inert=!active;s.setAttribute('aria-hidden',String(!active));});}
