@@ -185,7 +185,7 @@
    e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)togglePause();return;
   }
   if(!active)return;
-  if(['ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){
+  if(['ArrowDown','ArrowRight','PageDown',' ','Enter','Escape'].includes(e.key)){
    if(e.target.closest?.('button,a,input,textarea,select')&&[' ','Enter'].includes(e.key)&&e.target!==skip)return;
    e.preventDefault();e.stopImmediatePropagation();if(e.key==='Escape')finish();else advance();
   }else if(['o','O','n','N'].includes(e.key))finish();
