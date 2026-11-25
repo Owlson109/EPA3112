@@ -4,15 +4,15 @@
   "main_slides": 15,
   "appendix_slides": 2,
   "total_slides": 17,
-  "source_count": 83,
+  "source_count": 84,
   "groups": [
     {
       "title": "正文及逐字稿引用",
-      "count": 53
+      "count": 55
     },
     {
       "title": "補充核證文件",
-      "count": 9
+      "count": 8
     },
     {
       "title": "四份延伸研究報告",
@@ -839,6 +839,27 @@
       }
     },
     {
+      "id": "D79",
+      "group": "正文及逐字稿引用",
+      "title": "教育局2026–27開支預算答覆",
+      "date_or_version": "2026–27開支預算答覆",
+      "author": "",
+      "locator": "EDB066 印刷216／PDF224；EDB154 印刷453–454／PDF461–462",
+      "url": "https://www.edb.gov.hk/attachment/tc/about-edb/press/legco/replies-to-fc/edb-c-2627.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "15"
+        ],
+        "主張核證": [
+          "A30"
+        ],
+        "延伸時間線": [
+          "T072"
+        ]
+      }
+    },
+    {
       "id": "D80",
       "group": "正文及逐字稿引用",
       "title": "2025/26中四開課安排（2026–28年度）",
@@ -1065,6 +1086,21 @@
       "used_in": {
         "正文／逐字稿": [
           "12"
+        ]
+      }
+    },
+    {
+      "id": "D110",
+      "group": "正文及逐字稿引用",
+      "title": "教育局2023–24開支預算答覆：應用學習津貼",
+      "date_or_version": "2023–24開支預算答覆",
+      "author": "",
+      "locator": "EDB125 第(2)(a)部，印刷421／PDF431",
+      "url": "https://www.edb.gov.hk/attachment/tc/about-edb/press/legco/replies-to-fc/2324_EDB-2-c1.pdf",
+      "review_state": "已核相關頁",
+      "used_in": {
+        "正文／逐字稿": [
+          "15"
         ]
       }
     },
@@ -1299,24 +1335,6 @@
         ],
         "延伸時間線": [
           "T073"
-        ]
-      }
-    },
-    {
-      "id": "D79",
-      "group": "補充核證文件",
-      "title": "教育局2026–27開支預算答覆",
-      "date_or_version": "2026–27開支預算答覆",
-      "author": "",
-      "locator": "EDB154；第14節EDB印刷453–454／PDF461–462",
-      "url": "https://www.edb.gov.hk/attachment/tc/about-edb/press/legco/replies-to-fc/edb-c-2627.pdf",
-      "review_state": "已核相關頁",
-      "used_in": {
-        "主張核證": [
-          "A30"
-        ],
-        "延伸時間線": [
-          "T072"
         ]
       }
     },

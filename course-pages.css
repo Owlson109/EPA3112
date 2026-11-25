@@ -279,8 +279,8 @@ body[data-preview] .viewer-dock {display:none!important;}
   --recap-rule: #608778;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 30px;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 17px;
   padding: 0 16px;
 }
 .recap-opening {
@@ -297,7 +297,7 @@ body[data-preview] .viewer-dock {display:none!important;}
   color: #fbf6e6;
 }
 .recap-thesis h2 span { color: var(--accent); }
-.epa .recap-thesis p { margin-top: 15px; font-size: 30px; color: var(--text-2); }
+.epa .recap-thesis p { margin-top: 10px; font-size: 30px; color: var(--text-2); }
 .recap-certificates { display: flex; gap: 26px; }
 .recap-certificates figure { margin: 0; }
 .recap-certificate {
@@ -314,15 +314,15 @@ body[data-preview] .viewer-dock {display:none!important;}
 .recap-certificate-image {
   position: relative;
   display: block;
-  width: 102px;
-  height: 144px;
+  width: 90px;
+  height: 128px;
   box-shadow: 0 4px 16px #0b242666;
 }
 .recap-certificate-image .certificate-paper {
   position: absolute;
   inset: 0 auto auto 0;
   transform-origin: top left;
-  transform: scale(.3);
+  transform: scale(.265);
 }
 .recap-certificate-year { font-size: 22px; font-variant-numeric: tabular-nums; }
 .recap-certificate:hover .recap-certificate-year { color: var(--accent); }
@@ -332,8 +332,8 @@ body[data-preview] .viewer-dock {display:none!important;}
   display: grid;
   grid-template-columns: 1fr 1fr 1.08fr;
   align-content: center;
-  padding: 20px 0;
-  border-block: 1px solid var(--recap-rule);
+  padding: 11px 0;
+  border-top: 1px solid var(--recap-rule);
 }
 .recap-findings::before {
   content: "";
@@ -348,15 +348,15 @@ body[data-preview] .viewer-dock {display:none!important;}
 .recap-findings > section:last-child { padding-right: 0; }
 .recap-findings > section + section { border-left: 1px solid #4d7268; }
 .epa .recap-findings h3 {
-  margin: 0 0 21px;
+  margin: 0 0 10px;
   color: #f7f1dd;
-  font-size: 44px;
+  font-size: 41px;
   letter-spacing: -.025em;
   line-height: 1.3;
 }
-.recap-findings dl { display: grid; grid-template-rows: minmax(130px, auto) auto; gap: 19px; margin: 0; }
-.recap-findings dt { color: var(--recap-gold); font-size: 23px; font-weight: 650; line-height: 1.42; }
-.recap-findings dd { margin: 4px 0 0; color: var(--text-1); font-size: 31px; line-height: 1.48; text-wrap: pretty; }
+.recap-findings dl { display: grid; grid-template-rows: 114px auto; gap: 8px; margin: 0; }
+.recap-findings dt { color: var(--recap-gold); font-size: 23px; font-weight: 650; line-height: 1.35; }
+.recap-findings dd { margin: 4px 0 0; color: var(--text-1); font-size: 30px; line-height: 1.3; text-wrap: pretty; }
 .recap-findings .recap-grades {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -366,12 +366,32 @@ body[data-preview] .viewer-dock {display:none!important;}
   font-variant-numeric: tabular-nums;
 }
 .recap-grades span:nth-child(odd) { color: var(--accent); font-weight: 650; }
+.recap-grants {
+  display: grid;
+  grid-template-columns: 1.25fr 3.8fr;
+  align-items: center;
+  column-gap: 26px;
+  padding: 15px 28px 12px;
+  background: #20433e;
+  border-inline-start: 4px solid var(--recap-gold);
+}
+.epa .recap-grants h3 { margin: 0; color: #f7f1dd; font-size: 29px; line-height: 1.4; }
+.epa .recap-grants header p, .epa .recap-grant-scope { margin: 3px 0 0; color: #cedcd1; font-size: 20px; line-height: 1.4; }
+.recap-grants dl { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)) 1.12fr; gap: 18px; margin: 0; }
+.recap-grants dt { color: #dce8df; font-size: 21px; font-weight: 500; line-height: 1.4; white-space: nowrap; }
+.recap-grants dd { margin: 2px 0 0; color: #fff9e8; font-size: 43px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.recap-grants dd small { margin-inline-end: .2em; font-size: .64em; }
+.recap-grants a { color: inherit; text-decoration: none; }
+.recap-grants a:is(:hover,:focus-visible) { text-decoration: underline; text-underline-offset: .13em; }
+.recap-grant-change { padding-inline-start: 24px; border-inline-start: 1px solid #6d9184; }
+.recap-grants .recap-grant-change dd { color: var(--recap-gold); font-size: 38px; }
+.epa .recap-grant-scope { grid-column: 1 / -1; margin-top: 8px; }
 .recap-path {
   display: grid;
   grid-template-columns: 1.65fr 1fr;
   gap: 34px;
   align-items: center;
-  padding: 21px 34px;
+  padding: 14px 34px;
   background: #e4eadb;
   color: #193c33;
 }
