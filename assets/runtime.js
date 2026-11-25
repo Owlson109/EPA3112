@@ -217,6 +217,11 @@
             setAnalysisView(n, e.data.analysis === true);
             showSlide(n); syncLogo(slides[n]);
             slides[n].scrollTop = e.data.scrollTop || 0;
+            const venue = document.getElementById('venue-policy');
+            if (venue && e.source === window.parent) {
+              if (e.data.venuePolicy && !venue.open && slides[n].querySelector('[data-venue-policy]')) venue.showModal();
+              else if (!e.data.venuePolicy && venue.open) venue.close();
+            }
           }
         } else if (e.data.type === 'preview-scroll' && e.source === window.parent) {
           const active = slides[e.data.idx];
@@ -919,7 +924,12 @@
     rescaleIframe(iframeNxt);
   }
   window.addEventListener('resize', rescaleAll);
+  var audienceVenue = audienceDeck && audienceDeck.ownerDocument.getElementById('venue-policy');
   if (audienceDeck) {
+    var venueObserver = new MutationObserver(function() {
+      if (iframeReady.cur) postPreviewGoto(iframeCur, idx);
+    });
+    if (audienceVenue) venueObserver.observe(audienceVenue, {attributes:true, attributeFilter:['open']});
     var mirrorScroll = function(e) {
       if (e.target === audienceDeck.children[idx] && iframeCur.contentWindow) {
         iframeCur.contentWindow.postMessage({type:'preview-scroll',idx:idx,scrollTop:e.target.scrollTop}, '*');
@@ -928,6 +938,7 @@
     audience.addEventListener('resize', rescaleAll);
     audienceDeck.addEventListener('scroll', mirrorScroll, true);
     window.addEventListener('pagehide', function(){
+      venueObserver.disconnect();
       audience.removeEventListener('resize', rescaleAll);
       audienceDeck.removeEventListener('scroll', mirrorScroll, true);
     }, {once:true});
@@ -1024,7 +1035,8 @@
   function postPreviewGoto(iframe, n) {
     try {
       var top = iframe === iframeCur && audienceDeck && audienceDeck.children[n] ? audienceDeck.children[n].scrollTop : 0;
-      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n, analysis: iframe === iframeCur && n === analysisIndex, scrollTop:top }, '*');
+      var venueOpen = iframe === iframeCur && !!(audienceVenue && audienceVenue.open);
+      iframe.contentWindow.postMessage({ type: 'preview-goto', idx: n, analysis: iframe === iframeCur && n === analysisIndex, scrollTop:top, venuePolicy:venueOpen }, '*');
     } catch(e) {}
   }
 

@@ -236,7 +236,7 @@
       "D101",
       "D42"
     ],
-    "body": "\n<div class=\"venue-grid\" data-anim=\"stagger-list\"><article><span class=\"tag oral\">本人修讀經驗</span><b>2014–2016</b><h3>何文田校區</h3><p>星期六上課</p></article><article><span class=\"tag\">2016–18 概覽</span><b>2016 版本</b><h3>何文田／馬鞍山</h3><p>模式一列出多個場地</p></article><article><span class=\"tag\">2019–21 概覽</span><b>2019 版本</b><h3>馬鞍山</h3><p>模式一已只列兩個馬鞍山校園</p></article></div>\n<div class=\"pathways\" data-focus=\"progression-paths\"><h3>課程及院校提出的路徑</h3><div><b>相關升學</b><p>相關高級文憑、運動學士等課程</p></div><div><b>職業領域</b><p>體適能、運動活動及康體設施</p></div></div>\n<p class=\"fine\">港專現行課程頁亦列馬鞍山為模式一上課地點。學生可按興趣銜接相關課程，入學及專業資格各有要求。</p>",
+    "body": "\n<div class=\"venue-grid\" data-anim=\"stagger-list\"><article><span class=\"tag oral\">本人修讀經驗</span><b>2014–2016</b><h3>何文田校區</h3><p>星期六上課</p></article><article><span class=\"tag\">2016–18 概覽</span><b>2016 版本</b><h3>何文田／<button type=\"button\" class=\"venue-policy-trigger\" data-venue-policy aria-haspopup=\"dialog\" aria-controls=\"venue-policy\" aria-label=\"馬鞍山，查看教育局批地計劃\">馬鞍山</button></h3><p>模式一列出多個場地</p></article><article><span class=\"tag\">2019–21 概覽</span><b>2019 版本</b><h3><button type=\"button\" class=\"venue-policy-trigger\" data-venue-policy aria-haspopup=\"dialog\" aria-controls=\"venue-policy\" aria-label=\"馬鞍山，查看教育局批地計劃\">馬鞍山</button></h3><p>模式一已只列兩個馬鞍山校園</p></article></div>\n<div class=\"pathways\" data-focus=\"progression-paths\"><h3>課程及院校提出的路徑</h3><div><b>相關升學</b><p>相關高級文憑、運動學士等課程</p></div><div><b>職業領域</b><p>體適能、運動活動及康體設施</p></div></div>\n<p class=\"fine\">港專現行課程頁亦列馬鞍山為模式一上課地點。學生可按興趣銜接相關課程，入學及專業資格各有要求。</p>",
     "notes": [
       "我讀呢科嗰陣，何文田地方細，實習主要靠健身室同禮堂。",
       "2013年2月，教育局透過「批地計劃」推出馬鞍山一所空置校舍，幫非牟利院校改善自資專上課程嘅教學環境。8月港專獲批。《星島日報》報道，月租一蚊。港專話會將運動與體適能等高級文憑課程搬入去，咁就方便集中用實習場地同器材。",
@@ -249,7 +249,46 @@
       "D107",
       "D108",
       "D109"
-    ]
+    ],
+    "venue_policy": {
+      "title": "馬鞍山校舍與「批地計劃」",
+      "items": [
+        {
+          "label": "2013 年 2 月",
+          "text": "教育局邀請非牟利院校申請馬鞍山空置校舍。院校可以象徵式租金遷入，改善全日制自資副學位或以上課程的教學環境。",
+          "sources": {
+            "D106": {
+              "label": "批地計劃"
+            },
+            "D107": {
+              "label": "邀請申請"
+            }
+          }
+        },
+        {
+          "label": "2013 年 8 月",
+          "text": "教育局把校舍批予港專機構。《星島日報》報道，月租為一港元。港專表示，計劃把運動與體適能等需要實習場地的高級文憑課程遷入。",
+          "sources": {
+            "D108": {
+              "label": "分配結果"
+            },
+            "D109": {
+              "label": "港專回應"
+            }
+          }
+        },
+        {
+          "label": "本科的上課地點",
+          "text": "2019–21 屆課程概覽列明，模式一可在耀安邨的馬鞍山校園或鞍誠街的本科校園上課。該屆亦包括羽毛球和籃球。",
+          "sources": {
+            "D15": {
+              "label": "課程概覽 · 頁 70–71",
+              "page": 70
+            }
+          }
+        }
+      ]
+    }
   },
   {
     "number": 13,

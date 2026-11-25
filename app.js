@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   addEventListener('afterprint',()=>{for(const [a,href]of printLinks){if(href!==null)a.setAttribute('href',href);}printLinks.clear();});
   let returnFocus=null;
+  const venuePolicy=document.getElementById('venue-policy');
+  venuePolicy.addEventListener('click',e=>{
+    if(e.target!==venuePolicy)return;
+    const box=venuePolicy.getBoundingClientRect();
+    if(e.clientX<box.left||e.clientX>box.right||e.clientY<box.top||e.clientY>box.bottom)venuePolicy.close();
+  });
   const certificateDialog=document.querySelector('#certificate-dialog');
   const certificateStage=certificateDialog?.querySelector('.certificate-enlargement');
   function fitCertificate(){
@@ -54,7 +60,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     certificateDialog.showModal();
     fitCertificate();
   }
-  window.addEventListener('epa:slide-change',()=>{if(certificateDialog?.open)certificateDialog.close();});
+  window.addEventListener('epa:slide-change',()=>{
+    if(certificateDialog?.open)certificateDialog.close();
+    if(venuePolicy.open)venuePolicy.close();
+  });
   const field=(label,value)=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value||'未另記錄';return [dt,dd];};
   function openSource(id,trigger){
     const s=sourceFor(id,trigger);if(!s)return;
@@ -74,6 +83,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
   const key=k=>document.dispatchEvent(new KeyboardEvent('keydown',{key:k,bubbles:true,cancelable:true}));
   document.addEventListener('click',e=>{
+    const venue=e.target.closest('main.deck > .slide.is-active [data-venue-policy]');
+    if(venue){returnFocus=venue;venuePolicy.showModal();return;}
     const excerpt=e.target.closest('[data-course-excerpt]');
     if(excerpt){e.preventDefault();returnFocus=excerpt;document.querySelector('#course-excerpt').showModal();return;}
     const certificate=e.target.closest('[data-certificate]');if(certificate){openCertificate(certificate);return;}

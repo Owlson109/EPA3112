@@ -272,6 +272,88 @@ body[data-preview] .viewer-dock {display:none!important;}
 .epa button[data-open-analysis]:focus-visible {outline:3px solid currentColor;outline-offset:4px;}
 @media print {.epa button[data-open-analysis] {text-decoration:none;} .epa button[data-open-analysis]::after {content:none;}}
 
+/* The venue name opens a short policy note over the same slide. */
+.epa .venue-policy-trigger {
+  position: relative; display: inline-flex; align-items: center; gap: .2em;
+  padding: 0 .04em; border: 0; border-bottom: .055em solid var(--accent);
+  background: transparent; color: var(--accent); font: inherit; line-height: 1.15;
+  cursor: pointer; vertical-align: baseline;
+}
+.epa .venue-policy-trigger::after {
+  content: "+"; display: inline-grid; place-items: center;
+  width: 1.18em; height: 1.18em; border: 1px solid currentColor; border-radius: 50%;
+  font: 500 .52em/1 var(--font-sans);
+}
+.epa .venue-policy-trigger:is(:hover,:focus-visible) { background: var(--surface-2); }
+@media (pointer: coarse) {
+  .epa .venue-policy-trigger::before { content: ""; position: absolute; inset: -.3em -.12em; }
+}
+.epa #venue-policy {
+  width: min(91vw, 980px); max-width: none; max-height: 89dvh;
+  padding: clamp(20px, 2.2vw, 40px); border-top: 4px solid var(--accent);
+  background: var(--bg); box-shadow: 0 16px 65px color-mix(in srgb, var(--text-1) 22%, transparent);
+  overscroll-behavior: contain;
+}
+.epa #venue-policy .dialog-top { align-items: flex-start; gap: 15px; }
+.epa #venue-policy h2 {
+  margin: 0; color: var(--text-1); font-size: clamp(24px, 2.6vw, 40px); line-height: 1.26;
+  text-wrap: balance;
+}
+.epa #venue-policy .dialog-top button { flex: none; min-height: 40px; }
+.epa .venue-policy-rows { margin: clamp(16px, 2vw, 28px) 0 0; }
+.epa .venue-policy-rows > div {
+  display: grid; grid-template-columns: 7.4em minmax(0,1fr); align-items: baseline; gap: 6px 20px;
+  border-top: 1px solid var(--border-strong); padding: 15px 0; font-size: clamp(18px, 1.65vw, 25px);
+}
+.epa .venue-policy-rows > div:last-child {
+  border-left: 3px solid var(--accent); border-top: 0; background: var(--surface-2);
+  padding: 12px 15px;
+}
+.epa #venue-policy dt { margin: 0; color: var(--accent); font-size: .9em; line-height: 1.5; }
+.epa #venue-policy dd, .epa #venue-policy p { margin: 0; font-size: inherit; line-height: 1.55; }
+.epa .venue-citations { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; }
+.epa .venue-citations a {
+  color: var(--accent); font-size: clamp(14px, 1.02vw, 19px); line-height: 1.55;
+  text-decoration: underline; text-underline-offset: .2em; text-decoration-color: var(--border-strong);
+}
+.epa .bib-venue-sources .bib-topic {
+  margin: 7px 0 4px; border-top: 2px solid var(--accent); padding-top: 5px;
+  color: var(--accent); font-size: 19px; line-height: 1.3;
+}
+@media screen and (orientation: portrait) {
+  .epa .bib-venue-sources .bib-topic { font-size: 30px; margin: 23px 0 7px; padding-top: 12px; }
+}
+@media (max-width: 600px) {
+  .epa #venue-policy { width: 93vw; padding: 17px; }
+  .epa #venue-policy .dialog-top { position: sticky; top: 0; z-index: 1; background: var(--bg); }
+  .epa #venue-policy .dialog-top button { padding: 7px 10px; }
+  .epa .venue-policy-rows > div { grid-template-columns: minmax(0,1fr); gap: 4px; padding: 11px 0; }
+}
+@media screen {
+  .epa[data-preview] #venue-policy[open] { display: block !important; }
+  .epa #venue-policy {
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 220ms ease, transform 240ms ease, display 240ms allow-discrete, overlay 240ms allow-discrete;
+  }
+  .epa #venue-policy[open] { opacity: 1; transform: translateY(0); }
+  .epa #venue-policy::backdrop {
+    opacity: 0; background: color-mix(in srgb, var(--text-1) 36%, transparent);
+    transition: opacity 220ms ease, display 240ms allow-discrete, overlay 240ms allow-discrete;
+  }
+  .epa #venue-policy[open]::backdrop { opacity: 1; }
+  @starting-style {
+    .epa #venue-policy[open] { opacity: 0; transform: translateY(8px); }
+    .epa #venue-policy[open]::backdrop { opacity: 0; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .epa #venue-policy, .epa #venue-policy::backdrop { transition: none; }
+}
+@media print {
+  .epa .venue-policy-trigger { position: static; display: inline; appearance: none; padding: 0; border: 0; color: inherit; line-height: inherit; }
+  .epa .venue-policy-trigger::after { content: none; }
+}
+
 /* Slide 15's optional closing view recalls the opening certificates. */
 .epa .slide[data-layout="course-edition"] .recap-masthead { grid-template-columns: 1fr auto; }
 .epa .slide-content.recap-content {

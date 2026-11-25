@@ -49,6 +49,16 @@ def refs(source_ids,modal=False,passages=None):
 def note_source_ids(s):
     return s['refs'] + s.get('extra_notes_refs', [])
 
+def venue_policy_dialog(panel):
+    rows = []
+    for item in panel['items']:
+        links = refs(item['sources'], passages=item['sources'])
+        rows.append(f'<div><dt>{esc(item["label"])}</dt><dd><p>{esc(item["text"])}</p><div class="venue-citations">{links}</div></dd></div>')
+    return (f'<dialog id="venue-policy" aria-labelledby="venue-policy-title" data-no-swipe>'
+            f'<header class="dialog-top"><h2 id="venue-policy-title">{esc(panel["title"])}</h2>'
+            '<button type="button" data-close aria-label="關閉馬鞍山校舍說明" autofocus>關閉</button></header>'
+            '<dl class="venue-policy-rows">' + ''.join(rows) + '</dl></dialog>')
+
 def notes(s):
     if s.get('appendix_number'):
         return '<p class="note-meta">資料來源附頁 · 查閱及答問用途，不計入正文17分鐘。</p>'+''.join('<p>'+p+'</p>' for p in s['notes'])
@@ -109,6 +119,7 @@ controls='''<nav class="portrait-pager" aria-label="逐頁導覽">
 <button data-action="toc">目錄</button><button data-action="notes" title="開關本頁講稿（N）">講稿 N</button><button data-action="presenter" title="開啟講者視窗（S）">講者 S</button><button data-action="fullscreen" title="全螢幕（F）">全螢幕 F</button><button data-evidence-toggle aria-pressed="true" title="開關每頁前的文件重點動畫">文件動畫：開</button><button data-slide="16">資料來源</button><a href="appendix.html" target="_blank" rel="noopener">附錄</a><button data-action="print">列印</button></nav></details>'''
 dialogs=f'''<dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-top"><span id="source-id"></span><button data-close aria-label="關閉來源">關閉</button></div><h2 id="source-title"></h2><dl id="source-fields"></dl><p id="source-links"></p></dialog>
 <dialog id="course-excerpt" aria-labelledby="excerpt-title" data-no-swipe style="width:min(92vw,1250px);max-width:94vw"><div class="dialog-top"><h2 id="excerpt-title">附錄一 · 科目 674</h2><button type="button" data-close>關閉</button></div><img src="images/edb-69-2020-674.png" style="display:block;width:100%;height:auto" alt="科目674 運動及體適能教練，港專，中文或英文，2020/21學年中四提早開辦模式一及二，課程費用14,200元"><p>教育局通函第 69/2020 號，頁 7。表頭與科目 674 原列合併節錄。 <a href="https://www.edb.gov.hk/attachment/tc/curriculum-development/renewal/CM/EDBCM20069C.pdf#page=7" target="_blank" rel="noopener">查看原頁</a></p></dialog>
+{venue_policy_dialog(next(s['venue_policy'] for s in slides if 'venue_policy' in s))}
 <dialog id="certificate-dialog" aria-labelledby="certificate-title" data-no-swipe><div class="dialog-top"><h2 id="certificate-title">港專證書</h2><button type="button" data-close aria-label="關閉證書">關閉</button></div><div class="certificate-enlargement"></div></dialog>
 <dialog id="toc-dialog" aria-labelledby="toc-title"><div class="dialog-top"><span>正文15頁 · 配時17分鐘 · 來源附頁{len(reference_slides)}頁</span><button data-close aria-label="關閉目錄">關閉</button></div><h2 id="toc-title">簡報目錄</h2><ol class="toc-list">{toc}</ol></dialog>'''
 data=json.dumps(sources,ensure_ascii=False).replace('<','\\u003c')

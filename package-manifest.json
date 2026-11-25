@@ -6,8 +6,8 @@
   },
   {
     "path": "EPA3112_簡報.pdf",
-    "bytes": 3423796,
-    "sha256": "5f983e59f8363be18b62869a6085c8f352a2911a2b7280348a138daf4d90361e"
+    "bytes": 3424026,
+    "sha256": "e3636b062c12e582ba4f90f7334e41f1db1ff91fa8d677340640e6e43fae1fee"
   },
   {
     "path": "LICENSE",
@@ -31,8 +31,8 @@
   },
   {
     "path": "app.js",
-    "bytes": 6703,
-    "sha256": "d56f133703e1923fa90f8875e769832ad2cee166ea17e5462834b27efff107d6"
+    "bytes": 7216,
+    "sha256": "0f98bd4961a3fbf33e47345d0782b448cb156f8a3c1ba5393c6cc47d5035557e"
   },
   {
     "path": "appendix.html",
@@ -231,8 +231,8 @@
   },
   {
     "path": "assets/runtime.js",
-    "bytes": 54689,
-    "sha256": "2eb65bfcc12b284dc0777e2223bba90767d4fa3e7e2ff1afe863245e91976d13"
+    "bytes": 55493,
+    "sha256": "aca20e7ca8573d640bf4518cb2455c7d82607bddcfc674c4f275ec1f4eefe70e"
   },
   {
     "path": "assets/themes/academic-paper.css",
@@ -416,18 +416,18 @@
   },
   {
     "path": "course-pages.css",
-    "bytes": 30186,
-    "sha256": "cefcfee71cbfa433c18bf556a9a971c53f594195c06d84fc19081024d241c640"
+    "bytes": 34279,
+    "sha256": "50276db3e1641ba4923b94022b009c54480f8a7a37a1bea626f8fa16edb6e0ed"
   },
   {
     "path": "data/bibliography.csv",
-    "bytes": 29404,
-    "sha256": "ae73d5e031a7bbb657ca293a25a75317faea55b07c0f4d32494c7dbf0b176443"
+    "bytes": 29589,
+    "sha256": "2c6e96ffc691f796e92c8a18e753da174c85060ffc92ebc07898bd48e9a3cad3"
   },
   {
     "path": "data/bibliography.json",
-    "bytes": 51553,
-    "sha256": "cff5857eec2d9535b4224c161edffdada5317960ec9a4e021fb107f5feadb0ab"
+    "bytes": 51858,
+    "sha256": "a392ecdb0e8644818d9515b44a1c5ac4dbdd2130bca570bd4c41454331b0d244"
   },
   {
     "path": "data/changelog.csv",
@@ -456,13 +456,13 @@
   },
   {
     "path": "data/content.csv",
-    "bytes": 37602,
-    "sha256": "ba52f7ef67a7d4307b84701a1e57f8eccde630a0089d285f136b7ac63fdfeb3c"
+    "bytes": 39003,
+    "sha256": "1a5793809e44bf0615268c74a6fc684abb12db3a2b6eb20cacfd0b1a775fd9a8"
   },
   {
     "path": "data/content.json",
-    "bytes": 40969,
-    "sha256": "3f95022ec8e405e0b68934b2ad5894d37cc228061fb8c2cddfc7abcd52e3d739"
+    "bytes": 42714,
+    "sha256": "480075cecbef1b86b6d067a9796ee06c4a122e7005e73aaf4debb752ee7d94b2"
   },
   {
     "path": "data/evidence_intros.json",
@@ -576,8 +576,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 255922,
-    "sha256": "eadc5d08a0efc00f7fc133969289f64364fe74d57ef6ffe3b7b08ebc99074d14"
+    "bytes": 258325,
+    "sha256": "61f113cf32d1aa7e75fcbef7cedf5fd533989c02b69720bc7084d6f16ce90c73"
   },
   {
     "path": "motion.css",
@@ -827,7 +827,7 @@
   {
     "path": "qa/pdf-checks.json",
     "bytes": 273,
-    "sha256": "9767651ae20f58e132c99e7c0a41b5bb474ec1161f7036c51addeea7cc54fe1e"
+    "sha256": "9ce53632de3d587b43916b39d7194f9459e385e46fef19cc1a09e8a9aa74d866"
   },
   {
     "path": "qa/presenter.png",
@@ -1111,13 +1111,13 @@
   },
   {
     "path": "scripts/bibliography.py",
-    "bytes": 6965,
-    "sha256": "1d098422a92c9afb40f83e4539f4d5a346021eb6f40d9d50caae3f6cd3e8e5a8"
+    "bytes": 7932,
+    "sha256": "a2724d4333e7947eae7ce32e760305f36a71e7a17f46fa247761970379b88f08"
   },
   {
     "path": "scripts/build.py",
-    "bytes": 24191,
-    "sha256": "b74328edcf85b8fe3434af1123544ce3c7c67772c3411233c2a922fafa403914"
+    "bytes": 24956,
+    "sha256": "550cb803809476b8ed1798a3265235cd8c5780565b52b2c8b13dd6cf12015312"
   },
   {
     "path": "scripts/prepare_research.py",
